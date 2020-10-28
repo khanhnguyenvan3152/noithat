@@ -29,32 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Item));
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("");
             this.tabControlItem = new System.Windows.Forms.TabControl();
             this.tabPageItemList = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -118,19 +92,6 @@
             this.buttonAllow = new System.Windows.Forms.Button();
             this.tableLayoutPanelItem = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
-            this.listViewItem = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.iconButtonArrowRight = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
@@ -161,6 +122,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.buttonOk = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
+            this.dataGridViewItemList = new System.Windows.Forms.DataGridView();
             this.tabControlItem.SuspendLayout();
             this.tabPageItemList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -203,6 +165,7 @@
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).BeginInit();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemList)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlItem
@@ -479,7 +442,7 @@
             // 
             this.tableLayoutPanel9.ColumnCount = 2;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 522F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanelItem, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -502,7 +465,7 @@
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.panel11, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(279, 5);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(793, 5);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(10, 5, 0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
@@ -512,7 +475,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(512, 364);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1, 364);
             this.tableLayoutPanel2.TabIndex = 7;
             // 
             // iconButton1
@@ -529,7 +492,7 @@
             this.iconButton1.Location = new System.Drawing.Point(3, 3);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Rotation = 0D;
-            this.iconButton1.Size = new System.Drawing.Size(26, 23);
+            this.iconButton1.Size = new System.Drawing.Size(1, 23);
             this.iconButton1.TabIndex = 1;
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
@@ -547,7 +510,7 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(506, 130);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1, 130);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
             // pictureBox1
@@ -587,7 +550,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(373, 130);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1, 130);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -598,7 +561,7 @@
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 101);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(186, 29);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1, 29);
             this.flowLayoutPanel1.TabIndex = 8;
             // 
             // label1
@@ -617,7 +580,7 @@
             this.textBoxColor.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxColor.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxColor.ForeColor = System.Drawing.Color.White;
-            this.textBoxColor.Location = new System.Drawing.Point(46, 3);
+            this.textBoxColor.Location = new System.Drawing.Point(3, 22);
             this.textBoxColor.Name = "textBoxColor";
             this.textBoxColor.Size = new System.Drawing.Size(100, 20);
             this.textBoxColor.TabIndex = 1;
@@ -630,7 +593,7 @@
             this.flowLayoutPanel12.Location = new System.Drawing.Point(0, 76);
             this.flowLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
-            this.flowLayoutPanel12.Size = new System.Drawing.Size(186, 25);
+            this.flowLayoutPanel12.Size = new System.Drawing.Size(1, 25);
             this.flowLayoutPanel12.TabIndex = 6;
             // 
             // label9
@@ -649,7 +612,7 @@
             this.textBoxKind.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxKind.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxKind.ForeColor = System.Drawing.Color.White;
-            this.textBoxKind.Location = new System.Drawing.Point(47, 3);
+            this.textBoxKind.Location = new System.Drawing.Point(3, 22);
             this.textBoxKind.Name = "textBoxKind";
             this.textBoxKind.Size = new System.Drawing.Size(100, 20);
             this.textBoxKind.TabIndex = 1;
@@ -658,10 +621,10 @@
             // 
             this.flowLayoutPanel13.Controls.Add(this.label17);
             this.flowLayoutPanel13.Controls.Add(this.textBoxImport);
-            this.flowLayoutPanel13.Location = new System.Drawing.Point(186, 51);
+            this.flowLayoutPanel13.Location = new System.Drawing.Point(0, 51);
             this.flowLayoutPanel13.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel13.Name = "flowLayoutPanel13";
-            this.flowLayoutPanel13.Size = new System.Drawing.Size(187, 25);
+            this.flowLayoutPanel13.Size = new System.Drawing.Size(1, 25);
             this.flowLayoutPanel13.TabIndex = 5;
             // 
             // label17
@@ -680,7 +643,7 @@
             this.textBoxImport.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxImport.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxImport.ForeColor = System.Drawing.Color.White;
-            this.textBoxImport.Location = new System.Drawing.Point(70, 3);
+            this.textBoxImport.Location = new System.Drawing.Point(3, 22);
             this.textBoxImport.Name = "textBoxImport";
             this.textBoxImport.Size = new System.Drawing.Size(100, 20);
             this.textBoxImport.TabIndex = 1;
@@ -693,7 +656,7 @@
             this.flowLayoutPanel14.Location = new System.Drawing.Point(0, 51);
             this.flowLayoutPanel14.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel14.Name = "flowLayoutPanel14";
-            this.flowLayoutPanel14.Size = new System.Drawing.Size(186, 25);
+            this.flowLayoutPanel14.Size = new System.Drawing.Size(1, 25);
             this.flowLayoutPanel14.TabIndex = 4;
             // 
             // label18
@@ -712,7 +675,7 @@
             this.textBoxType.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxType.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxType.ForeColor = System.Drawing.Color.White;
-            this.textBoxType.Location = new System.Drawing.Point(46, 3);
+            this.textBoxType.Location = new System.Drawing.Point(3, 22);
             this.textBoxType.Name = "textBoxType";
             this.textBoxType.Size = new System.Drawing.Size(100, 20);
             this.textBoxType.TabIndex = 1;
@@ -722,10 +685,10 @@
             this.flowLayoutPanel15.Controls.Add(this.label19);
             this.flowLayoutPanel15.Controls.Add(this.textBoxCountry);
             this.flowLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel15.Location = new System.Drawing.Point(186, 26);
+            this.flowLayoutPanel15.Location = new System.Drawing.Point(0, 26);
             this.flowLayoutPanel15.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel15.Name = "flowLayoutPanel15";
-            this.flowLayoutPanel15.Size = new System.Drawing.Size(187, 25);
+            this.flowLayoutPanel15.Size = new System.Drawing.Size(1, 25);
             this.flowLayoutPanel15.TabIndex = 3;
             // 
             // label19
@@ -744,7 +707,7 @@
             this.textBoxCountry.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxCountry.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxCountry.ForeColor = System.Drawing.Color.White;
-            this.textBoxCountry.Location = new System.Drawing.Point(70, 3);
+            this.textBoxCountry.Location = new System.Drawing.Point(3, 22);
             this.textBoxCountry.Name = "textBoxCountry";
             this.textBoxCountry.Size = new System.Drawing.Size(100, 20);
             this.textBoxCountry.TabIndex = 1;
@@ -757,7 +720,7 @@
             this.flowLayoutPanel16.Location = new System.Drawing.Point(0, 26);
             this.flowLayoutPanel16.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel16.Name = "flowLayoutPanel16";
-            this.flowLayoutPanel16.Size = new System.Drawing.Size(186, 25);
+            this.flowLayoutPanel16.Size = new System.Drawing.Size(1, 25);
             this.flowLayoutPanel16.TabIndex = 2;
             // 
             // label20
@@ -776,7 +739,7 @@
             this.textBoxName.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxName.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxName.ForeColor = System.Drawing.Color.White;
-            this.textBoxName.Location = new System.Drawing.Point(60, 3);
+            this.textBoxName.Location = new System.Drawing.Point(3, 22);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(100, 20);
             this.textBoxName.TabIndex = 1;
@@ -786,10 +749,10 @@
             this.flowLayoutPanel17.Controls.Add(this.label21);
             this.flowLayoutPanel17.Controls.Add(this.textBoxMateral);
             this.flowLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel17.Location = new System.Drawing.Point(186, 0);
+            this.flowLayoutPanel17.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel17.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel17.Name = "flowLayoutPanel17";
-            this.flowLayoutPanel17.Size = new System.Drawing.Size(187, 26);
+            this.flowLayoutPanel17.Size = new System.Drawing.Size(1, 26);
             this.flowLayoutPanel17.TabIndex = 1;
             // 
             // label21
@@ -808,7 +771,7 @@
             this.textBoxMateral.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxMateral.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMateral.ForeColor = System.Drawing.Color.White;
-            this.textBoxMateral.Location = new System.Drawing.Point(71, 3);
+            this.textBoxMateral.Location = new System.Drawing.Point(3, 22);
             this.textBoxMateral.Name = "textBoxMateral";
             this.textBoxMateral.Size = new System.Drawing.Size(100, 20);
             this.textBoxMateral.TabIndex = 1;
@@ -821,7 +784,7 @@
             this.flowLayoutPanel18.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel18.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
-            this.flowLayoutPanel18.Size = new System.Drawing.Size(186, 26);
+            this.flowLayoutPanel18.Size = new System.Drawing.Size(1, 26);
             this.flowLayoutPanel18.TabIndex = 0;
             // 
             // label22
@@ -840,7 +803,7 @@
             this.textBoxId.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxId.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxId.ForeColor = System.Drawing.Color.White;
-            this.textBoxId.Location = new System.Drawing.Point(56, 3);
+            this.textBoxId.Location = new System.Drawing.Point(3, 22);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(100, 20);
             this.textBoxId.TabIndex = 1;
@@ -849,10 +812,10 @@
             // 
             this.flowLayoutPanel19.Controls.Add(this.label24);
             this.flowLayoutPanel19.Controls.Add(this.textBoxSale);
-            this.flowLayoutPanel19.Location = new System.Drawing.Point(186, 76);
+            this.flowLayoutPanel19.Location = new System.Drawing.Point(0, 76);
             this.flowLayoutPanel19.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel19.Name = "flowLayoutPanel19";
-            this.flowLayoutPanel19.Size = new System.Drawing.Size(187, 25);
+            this.flowLayoutPanel19.Size = new System.Drawing.Size(1, 25);
             this.flowLayoutPanel19.TabIndex = 5;
             // 
             // label24
@@ -871,7 +834,7 @@
             this.textBoxSale.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxSale.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSale.ForeColor = System.Drawing.Color.White;
-            this.textBoxSale.Location = new System.Drawing.Point(64, 3);
+            this.textBoxSale.Location = new System.Drawing.Point(3, 22);
             this.textBoxSale.Name = "textBoxSale";
             this.textBoxSale.Size = new System.Drawing.Size(100, 20);
             this.textBoxSale.TabIndex = 1;
@@ -880,10 +843,10 @@
             // 
             this.flowLayoutPanel20.Controls.Add(this.label25);
             this.flowLayoutPanel20.Controls.Add(this.textBoxBH);
-            this.flowLayoutPanel20.Location = new System.Drawing.Point(186, 101);
+            this.flowLayoutPanel20.Location = new System.Drawing.Point(0, 101);
             this.flowLayoutPanel20.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel20.Name = "flowLayoutPanel20";
-            this.flowLayoutPanel20.Size = new System.Drawing.Size(187, 25);
+            this.flowLayoutPanel20.Size = new System.Drawing.Size(1, 25);
             this.flowLayoutPanel20.TabIndex = 5;
             // 
             // label25
@@ -902,7 +865,7 @@
             this.textBoxBH.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.textBoxBH.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBH.ForeColor = System.Drawing.Color.White;
-            this.textBoxBH.Location = new System.Drawing.Point(73, 3);
+            this.textBoxBH.Location = new System.Drawing.Point(3, 22);
             this.textBoxBH.Name = "textBoxBH";
             this.textBoxBH.Size = new System.Drawing.Size(100, 20);
             this.textBoxBH.TabIndex = 1;
@@ -913,7 +876,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 228);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(506, 133);
+            this.dataGridView1.Size = new System.Drawing.Size(1, 133);
             this.dataGridView1.TabIndex = 4;
             // 
             // panel1
@@ -923,7 +886,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 195);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(512, 30);
+            this.panel1.Size = new System.Drawing.Size(1, 30);
             this.panel1.TabIndex = 5;
             // 
             // label23
@@ -945,7 +908,7 @@
             this.panel11.Location = new System.Drawing.Point(0, 165);
             this.panel11.Margin = new System.Windows.Forms.Padding(0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(512, 30);
+            this.panel11.Size = new System.Drawing.Size(1, 30);
             this.panel11.TabIndex = 6;
             // 
             // buttonCancel
@@ -988,7 +951,7 @@
             this.tableLayoutPanelItem.Name = "tableLayoutPanelItem";
             this.tableLayoutPanelItem.RowCount = 1;
             this.tableLayoutPanelItem.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanelItem.Size = new System.Drawing.Size(269, 364);
+            this.tableLayoutPanelItem.Size = new System.Drawing.Size(783, 364);
             this.tableLayoutPanelItem.TabIndex = 3;
             // 
             // tableLayoutPanel10
@@ -996,110 +959,15 @@
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel10.Controls.Add(this.listViewItem, 0, 0);
+            this.tableLayoutPanel10.Controls.Add(this.dataGridViewItemList, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.61986F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(269, 364);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(783, 364);
             this.tableLayoutPanel10.TabIndex = 1;
-            // 
-            // listViewItem
-            // 
-            this.listViewItem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listViewItem.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8,
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11,
-            this.columnHeader12});
-            this.listViewItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewItem.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewItem.FullRowSelect = true;
-            this.listViewItem.GridLines = true;
-            this.listViewItem.HideSelection = false;
-            this.listViewItem.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
-            this.listViewItem.Location = new System.Drawing.Point(0, 0);
-            this.listViewItem.Margin = new System.Windows.Forms.Padding(0);
-            this.listViewItem.Name = "listViewItem";
-            this.listViewItem.Size = new System.Drawing.Size(269, 364);
-            this.listViewItem.TabIndex = 3;
-            this.listViewItem.UseCompatibleStateImageBehavior = false;
-            this.listViewItem.View = System.Windows.Forms.View.Details;
-            this.listViewItem.SelectedIndexChanged += new System.EventHandler(this.listViewItem_SelectedIndexChanged);
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "STT";
-            this.columnHeader1.Width = 37;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Mã SP";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tên SP";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 102;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Loại";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 59;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Kiểu";
-            this.columnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader5.Width = 62;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Màu";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Chất Liệu";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Nước SX";
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "SL";
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Giá Nhập";
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Giá Bán";
-            // 
-            // columnHeader12
-            // 
-            this.columnHeader12.Text = "T/g Bảo Hành";
             // 
             // tableLayoutPanel11
             // 
@@ -1111,7 +979,7 @@
             this.tableLayoutPanel11.Controls.Add(this.dataGridViewBill, 0, 3);
             this.tableLayoutPanel11.Controls.Add(this.panel9, 0, 2);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel11.Location = new System.Drawing.Point(279, 0);
+            this.tableLayoutPanel11.Location = new System.Drawing.Point(793, 0);
             this.tableLayoutPanel11.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.tableLayoutPanel11.Name = "tableLayoutPanel11";
             this.tableLayoutPanel11.RowCount = 4;
@@ -1461,6 +1329,15 @@
             this.label16.TabIndex = 4;
             this.label16.Text = "DS HÓA ĐƠN ĐÃ MUA SẢN PHẨM:";
             // 
+            // dataGridViewItemList
+            // 
+            this.dataGridViewItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItemList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewItemList.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewItemList.Name = "dataGridViewItemList";
+            this.dataGridViewItemList.Size = new System.Drawing.Size(777, 358);
+            this.dataGridViewItemList.TabIndex = 0;
+            // 
             // Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1540,6 +1417,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItemList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1564,19 +1442,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.ListView listViewItem;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
-        private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private FontAwesome.Sharp.IconButton iconButtonArrowRight;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
@@ -1652,5 +1517,6 @@
         private FontAwesome.Sharp.IconButton iconButtonAdd;
         private FontAwesome.Sharp.IconButton iconButtonRepair;
         private FontAwesome.Sharp.IconButton iconButtonDelete;
+        private System.Windows.Forms.DataGridView dataGridViewItemList;
     }
 }
