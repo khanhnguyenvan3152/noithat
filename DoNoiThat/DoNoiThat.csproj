@@ -63,6 +63,7 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="NoiThat.cs" />
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +173,9 @@
   <ItemGroup>
     <Content Include="images\noithat1 %282%29.ico" />
     <Content Include="images\noithat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="furnitureimage\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

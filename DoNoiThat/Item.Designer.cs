@@ -1,34 +1,4 @@
-﻿namespace DoNoiThat
-{
-    partial class Item
-    {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Item));
+﻿namespace DoNoiThat {     partial class Item     {         /// <summary>         /// Required designer variable.         /// </summary>         private System.ComponentModel.IContainer components = null;          /// <summary>         /// Clean up any resources being used.         /// </summary>         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>         protected override void Dispose(bool disposing)         {             if (disposing && (components != null))             {                 components.Dispose();             }             base.Dispose(disposing);         }          #region Windows Form Designer generated code          /// <summary>         /// Required method for Designer support - do not modify         /// the contents of this method with the code editor.         /// </summary>         private void InitializeComponent()         {             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Item));
             this.tabControlItem = new System.Windows.Forms.TabControl();
             this.tabPageItemList = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
@@ -393,6 +363,7 @@
             this.iconButtonAdd.Text = "Thêm";
             this.iconButtonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAdd.UseVisualStyleBackColor = false;
+            this.iconButtonAdd.Click += new System.EventHandler(this.iconButtonAdd_Click);
             // 
             // iconButtonRepair
             // 
@@ -415,6 +386,7 @@
             this.iconButtonRepair.Text = "Sửa";
             this.iconButtonRepair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonRepair.UseVisualStyleBackColor = false;
+            this.iconButtonRepair.Click += new System.EventHandler(this.iconButtonRepair_Click);
             // 
             // iconButtonDelete
             // 
@@ -1425,103 +1397,4 @@
             this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
-        }
-
-        #endregion
-
-        private System.Windows.Forms.TabControl tabControlItem;
-        private System.Windows.Forms.TabPage tabPageItemList;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.Panel panel12;
-        private FontAwesome.Sharp.IconButton iconButtonFilter;
-        private System.Windows.Forms.ComboBox comboBoxImportPrice;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBoxCountry;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBoxMaterial;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxType;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItem;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
-        private FontAwesome.Sharp.IconButton iconButtonArrowRight;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox Type;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxMaterial;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridViewBill;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button buttonOk;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxColor;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox textBoxImport;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBoxType;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel15;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBoxCountry;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel16;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel17;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBoxMateral;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel19;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBoxSale;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel20;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBoxBH;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button buttonCancel;
-        private System.Windows.Forms.Button buttonAllow;
-        private System.Windows.Forms.TextBox textBoxId;
-        private System.Windows.Forms.TextBox textBoxKind;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel21;
-        private FontAwesome.Sharp.IconButton iconButtonAdd;
-        private FontAwesome.Sharp.IconButton iconButtonRepair;
-        private FontAwesome.Sharp.IconButton iconButtonDelete;
-        private System.Windows.Forms.DataGridView dataGridViewItemList;
-    }
-}
+        }          #endregion          private System.Windows.Forms.TabControl tabControlItem;         private System.Windows.Forms.TabPage tabPageItemList;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;         private System.Windows.Forms.Panel panel12;         private FontAwesome.Sharp.IconButton iconButtonFilter;         private System.Windows.Forms.ComboBox comboBoxImportPrice;         private System.Windows.Forms.Label label5;         private System.Windows.Forms.ComboBox comboBoxCountry;         private System.Windows.Forms.Label label4;         private System.Windows.Forms.ComboBox comboBoxMaterial;         private System.Windows.Forms.Label label3;         private System.Windows.Forms.ComboBox comboBoxType;         private System.Windows.Forms.Label label2;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelItem;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;         private FontAwesome.Sharp.IconButton iconButtonArrowRight;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;         private System.Windows.Forms.PictureBox pictureBox3;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;         private System.Windows.Forms.Label label15;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;         private System.Windows.Forms.Label label14;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;         private System.Windows.Forms.Label label13;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;         private System.Windows.Forms.Label label12;         private System.Windows.Forms.TextBox Type;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;         private System.Windows.Forms.Label label11;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;         private System.Windows.Forms.Label label10;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;         private System.Windows.Forms.Label label8;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;         private System.Windows.Forms.Label label7;         private System.Windows.Forms.TextBox textBoxMaterial;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;         private System.Windows.Forms.Label label6;         private System.Windows.Forms.DataGridView dataGridViewBill;         private System.Windows.Forms.Panel panel9;         private System.Windows.Forms.Button buttonOk;         private System.Windows.Forms.Label label16;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;         private FontAwesome.Sharp.IconButton iconButton1;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;         private System.Windows.Forms.PictureBox pictureBox1;         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;         private System.Windows.Forms.Label label1;         private System.Windows.Forms.TextBox textBoxColor;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;         private System.Windows.Forms.Label label9;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;         private System.Windows.Forms.Label label17;         private System.Windows.Forms.TextBox textBoxImport;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;         private System.Windows.Forms.Label label18;         private System.Windows.Forms.TextBox textBoxType;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel15;         private System.Windows.Forms.Label label19;         private System.Windows.Forms.TextBox textBoxCountry;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel16;         private System.Windows.Forms.Label label20;         private System.Windows.Forms.TextBox textBoxName;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel17;         private System.Windows.Forms.Label label21;         private System.Windows.Forms.TextBox textBoxMateral;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;         private System.Windows.Forms.Label label22;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel19;         private System.Windows.Forms.Label label24;         private System.Windows.Forms.TextBox textBoxSale;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel20;         private System.Windows.Forms.Label label25;         private System.Windows.Forms.TextBox textBoxBH;         private System.Windows.Forms.DataGridView dataGridView1;         private System.Windows.Forms.Panel panel1;         private System.Windows.Forms.Label label23;         private System.Windows.Forms.Panel panel11;         private System.Windows.Forms.Button buttonCancel;         private System.Windows.Forms.Button buttonAllow;         private System.Windows.Forms.TextBox textBoxId;         private System.Windows.Forms.TextBox textBoxKind;         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel21;         private FontAwesome.Sharp.IconButton iconButtonAdd;         private FontAwesome.Sharp.IconButton iconButtonRepair;         private FontAwesome.Sharp.IconButton iconButtonDelete;         private System.Windows.Forms.DataGridView dataGridViewItemList;     } }

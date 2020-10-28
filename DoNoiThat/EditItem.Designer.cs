@@ -319,6 +319,7 @@
             this.cbMaChatLieu.Name = "cbMaChatLieu";
             this.cbMaChatLieu.Size = new System.Drawing.Size(100, 24);
             this.cbMaChatLieu.TabIndex = 6;
+            this.cbMaChatLieu.SelectedIndexChanged += new System.EventHandler(this.cbMaChatLieu_SelectedIndexChanged);
             // 
             // label6
             // 

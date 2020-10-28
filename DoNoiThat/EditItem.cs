@@ -14,7 +14,11 @@ namespace DoNoiThat
     {
         NoiThat sanpham;
         Dictionary<string, string> ChatLieu;
-        public EditItem() => InitializeComponent();
+     
+        public EditItem()
+        {
+                InitializeComponent();
+        }
         public EditItem(NoiThat o)
         {
             InitializeComponent();
@@ -40,15 +44,26 @@ namespace DoNoiThat
         }
         private Dictionary<string,string> TimKiem(string sql)
         {
+            Dictionary<string, string> dic = new Dictionary<string, string>();
             DataTable table = Functions.GetDataTable(sql);
-            foreach(DataGridViewRow in table)
+            foreach(DataRow row in table.Rows)
             {
-
+                dic.Add(row.ItemArray[0].ToString(), row.ItemArray[1].ToString());
             }
+            return dic;
         }
         private void EditItem_Load(object sender, EventArgs e)
         {
-           
+            ChatLieu = TimKiem("SELECT * FROM ChatLieu");
+            foreach(var lmao in ChatLieu)
+            {
+                cbMaChatLieu.Items.Add(lmao.Key);
+            }
+        }
+
+        private void cbMaChatLieu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            sanpham.MaChatLieu = ChatLieu[cbMaChatLieu.SelectedItem.ToString()];
         }
     }
 }

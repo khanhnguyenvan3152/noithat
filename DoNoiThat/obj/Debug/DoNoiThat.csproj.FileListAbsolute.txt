@@ -96,3 +96,4 @@ C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debu
 C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
 C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.exe
 C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.EditItem.resources

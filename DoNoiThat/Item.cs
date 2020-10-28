@@ -53,5 +53,39 @@ namespace DoNoiThat
         {
             
         }
+
+        private void iconButtonAdd_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void iconButtonRepair_Click(object sender, EventArgs e)
+        {
+
+            if (dataGridViewItemList.SelectedCells.Count > 0)
+            {
+                int selectedrowindex = dataGridViewItemList.SelectedCells[0].RowIndex;
+                DataGridViewRow row = dataGridViewItemList.Rows[selectedrowindex];
+                MessageBox.Show(row.Cells[10].Value.ToString());
+                NoiThat sanpham = new NoiThat(row.Cells[0].Value.ToString(),
+                    row.Cells[1].Value.ToString(),
+                    row.Cells[2].Value.ToString(),
+                    row.Cells[3].Value.ToString(),
+                    row.Cells[4].Value.ToString(),
+                    row.Cells[5].Value.ToString(),
+                row.Cells[6].Value.ToString(),
+                int.Parse(row.Cells[7].Value.ToString()),
+                double.Parse(row.Cells[8].Value.ToString()),
+                double.Parse(row.Cells[9].Value.ToString()), row.Cells[10].Value.ToString(), row.Cells[11].Value.ToString());
+                EditItem editform = new EditItem(sanpham);
+                editform.Show();
+            }
+            // NoiThat sanpham = new NoiThat(row.Cells[0].ToString(), row.Cells[1].ToString(), row.Cells[2].ToString(), row.Cells[3].ToString(), row.Cells[4].ToString(), row.Cells[5].ToString(),
+            //                    row.Cells[6].ToString(), int.Parse(row.Cells[7].ToString()), double.Parse(row.Cells[8].ToString()), double.Parse(row.Cells[9].ToString()), row.Cells[10].ToString(), row.Cells[11].ToString());
+            //EditItem editform = new EditItem(sanpham);
+            //editform.Show();
+
+
+        }
     }
 }
