@@ -25,5 +25,15 @@ namespace DoNoiThat
         {
             
         }
+
+        private void radioButtonYes_CheckedChanged(object sender, EventArgs e)
+        {
+            panelCustomer.Enabled = false;
+        }
+
+        private void radioButtonNo_CheckedChanged(object sender, EventArgs e)
+        {
+            panelCustomer.Enabled = true;
+        }
     }
 }

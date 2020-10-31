@@ -156,7 +156,7 @@
             this.tabPageImportList.Controls.Add(this.tableLayoutPanel7);
             this.tabPageImportList.Location = new System.Drawing.Point(4, 25);
             this.tabPageImportList.Name = "tabPageImportList";
-            this.tabPageImportList.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageImportList.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageImportList.Size = new System.Drawing.Size(797, 477);
             this.tabPageImportList.TabIndex = 0;
             this.tabPageImportList.Text = "DS Hóa Đơn Nhập";
@@ -420,10 +420,11 @@
             // 
             // dataGridViewImportDetail
             // 
+            this.dataGridViewImportDetail.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewImportDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewImportDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewImportDetail.Location = new System.Drawing.Point(2, 87);
-            this.dataGridViewImportDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewImportDetail.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewImportDetail.Name = "dataGridViewImportDetail";
             this.dataGridViewImportDetail.RowHeadersWidth = 51;
             this.dataGridViewImportDetail.RowTemplate.Height = 24;
@@ -599,10 +600,11 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(2, 87);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -614,7 +616,7 @@
             this.tabPageSale.Controls.Add(this.tableLayoutPanel12);
             this.tabPageSale.Location = new System.Drawing.Point(4, 25);
             this.tabPageSale.Name = "tabPageSale";
-            this.tabPageSale.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageSale.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSale.Size = new System.Drawing.Size(797, 477);
             this.tabPageSale.TabIndex = 1;
             this.tabPageSale.Text = "Lập Hóa Đơn";

@@ -76,3 +76,4 @@ D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
 D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
 D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.exe
 D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.pdb
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Else.resources

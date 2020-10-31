@@ -40,10 +40,13 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.iconButtonStElse = new FontAwesome.Sharp.IconButton();
+            this.button8 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.iconButtonReport = new FontAwesome.Sharp.IconButton();
-            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.iconButtonStaff = new FontAwesome.Sharp.IconButton();
             this.button7 = new System.Windows.Forms.Button();
@@ -82,6 +85,8 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -239,8 +244,8 @@
             // 
             this.tableLayoutPanel6.ColumnCount = 1;
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 239F));
+            this.tableLayoutPanel6.Controls.Add(this.panel11, 0, 7);
             this.tableLayoutPanel6.Controls.Add(this.panel9, 0, 8);
-            this.tableLayoutPanel6.Controls.Add(this.panel8, 0, 7);
             this.tableLayoutPanel6.Controls.Add(this.panel7, 0, 6);
             this.tableLayoutPanel6.Controls.Add(this.panel6, 0, 5);
             this.tableLayoutPanel6.Controls.Add(this.panel5, 0, 4);
@@ -268,8 +273,56 @@
             this.tableLayoutPanel6.Size = new System.Drawing.Size(239, 425);
             this.tableLayoutPanel6.TabIndex = 1;
             // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.iconButtonStElse);
+            this.panel11.Controls.Add(this.button8);
+            this.panel11.Location = new System.Drawing.Point(0, 280);
+            this.panel11.Margin = new System.Windows.Forms.Padding(0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(239, 40);
+            this.panel11.TabIndex = 7;
+            // 
+            // iconButtonStElse
+            // 
+            this.iconButtonStElse.FlatAppearance.BorderSize = 0;
+            this.iconButtonStElse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(45)))));
+            this.iconButtonStElse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.iconButtonStElse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonStElse.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonStElse.IconChar = FontAwesome.Sharp.IconChar.Elementor;
+            this.iconButtonStElse.IconColor = System.Drawing.Color.White;
+            this.iconButtonStElse.IconSize = 25;
+            this.iconButtonStElse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonStElse.Location = new System.Drawing.Point(3, -1);
+            this.iconButtonStElse.Margin = new System.Windows.Forms.Padding(0);
+            this.iconButtonStElse.Name = "iconButtonStElse";
+            this.iconButtonStElse.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.iconButtonStElse.Rotation = 0D;
+            this.iconButtonStElse.Size = new System.Drawing.Size(236, 40);
+            this.iconButtonStElse.TabIndex = 8;
+            this.iconButtonStElse.Text = "Khác";
+            this.iconButtonStElse.UseVisualStyleBackColor = true;
+            this.iconButtonStElse.Click += new System.EventHandler(this.iconButtonStElse_Click);
+            // 
+            // button8
+            // 
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Location = new System.Drawing.Point(-1, -1);
+            this.button8.Margin = new System.Windows.Forms.Padding(0);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(4, 40);
+            this.button8.TabIndex = 8;
+            this.button8.Text = " \r\n";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.panel8);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 320);
             this.panel9.Margin = new System.Windows.Forms.Padding(0);
@@ -280,9 +333,8 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.iconButtonReport);
-            this.panel8.Controls.Add(this.button8);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel8.Location = new System.Drawing.Point(0, 280);
+            this.panel8.Controls.Add(this.button9);
+            this.panel8.Location = new System.Drawing.Point(0, 0);
             this.panel8.Margin = new System.Windows.Forms.Padding(0);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(239, 40);
@@ -305,25 +357,25 @@
             this.iconButtonReport.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
             this.iconButtonReport.Rotation = 0D;
             this.iconButtonReport.Size = new System.Drawing.Size(236, 40);
-            this.iconButtonReport.TabIndex = 8;
+            this.iconButtonReport.TabIndex = 9;
             this.iconButtonReport.Text = "Báo Cáo";
             this.iconButtonReport.UseVisualStyleBackColor = true;
             this.iconButtonReport.Click += new System.EventHandler(this.iconButtonReport_Click);
             // 
-            // button8
+            // button9
             // 
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(-1, -1);
-            this.button8.Margin = new System.Windows.Forms.Padding(0);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(4, 40);
-            this.button8.TabIndex = 8;
-            this.button8.Text = " \r\n";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(-1, -1);
+            this.button9.Margin = new System.Windows.Forms.Padding(0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(4, 40);
+            this.button9.TabIndex = 9;
+            this.button9.Text = " \r\n";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // panel7
             // 
@@ -784,6 +836,8 @@
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -810,7 +864,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel9;
         private FontAwesome.Sharp.IconButton iconButtonReport;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel8;
         private FontAwesome.Sharp.IconButton iconButtonStaff;
         private System.Windows.Forms.Button button7;
@@ -847,5 +901,8 @@
         private FontAwesome.Sharp.IconButton iconButtonBars;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.Panel paneMain;
+        private System.Windows.Forms.Panel panel11;
+        private FontAwesome.Sharp.IconButton iconButtonStElse;
+        private System.Windows.Forms.Button button8;
     }
 }

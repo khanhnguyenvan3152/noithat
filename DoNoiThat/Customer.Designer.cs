@@ -67,7 +67,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.buttonOk = new System.Windows.Forms.Button();
             this.dataGridViewItem = new System.Windows.Forms.DataGridView();
-            this.comboBoxMonth = new System.Windows.Forms.ComboBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.textBoxPhone = new System.Windows.Forms.TextBox();
             this.textBoxId = new System.Windows.Forms.TextBox();
@@ -75,7 +74,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
@@ -236,7 +234,6 @@
             this.panel13.Controls.Add(this.label9);
             this.panel13.Controls.Add(this.buttonOk);
             this.panel13.Controls.Add(this.dataGridViewItem);
-            this.panel13.Controls.Add(this.comboBoxMonth);
             this.panel13.Controls.Add(this.textBoxAddress);
             this.panel13.Controls.Add(this.textBoxPhone);
             this.panel13.Controls.Add(this.textBoxId);
@@ -244,7 +241,6 @@
             this.panel13.Controls.Add(this.label11);
             this.panel13.Controls.Add(this.label12);
             this.panel13.Controls.Add(this.label6);
-            this.panel13.Controls.Add(this.label8);
             this.panel13.Controls.Add(this.label7);
             this.panel13.Controls.Add(this.label13);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -287,14 +283,6 @@
             this.dataGridViewItem.Name = "dataGridViewItem";
             this.dataGridViewItem.Size = new System.Drawing.Size(374, 224);
             this.dataGridViewItem.TabIndex = 3;
-            // 
-            // comboBoxMonth
-            // 
-            this.comboBoxMonth.FormattingEnabled = true;
-            this.comboBoxMonth.Location = new System.Drawing.Point(313, 116);
-            this.comboBoxMonth.Name = "comboBoxMonth";
-            this.comboBoxMonth.Size = new System.Drawing.Size(49, 24);
-            this.comboBoxMonth.TabIndex = 2;
             // 
             // textBoxAddress
             // 
@@ -354,17 +342,6 @@
             this.label6.Size = new System.Drawing.Size(161, 16);
             this.label6.TabIndex = 0;
             this.label6.Text = "DANH SÁCH SẢN PHẨM:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(259, 119);
-            this.label8.Margin = new System.Windows.Forms.Padding(3, 10, 3, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 16);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Tháng:";
             // 
             // label7
             // 
@@ -499,7 +476,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.DataGridView dataGridViewItem;
-        private System.Windows.Forms.ComboBox comboBoxMonth;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.TextBox textBoxPhone;
         private System.Windows.Forms.TextBox textBoxId;
@@ -507,7 +483,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;

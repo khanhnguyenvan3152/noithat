@@ -19,6 +19,11 @@ namespace DoNoiThat
             InitializeComponent();
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonSignup_Click(object sender, EventArgs e)
         {
             this.Hide();

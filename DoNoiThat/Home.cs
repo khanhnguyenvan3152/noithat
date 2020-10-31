@@ -14,10 +14,12 @@ namespace DoNoiThat
 {
     public partial class Home : Form
     {
+        public SendNotification send;
 
-        public Home()
+        public Home(SendNotification sender)
         {
             InitializeComponent();
+            this.send = sender;
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -32,7 +34,42 @@ namespace DoNoiThat
 
         private void icoBtnItem_Click(object sender, EventArgs e)
         {
-            
+            this.send(2);
+        }
+
+        private void icoBtnOrder_Click(object sender, EventArgs e)
+        {
+            this.send(3);
+        }
+
+        private void icoBtnImportBill_Click(object sender, EventArgs e)
+        {
+            this.send(4);
+        }
+
+        private void icoBtnCustomer_Click(object sender, EventArgs e)
+        {
+            this.send(5);
+        }
+
+        private void icoBtnSupplier_Click(object sender, EventArgs e)
+        {
+            this.send(6);
+        }
+
+        private void icoBtnStaff_Click(object sender, EventArgs e)
+        {
+            this.send(7);
+        }
+
+        private void icoBtnStElse_Click(object sender, EventArgs e)
+        {
+            this.send(8);
+        }
+
+        private void icoBtnReport_Click(object sender, EventArgs e)
+        {
+            this.send(9);
         }
 
 
@@ -159,6 +196,23 @@ namespace DoNoiThat
         }
 
 
+        //hover cho icoBtnStElse
+        private void icoBtnStElse_MouseMove(object sender, MouseEventArgs e)
+        {
+            MouseMoveChange(icoBtnStElse, panelStElse);
+        }
+
+        private void icoBtnStElse_MouseLeave(object sender, EventArgs e)
+        {
+            MouseLeaveChange(icoBtnStElse, panelStElse, Color.Orange);
+        }
+
+        private void icoBtnStElse_MouseDown(object sender, MouseEventArgs e)
+        {
+            panelStElse.BackColor = Color.DarkOrange;
+        }
+
+
         //hover cho icoBtnReport
         private void icoBtnReport_MouseMove(object sender, MouseEventArgs e)
         {
@@ -167,13 +221,15 @@ namespace DoNoiThat
 
         private void icoBtnReport_MouseLeave(object sender, EventArgs e)
         {
-            MouseLeaveChange(icoBtnReport, panelReport, Color.Orange);
+            MouseLeaveChange(icoBtnReport, panelReport, Color.Teal);
         }
 
         private void icoBtnReport_MouseDown(object sender, MouseEventArgs e)
         {
-            panelReport.BackColor = Color.DarkOrange;
+            panelReport.BackColor = Color.DarkSlateGray;
         }
+
+
 
 
         /*
