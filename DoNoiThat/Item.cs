@@ -15,11 +15,7 @@ namespace DoNoiThat
 {
     public partial class Item : Form
     {
-        SortedDictionary<string, string> dicchatlieu = Functions.Dic("Select MaChatLieu,TenChatLieu FROM ChatLieu");
-        SortedDictionary<string, string> dicTheLoai = Functions.Dic("Select * From TheLoai");
-        SortedDictionary<string, string> dicKieuDang = Functions.Dic("Select * FROM KieuDang");
-        SortedDictionary<string, string> dicMauSac = Functions.Dic("Select * FROM MauSac");
-        SortedDictionary<string, string> dicNuocSX = Functions.Dic("Select MaNSX,TenNSX FROM NuocSX");
+        
 
 
         public Item()
