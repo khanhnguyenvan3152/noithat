@@ -15,8 +15,8 @@ namespace DoNoiThat
 {
     public partial class Item : Form
     {
-        
 
+        int state = 0; // readonly // 1 them //2 sua
 
         public Item()
         {
@@ -75,31 +75,43 @@ namespace DoNoiThat
         private void iconButtonAdd_Click(object sender, EventArgs e)
         {
             tableLayoutPanel9.ColumnStyles[1].Width = 600;
+
         }
 
         private void iconButtonRepair_Click(object sender, EventArgs e)
         {
             tableLayoutPanel9.ColumnStyles[1].Width = 600;
-
-            if (dataGridViewItemList.SelectedCells.Count > 0)
+            state = 2;
+            int selectedrowindex = dataGridViewItemList.SelectedCells[0].RowIndex;
+            if (selectedrowindex < dataGridViewItemList.RowCount - 1)
             {
-                int selectedrowindex = dataGridViewItemList.SelectedCells[0].RowIndex;
                 DataGridViewRow row = dataGridViewItemList.Rows[selectedrowindex];
-                MessageBox.Show(row.Cells[10].Value.ToString());
-                NoiThat sanpham = new NoiThat(row.Cells[0].Value.ToString(),
-                    row.Cells[1].Value.ToString(),
-                    row.Cells[2].Value.ToString(),
-                    row.Cells[3].Value.ToString(),
-                    row.Cells[4].Value.ToString(),
-                    row.Cells[5].Value.ToString(),
-                row.Cells[6].Value.ToString(),
-                int.Parse(row.Cells[7].Value.ToString()),
-                double.Parse(row.Cells[8].Value.ToString()),
-                double.Parse(row.Cells[9].Value.ToString()), row.Cells[10].Value.ToString(), row.Cells[11].Value.ToString());
-                EditItem editform = new EditItem(sanpham);
-                editform.Show();
+                string path = Application.StartupPath + "\\" + row.Cells[10].Value.ToString();
+
+                Image img = Image.FromFile(path);
+                pictureBox1.Image = img;
+                pictureBox1.ImageLocation = path;
+                btnAdd.Enabled =  true;
+                btnAdd.Text = "Xác nhận";
+
+
+                textBoxId.Text = row.Cells[0].Value.ToString();
+                textBoxId.Enabled = false;
+                textBoxName.Text = row.Cells[1].Value.ToString();
+
+                cbTheLoai.SelectedValue = row.Cells[2].Value;
+                cbKieuDang.SelectedValue = row.Cells[3].Value;
+                cbMauSac.SelectedValue = row.Cells[4].Value;
+                cbChatLieu.SelectedValue = row.Cells[5].Value;
+                cbNuocSX.SelectedValue = row.Cells[6].Value;
+
+                textBoxQuantity.Text = row.Cells[7].Value.ToString();
+                textBoxImportPrice.Text = row.Cells[8].Value.ToString();
+                textBoxSalePrice.Text = row.Cells[9].Value.ToString();
+                txtImagePath.Text = path;
+                textBoxWarranty.Text = row.Cells[11].Value.ToString();
             }
-            // NoiThat sanpham = new NoiThat(row.Cells[0].ToString(), row.Cells[1].ToString(), row.Cells[2].ToString(), row.Cells[3].ToString(), row.Cells[4].ToString(), row.Cells[5].ToString(),
+                    // NoiThat sanpham = new NoiThat(row.Cells[0].ToString(), row.Cells[1].ToString(), row.Cells[2].ToString(), row.Cells[3].ToString(), row.Cells[4].ToString(), row.Cells[5].ToString(),
             //                    row.Cells[6].ToString(), int.Parse(row.Cells[7].ToString()), double.Parse(row.Cells[8].ToString()), double.Parse(row.Cells[9].ToString()), row.Cells[10].ToString(), row.Cells[11].ToString());
             //EditItem editform = new EditItem(sanpham);
             //editform.Show();
@@ -165,6 +177,14 @@ namespace DoNoiThat
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if(state == 2)
+            {
+
+            }
         }
     }
 }

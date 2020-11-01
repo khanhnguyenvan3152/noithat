@@ -33,6 +33,23 @@ namespace DoNoiThat
                 Con = null;
             }
         }
+        public static void RunSQL(string sql)
+        {
+            SqlCommand cmd; //Đối tượng thuộc lớp SqlCommand
+            cmd = new SqlCommand();
+            cmd.Connection = Con; //Gán kết nối
+            cmd.CommandText = sql; //Gán lệnh SQL
+            try
+            {
+                cmd.ExecuteNonQuery(); //Thực hiện câu lệnh SQL
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            cmd.Dispose();//Giải phóng bộ nhớ
+            cmd = null;
+        }
         public static DataTable GetDataTable(string sql)
         {
             SqlDataAdapter Dap = new SqlDataAdapter();

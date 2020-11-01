@@ -68,6 +68,9 @@
             this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
             this.label19 = new System.Windows.Forms.Label();
             this.textBoxQuantity = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
             this.label21 = new System.Windows.Forms.Label();
             this.cbNuocSX = new System.Windows.Forms.ComboBox();
@@ -131,9 +134,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
             this.tabControlItem.SuspendLayout();
             this.tabPageItemList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -149,6 +149,7 @@
             this.flowLayoutPanel12.SuspendLayout();
             this.flowLayoutPanel14.SuspendLayout();
             this.flowLayoutPanel15.SuspendLayout();
+            this.flowLayoutPanel16.SuspendLayout();
             this.flowLayoutPanel17.SuspendLayout();
             this.flowLayoutPanel18.SuspendLayout();
             this.flowLayoutPanel23.SuspendLayout();
@@ -177,7 +178,6 @@
             this.flowLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).BeginInit();
             this.panel9.SuspendLayout();
-            this.flowLayoutPanel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlItem
@@ -256,7 +256,6 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1183, 62);
             this.panel12.TabIndex = 0;
-            this.panel12.Paint += new System.Windows.Forms.PaintEventHandler(this.panel12_Paint);
             // 
             // label30
             // 
@@ -720,6 +719,39 @@
             this.textBoxQuantity.Size = new System.Drawing.Size(124, 25);
             this.textBoxQuantity.TabIndex = 2;
             // 
+            // flowLayoutPanel16
+            // 
+            this.flowLayoutPanel16.Controls.Add(this.label20);
+            this.flowLayoutPanel16.Controls.Add(this.textBoxName);
+            this.flowLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel16.Location = new System.Drawing.Point(0, 32);
+            this.flowLayoutPanel16.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel16.Name = "flowLayoutPanel16";
+            this.flowLayoutPanel16.Size = new System.Drawing.Size(297, 31);
+            this.flowLayoutPanel16.TabIndex = 2;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(4, 6);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(59, 16);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Tên SP:";
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.ForeColor = System.Drawing.Color.Black;
+            this.textBoxName.Location = new System.Drawing.Point(79, 4);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(192, 25);
+            this.textBoxName.TabIndex = 1;
+            // 
             // flowLayoutPanel17
             // 
             this.flowLayoutPanel17.Controls.Add(this.label21);
@@ -1003,6 +1035,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // panel11
             // 
@@ -1455,39 +1488,6 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Giá Nhập:";
             // 
-            // textBoxName
-            // 
-            this.textBoxName.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxName.ForeColor = System.Drawing.Color.Black;
-            this.textBoxName.Location = new System.Drawing.Point(79, 4);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(192, 25);
-            this.textBoxName.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(4, 6);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 16);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "Tên SP:";
-            // 
-            // flowLayoutPanel16
-            // 
-            this.flowLayoutPanel16.Controls.Add(this.label20);
-            this.flowLayoutPanel16.Controls.Add(this.textBoxName);
-            this.flowLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel16.Location = new System.Drawing.Point(0, 32);
-            this.flowLayoutPanel16.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel16.Name = "flowLayoutPanel16";
-            this.flowLayoutPanel16.Size = new System.Drawing.Size(297, 31);
-            this.flowLayoutPanel16.TabIndex = 2;
-            // 
             // Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1524,6 +1524,8 @@
             this.flowLayoutPanel14.PerformLayout();
             this.flowLayoutPanel15.ResumeLayout(false);
             this.flowLayoutPanel15.PerformLayout();
+            this.flowLayoutPanel16.ResumeLayout(false);
+            this.flowLayoutPanel16.PerformLayout();
             this.flowLayoutPanel17.ResumeLayout(false);
             this.flowLayoutPanel17.PerformLayout();
             this.flowLayoutPanel18.ResumeLayout(false);
@@ -1569,8 +1571,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBill)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.flowLayoutPanel16.ResumeLayout(false);
-            this.flowLayoutPanel16.PerformLayout();
             this.ResumeLayout(false);
 
         }
