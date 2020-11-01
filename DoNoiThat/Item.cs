@@ -130,17 +130,35 @@ namespace DoNoiThat
         private void dataGridViewItemList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             tableLayoutPanel9.ColumnStyles[1].Width = 600;
-            
+           
             int selectedrowindex = dataGridViewItemList.SelectedCells[0].RowIndex;
             if (selectedrowindex < dataGridViewItemList.RowCount-1)
             {
                 DataGridViewRow row = dataGridViewItemList.Rows[selectedrowindex];
                 string path = Application.StartupPath + "\\" + row.Cells[10].Value.ToString();
-
+                
                 Image img = Image.FromFile(path);
                 pictureBox1.Image = img;
                 pictureBox1.ImageLocation = path;
                 pictureBox1.Visible = true;
+                btnAdd.Enabled = false;
+                btnAdd.ForeColor = Color.White;
+
+                textBoxId.Text = row.Cells[0].Value.ToString();
+                textBoxId.Enabled = false;
+                textBoxName.Text = row.Cells[1].Value.ToString();
+
+                cbTheLoai.SelectedValue = row.Cells[2].Value;
+                cbKieuDang.SelectedValue = row.Cells[3].Value;
+                cbMauSac.SelectedValue = row.Cells[4].Value;
+                cbChatLieu.SelectedValue = row.Cells[5].Value;
+                cbNuocSX.SelectedValue = row.Cells[6].Value;
+
+                textBoxQuantity.Text = row.Cells[7].Value.ToString();
+                textBoxImportPrice.Text = row.Cells[8].Value.ToString();
+                textBoxSalePrice.Text = row.Cells[9].Value.ToString();
+                txtImagePath.Text = path;
+                textBoxWarranty.Text = row.Cells[11].Value.ToString();
             }
         }
 
