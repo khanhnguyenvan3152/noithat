@@ -95,7 +95,7 @@
             this.btnChooseImage = new System.Windows.Forms.Button();
             this.txtImagePath = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonCancel = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -437,7 +437,7 @@
             this.btnEnableAdd.Text = "Thêm";
             this.btnEnableAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEnableAdd.UseVisualStyleBackColor = false;
-            this.btnEnableAdd.Click += new System.EventHandler(this.iconButtonAdd_Click);
+            this.btnEnableAdd.Click += new System.EventHandler(this.iconEnableAdd_Click);
             // 
             // iconButtonRepair
             // 
@@ -878,6 +878,8 @@
             this.textBoxImportPrice.Name = "textBoxImportPrice";
             this.textBoxImportPrice.Size = new System.Drawing.Size(162, 25);
             this.textBoxImportPrice.TabIndex = 1;
+            this.textBoxImportPrice.TextChanged += new System.EventHandler(this.textBoxImportPrice_TextChanged);
+            this.textBoxImportPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxImportPrice_KeyPress);
             // 
             // flowLayoutPanel25
             // 
@@ -984,6 +986,7 @@
             this.btnChooseImage.TabIndex = 2;
             this.btnChooseImage.Text = "Chọn";
             this.btnChooseImage.UseVisualStyleBackColor = true;
+            this.btnChooseImage.Click += new System.EventHandler(this.btnChooseImage_Click);
             // 
             // txtImagePath
             // 
@@ -999,7 +1002,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.buttonCancel);
+            this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 693);
@@ -1008,19 +1011,19 @@
             this.panel1.Size = new System.Drawing.Size(606, 99);
             this.panel1.TabIndex = 5;
             // 
-            // buttonCancel
+            // btnCancel
             // 
-            this.buttonCancel.BackColor = System.Drawing.Color.Crimson;
-            this.buttonCancel.FlatAppearance.BorderSize = 0;
-            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCancel.Location = new System.Drawing.Point(503, 4);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(94, 34);
-            this.buttonCancel.TabIndex = 1;
-            this.buttonCancel.Text = "Hủy";
-            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.BackColor = System.Drawing.Color.Crimson;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Location = new System.Drawing.Point(503, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(94, 34);
+            this.btnCancel.TabIndex = 1;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // btnAdd
             // 
@@ -1093,6 +1096,7 @@
             // 
             // dataGridViewItemList
             // 
+            this.dataGridViewItemList.AllowUserToAddRows = false;
             this.dataGridViewItemList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewItemList.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewItemList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1499,11 +1503,13 @@
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1006, 632);
             this.Name = "Item";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Item_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Item_KeyDown);
             this.tabControlItem.ResumeLayout(false);
             this.tabPageItemList.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
@@ -1636,7 +1642,7 @@
         private System.Windows.Forms.DataGridView dataGridViewItemList;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;

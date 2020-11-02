@@ -50,10 +50,12 @@ namespace DoNoiThat
             cmd.Dispose();//Giải phóng bộ nhớ
             cmd = null;
         }
+     
         public static DataTable GetDataTable(string sql)
         {
             SqlDataAdapter Dap = new SqlDataAdapter();
             Dap.SelectCommand = new SqlCommand();
+     
             Dap.SelectCommand.Connection = Functions.Con;
             Dap.SelectCommand.CommandText = sql;
             DataTable table = new DataTable();
@@ -87,6 +89,50 @@ namespace DoNoiThat
             cb.DataSource = new BindingSource(dic, null);
             cb.DisplayMember = "Value";
             cb.ValueMember = "Key";
+        }
+        public static void InsertDMNoiThat(string id,
+        string name ,
+        string type ,
+        string shape ,
+        string color ,
+        string material ,
+        string country ,
+        int quantity,
+        float importPrice ,
+        float salePrice,
+        string image,
+        string warranty)
+        {
+                SqlCommand cmd = new SqlCommand("InsertDMNoiThat", Con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaNoiThat", SqlDbType.NVarChar).Value = id;
+                cmd.Parameters.AddWithValue("@TenNoiThat", SqlDbType.NVarChar).Value = name;
+                cmd.Parameters.AddWithValue("@MaLoai", SqlDbType.NVarChar).Value = type;
+                cmd.Parameters.AddWithValue("@MaKieu", SqlDbType.NVarChar).Value = shape;
+                cmd.Parameters.AddWithValue("@MaMau", SqlDbType.NVarChar).Value = color;
+                cmd.Parameters.AddWithValue("@MaChatLieu", SqlDbType.NVarChar).Value = material;
+                cmd.Parameters.AddWithValue("@MaNSX", SqlDbType.NVarChar).Value = country;
+                cmd.Parameters.AddWithValue("@SoLuong", SqlDbType.Int).Value = quantity;
+                cmd.Parameters.AddWithValue("@DonGiaNhap", SqlDbType.Float).Value = importPrice;
+                cmd.Parameters.AddWithValue("@DonGiaBan", SqlDbType.Float).Value = salePrice;
+                cmd.Parameters.AddWithValue("@Anh", SqlDbType.NVarChar).Value = image;
+                cmd.Parameters.AddWithValue("@ThoiGianBH", SqlDbType.NVarChar).Value = warranty;
+               try
+                {
+                    cmd.ExecuteNonQuery();
+
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Thêm hàng thất bại!");
+                   
+                }
+                finally
+                {
+                    
+                }
+
+            
         }
 
     }
