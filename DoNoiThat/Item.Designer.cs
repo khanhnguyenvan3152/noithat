@@ -510,6 +510,7 @@
             this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.panel11, 0, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(768, 6);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(12, 6, 0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -569,12 +570,12 @@
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel16, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel17, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel18, 0, 0);
-            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel23, 0, 5);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel24, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel25, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel20, 0, 6);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel26, 1, 4);
             this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel27, 1, 5);
+            this.tableLayoutPanel4.Controls.Add(this.flowLayoutPanel23, 0, 5);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 0);
@@ -597,7 +598,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.label1);
             this.flowLayoutPanel1.Controls.Add(this.cbMauSac);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 125);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -617,11 +618,12 @@
             // 
             // cbMauSac
             // 
+            this.cbMauSac.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMauSac.FormattingEnabled = true;
             this.cbMauSac.Location = new System.Drawing.Point(99, 3);
             this.cbMauSac.Margin = new System.Windows.Forms.Padding(44, 3, 3, 3);
             this.cbMauSac.Name = "cbMauSac";
-            this.cbMauSac.Size = new System.Drawing.Size(121, 26);
+            this.cbMauSac.Size = new System.Drawing.Size(121, 27);
             this.cbMauSac.TabIndex = 1;
             // 
             // flowLayoutPanel12
@@ -629,6 +631,7 @@
             this.flowLayoutPanel12.Controls.Add(this.label9);
             this.flowLayoutPanel12.Controls.Add(this.cbKieuDang);
             this.flowLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel12.Location = new System.Drawing.Point(0, 94);
             this.flowLayoutPanel12.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel12.Name = "flowLayoutPanel12";
@@ -648,11 +651,12 @@
             // 
             // cbKieuDang
             // 
+            this.cbKieuDang.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbKieuDang.FormattingEnabled = true;
             this.cbKieuDang.Location = new System.Drawing.Point(100, 3);
             this.cbKieuDang.Margin = new System.Windows.Forms.Padding(44, 3, 3, 3);
             this.cbKieuDang.Name = "cbKieuDang";
-            this.cbKieuDang.Size = new System.Drawing.Size(121, 26);
+            this.cbKieuDang.Size = new System.Drawing.Size(121, 27);
             this.cbKieuDang.TabIndex = 1;
             // 
             // flowLayoutPanel14
@@ -660,6 +664,7 @@
             this.flowLayoutPanel14.Controls.Add(this.label18);
             this.flowLayoutPanel14.Controls.Add(this.cbTheLoai);
             this.flowLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel14.Location = new System.Drawing.Point(0, 63);
             this.flowLayoutPanel14.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel14.Name = "flowLayoutPanel14";
@@ -679,11 +684,12 @@
             // 
             // cbTheLoai
             // 
+            this.cbTheLoai.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTheLoai.FormattingEnabled = true;
             this.cbTheLoai.Location = new System.Drawing.Point(99, 3);
             this.cbTheLoai.Margin = new System.Windows.Forms.Padding(44, 3, 3, 3);
             this.cbTheLoai.Name = "cbTheLoai";
-            this.cbTheLoai.Size = new System.Drawing.Size(121, 26);
+            this.cbTheLoai.Size = new System.Drawing.Size(121, 27);
             this.cbTheLoai.TabIndex = 1;
             // 
             // flowLayoutPanel15
@@ -711,12 +717,12 @@
             // textBoxQuantity
             // 
             this.textBoxQuantity.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxQuantity.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxQuantity.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxQuantity.ForeColor = System.Drawing.Color.Black;
             this.textBoxQuantity.Location = new System.Drawing.Point(86, 4);
             this.textBoxQuantity.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxQuantity.Name = "textBoxQuantity";
-            this.textBoxQuantity.Size = new System.Drawing.Size(124, 25);
+            this.textBoxQuantity.Size = new System.Drawing.Size(124, 27);
             this.textBoxQuantity.TabIndex = 2;
             // 
             // flowLayoutPanel16
@@ -724,6 +730,7 @@
             this.flowLayoutPanel16.Controls.Add(this.label20);
             this.flowLayoutPanel16.Controls.Add(this.textBoxName);
             this.flowLayoutPanel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel16.Location = new System.Drawing.Point(0, 32);
             this.flowLayoutPanel16.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel16.Name = "flowLayoutPanel16";
@@ -744,12 +751,12 @@
             // textBoxName
             // 
             this.textBoxName.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxName.ForeColor = System.Drawing.Color.Black;
             this.textBoxName.Location = new System.Drawing.Point(79, 4);
             this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(192, 25);
+            this.textBoxName.Size = new System.Drawing.Size(192, 27);
             this.textBoxName.TabIndex = 1;
             // 
             // flowLayoutPanel17
@@ -776,11 +783,12 @@
             // 
             // cbNuocSX
             // 
+            this.cbNuocSX.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbNuocSX.FormattingEnabled = true;
             this.cbNuocSX.Location = new System.Drawing.Point(89, 3);
             this.cbNuocSX.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.cbNuocSX.Name = "cbNuocSX";
-            this.cbNuocSX.Size = new System.Drawing.Size(121, 26);
+            this.cbNuocSX.Size = new System.Drawing.Size(121, 27);
             this.cbNuocSX.TabIndex = 1;
             // 
             // flowLayoutPanel18
@@ -788,6 +796,7 @@
             this.flowLayoutPanel18.Controls.Add(this.label22);
             this.flowLayoutPanel18.Controls.Add(this.textBoxId);
             this.flowLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel18.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel18.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel18.Name = "flowLayoutPanel18";
@@ -808,12 +817,12 @@
             // textBoxId
             // 
             this.textBoxId.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxId.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxId.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxId.ForeColor = System.Drawing.Color.Black;
             this.textBoxId.Location = new System.Drawing.Point(73, 4);
             this.textBoxId.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxId.Name = "textBoxId";
-            this.textBoxId.Size = new System.Drawing.Size(124, 25);
+            this.textBoxId.Size = new System.Drawing.Size(124, 27);
             this.textBoxId.TabIndex = 1;
             // 
             // flowLayoutPanel23
@@ -821,6 +830,7 @@
             this.flowLayoutPanel23.Controls.Add(this.label23);
             this.flowLayoutPanel23.Controls.Add(this.cbChatLieu);
             this.flowLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.flowLayoutPanel23.Location = new System.Drawing.Point(0, 156);
             this.flowLayoutPanel23.Margin = new System.Windows.Forms.Padding(0);
             this.flowLayoutPanel23.Name = "flowLayoutPanel23";
@@ -830,21 +840,22 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(4, 6);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(73, 16);
+            this.label23.Size = new System.Drawing.Size(74, 17);
             this.label23.TabIndex = 0;
             this.label23.Text = "Chất Liệu:";
             // 
             // cbChatLieu
             // 
+            this.cbChatLieu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbChatLieu.FormattingEnabled = true;
-            this.cbChatLieu.Location = new System.Drawing.Point(99, 3);
+            this.cbChatLieu.Location = new System.Drawing.Point(100, 3);
             this.cbChatLieu.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.cbChatLieu.Name = "cbChatLieu";
-            this.cbChatLieu.Size = new System.Drawing.Size(121, 26);
+            this.cbChatLieu.Size = new System.Drawing.Size(121, 27);
             this.cbChatLieu.TabIndex = 1;
             // 
             // flowLayoutPanel24
@@ -871,12 +882,12 @@
             // textBoxImportPrice
             // 
             this.textBoxImportPrice.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxImportPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxImportPrice.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxImportPrice.ForeColor = System.Drawing.Color.Black;
             this.textBoxImportPrice.Location = new System.Drawing.Point(114, 4);
             this.textBoxImportPrice.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxImportPrice.Name = "textBoxImportPrice";
-            this.textBoxImportPrice.Size = new System.Drawing.Size(162, 25);
+            this.textBoxImportPrice.Size = new System.Drawing.Size(162, 27);
             this.textBoxImportPrice.TabIndex = 1;
             this.textBoxImportPrice.TextChanged += new System.EventHandler(this.textBoxImportPrice_TextChanged);
             this.textBoxImportPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxImportPrice_KeyPress);
@@ -906,12 +917,12 @@
             // textBoxSalePrice
             // 
             this.textBoxSalePrice.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxSalePrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSalePrice.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSalePrice.ForeColor = System.Drawing.Color.Black;
             this.textBoxSalePrice.Location = new System.Drawing.Point(106, 4);
             this.textBoxSalePrice.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxSalePrice.Name = "textBoxSalePrice";
-            this.textBoxSalePrice.Size = new System.Drawing.Size(170, 25);
+            this.textBoxSalePrice.Size = new System.Drawing.Size(170, 27);
             this.textBoxSalePrice.TabIndex = 1;
             // 
             // flowLayoutPanel20
@@ -947,12 +958,12 @@
             // textBoxWarranty
             // 
             this.textBoxWarranty.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxWarranty.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxWarranty.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxWarranty.ForeColor = System.Drawing.Color.Black;
             this.textBoxWarranty.Location = new System.Drawing.Point(152, 4);
             this.textBoxWarranty.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxWarranty.Name = "textBoxWarranty";
-            this.textBoxWarranty.Size = new System.Drawing.Size(124, 25);
+            this.textBoxWarranty.Size = new System.Drawing.Size(124, 27);
             this.textBoxWarranty.TabIndex = 1;
             // 
             // flowLayoutPanel27

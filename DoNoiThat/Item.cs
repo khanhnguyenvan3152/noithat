@@ -9,6 +9,7 @@ using System.Drawing.Printing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Security.AccessControl;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -113,6 +114,7 @@ namespace DoNoiThat
                         btnChooseImage.Visible = false;
                         btnAdd.Visible = false;
                         btnCancel.Visible = false;
+                        txtImagePath.ReadOnly = true;
                         break;
                     }
                 case 1:
