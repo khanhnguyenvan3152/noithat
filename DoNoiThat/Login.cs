@@ -26,5 +26,10 @@ namespace DoNoiThat
             main.ShowDialog();
             this.Close();
         }
+
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

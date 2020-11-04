@@ -26,7 +26,7 @@ namespace DoNoiThat
         {
             InitializeComponent();
         }
-        TaskCompletionSource<int> btnAddTs = new TaskCompletionSource<int>();
+        TaskCompletionSource<int> btnAddTs;
 
         private void Item_Load(object sender, EventArgs e)
         {
@@ -151,6 +151,7 @@ namespace DoNoiThat
                         textBoxWarranty.Enabled = true;
                         btnChooseImage.Visible = true;
                         btnAdd.Visible = true;
+                        btnAdd.Enabled = true;
                         btnCancel.Visible = true;
                         break;
                     }
@@ -171,28 +172,10 @@ namespace DoNoiThat
                 {
                     DataGridViewRow row = dataGridViewItemList.Rows[selectedrowindex];
                     string path = Application.StartupPath + "\\" + row.Cells[10].Value.ToString();
-
-                    Image img = Image.FromFile(path);
-                    pictureBox1.Image = img;
-                    pictureBox1.ImageLocation = path;
-                    btnAdd.Text = "Xác nhận";
+                    TaskCompletionSource<int> btnAddTs = new TaskCompletionSource<int>();
 
 
-                    textBoxId.Text = row.Cells[0].Value.ToString();
-
-                    textBoxName.Text = row.Cells[1].Value.ToString();
-
-                    cbTheLoai.SelectedValue = row.Cells[2].Value;
-                    cbKieuDang.SelectedValue = row.Cells[3].Value;
-                    cbMauSac.SelectedValue = row.Cells[4].Value;
-                    cbChatLieu.SelectedValue = row.Cells[5].Value;
-                    cbNuocSX.SelectedValue = row.Cells[6].Value;
-
-                    textBoxQuantity.Text = row.Cells[7].Value.ToString();
-                    textBoxImportPrice.Text = row.Cells[8].Value.ToString();
-                    textBoxSalePrice.Text = row.Cells[9].Value.ToString();
-                    txtImagePath.Text = path;
-                    textBoxWarranty.Text = row.Cells[11].Value.ToString();
+                    anh = dataGridViewItemList.Rows[dataGridViewItemList.SelectedCells[0].RowIndex].Cells[10].Value.ToString();
                 }
             }
             // NoiThat sanpham = new NoiThat(row.Cells[0].ToString(), row.Cells[1].ToString(), row.Cells[2].ToString(), row.Cells[3].ToString(), row.Cells[4].ToString(), row.Cells[5].ToString(),
@@ -236,14 +219,31 @@ namespace DoNoiThat
             {
                 DataGridViewRow row = dataGridViewItemList.Rows[selectedrowindex];
                 string path = Application.StartupPath + "\\" + row.Cells[10].Value.ToString();
-                
-                Image img = Image.FromFile(path);
-                pictureBox1.Image = img;
-                pictureBox1.ImageLocation = path;
-                pictureBox1.Visible = true;
-                btnAdd.Enabled = false;
-                btnAdd.ForeColor = Color.White;
+                try
+                { 
+                    using (FileStream fs = new FileStream(path, FileMode.Open, FileAccess.Read))
+                    {
+                        try
+                        {
 
+                            Image tempimg = Image.FromStream(fs);
+                            Image img = (Image)tempimg.Clone();
+                            pictureBox1.ImageLocation = path;
+                            pictureBox1.Visible = true;
+                            btnAdd.ForeColor = Color.White;
+                            fs.Dispose();
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Không tìm thấy ảnh");
+                            pictureBox1.Image = null;
+                        }
+                    }
+                }
+                catch
+                {
+
+                }
                 textBoxId.Text = row.Cells[0].Value.ToString();
                 textBoxId.Enabled = false;
                 textBoxName.Text = row.Cells[1].Value.ToString();
@@ -272,7 +272,7 @@ namespace DoNoiThat
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (checkValue() == true && state ==1)
+            if (checkValue() == true)
             {
                 string id = textBoxId.Text;
                 string name = textBoxName.Text;
@@ -284,12 +284,66 @@ namespace DoNoiThat
                 float importPrice = float.Parse(textBoxImportPrice.Text);
                 float salePrice = float.Parse(textBoxSalePrice.Text);
                 int quantity = int.Parse(textBoxQuantity.Text);
+               
                 string warranty = textBoxWarranty.Text;
-                Functions.InsertDMNoiThat(id, name, type, shape, color, material, country,quantity, importPrice, salePrice, anh, warranty);
-                btnAddTs.SetResult(5);
-                MessageBox.Show("Thêm mặt hàng thành công!");
-                clearTextBox();
-                loadDataGridView();
+                if (state == 1)
+                {
+                    string oldPath = txtImagePath.Text;
+                    txtImagePath.Text = oldPath;
+                    string newpath = Application.StartupPath + "\\" + "furniture\\";
+                    string newFileName = textBoxId.Text;
+                    FileInfo f1 = new FileInfo(oldPath);
+                    if (f1.Exists)
+                    {
+                        if (!Directory.Exists(newpath))
+                        {
+                            Directory.CreateDirectory(newpath);
+                        }
+
+                        anh = "furniture\\" + newFileName + f1.Extension;
+                        txtImagePath.Text = newpath + newFileName + f1.Extension;
+
+                        f1.CopyTo(string.Format("{0}{1}{2}", newpath, newFileName, f1.Extension), true);
+
+                    }
+                    Functions.InsertDMNoiThat(id, name, type, shape, color, material, country, quantity, importPrice, salePrice, anh, warranty);
+               
+                   
+                    clearTextBox();
+                    loadDataGridView();
+                    return;
+                }
+                if(state == 2)
+                {
+                    string oldPath = txtImagePath.Text;
+                    txtImagePath.Text = oldPath;
+                    string newpath = Application.StartupPath + "\\" + "furniture";
+                    string newFileName = textBoxId.Text;
+                    FileInfo f1 = new FileInfo(oldPath);
+                    if (f1.Exists)
+                    {
+                        if (!Directory.Exists(newpath))
+                        {
+                            Directory.CreateDirectory(newpath);
+                        }
+                        string ext = f1.Extension;
+                        FileStream fs = f1.Create();
+                        anh = "furniture\\" + newFileName + f1.Extension;
+                        txtImagePath.Text = newpath + newFileName + f1.Extension;
+                   
+                        f1.CopyTo(string.Format("{0}{1}{2}", newpath, "tempfile", f1.Extension), true);
+                        f1.Delete();
+                        File.Move()
+                        
+
+                    }
+                    Functions.UpdateDMNoiThat(id, name, type, shape, color, material, country, quantity, importPrice, salePrice, anh, warranty);
+
+                    clearTextBox();
+                    loadDataGridView();
+                    return;
+                }
+                
             }
 
 
@@ -373,37 +427,41 @@ namespace DoNoiThat
             clearTextBox();
             pictureBox1.Image = null;
             dataGridViewItemList.Rows[dataGridViewItemList.CurrentRow.Index].Selected = false;
-
+            btnAddTs = new TaskCompletionSource<int>();
             textBoxId.Text = genarateKey();
         }
 
-        private async  void btnChooseImage_Click(object sender, EventArgs e)
+        private void btnChooseImage_Click(object sender, EventArgs e)
         {
             OpenFileDialog opendlg = new OpenFileDialog();
             
             opendlg.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if(opendlg.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image = new Bitmap(opendlg.FileName);
-                string oldPath = opendlg.FileName.ToString();
-                string newpath = Application.StartupPath + "\\" +"furniture\\";
-                string newFileName = textBoxId.Text;
-                FileInfo f1 = new FileInfo(oldPath);
-                if (f1.Exists)
+                pictureBox1.Image.Dispose();
+                pictureBox1.Image = null;
+                string filename = opendlg.FileName;
+                using (FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read))
                 {
-                    if (!Directory.Exists(newpath))
+                    try
                     {
-                        Directory.CreateDirectory(newpath);
+
+                        Image tempimg = Image.FromStream(fs);
+                        Image img = (Image)tempimg.Clone();
+                        pictureBox1.Image = img;
+                        pictureBox1.Visible = true;
+                        btnAdd.ForeColor = Color.White;
+                        fs.Dispose();
+                        tempimg.Dispose();
                     }
-                    txtImagePath.Text = newpath;
-                    anh = "furniture\\" + newFileName + f1.Extension;
-                   var buttondata = await btnAddTs.Task;
-                    if (buttondata == 5)
+                    catch
                     {
-                        f1.CopyTo(string.Format("{0}{1}{2}", newpath, newFileName, f1.Extension), true);
+                        MessageBox.Show("Không tìm thấy ảnh");
+                        pictureBox1.Image = null;
                     }
-                    
                 }
+
+              
             }
         }
 
