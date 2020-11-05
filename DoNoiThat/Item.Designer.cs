@@ -77,9 +77,6 @@
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.label22 = new System.Windows.Forms.Label();
             this.textBoxId = new System.Windows.Forms.TextBox();
-            this.flowLayoutPanel23 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbChatLieu = new System.Windows.Forms.ComboBox();
             this.flowLayoutPanel24 = new System.Windows.Forms.FlowLayoutPanel();
             this.label26 = new System.Windows.Forms.Label();
             this.textBoxImportPrice = new System.Windows.Forms.TextBox();
@@ -94,6 +91,9 @@
             this.label29 = new System.Windows.Forms.Label();
             this.btnChooseImage = new System.Windows.Forms.Button();
             this.txtImagePath = new System.Windows.Forms.TextBox();
+            this.flowLayoutPanel23 = new System.Windows.Forms.FlowLayoutPanel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.cbChatLieu = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -152,11 +152,11 @@
             this.flowLayoutPanel16.SuspendLayout();
             this.flowLayoutPanel17.SuspendLayout();
             this.flowLayoutPanel18.SuspendLayout();
-            this.flowLayoutPanel23.SuspendLayout();
             this.flowLayoutPanel24.SuspendLayout();
             this.flowLayoutPanel25.SuspendLayout();
             this.flowLayoutPanel26.SuspendLayout();
             this.flowLayoutPanel27.SuspendLayout();
+            this.flowLayoutPanel23.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -483,6 +483,7 @@
             this.iconButtonDelete.Text = "Xóa";
             this.iconButtonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonDelete.UseVisualStyleBackColor = false;
+            this.iconButtonDelete.Click += new System.EventHandler(this.iconButtonDelete_Click);
             // 
             // tableLayoutPanel9
             // 
@@ -825,39 +826,6 @@
             this.textBoxId.Size = new System.Drawing.Size(124, 27);
             this.textBoxId.TabIndex = 1;
             // 
-            // flowLayoutPanel23
-            // 
-            this.flowLayoutPanel23.Controls.Add(this.label23);
-            this.flowLayoutPanel23.Controls.Add(this.cbChatLieu);
-            this.flowLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.flowLayoutPanel23.Location = new System.Drawing.Point(0, 156);
-            this.flowLayoutPanel23.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel23.Name = "flowLayoutPanel23";
-            this.flowLayoutPanel23.Size = new System.Drawing.Size(297, 120);
-            this.flowLayoutPanel23.TabIndex = 9;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(4, 6);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(74, 17);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "Chất Liệu:";
-            // 
-            // cbChatLieu
-            // 
-            this.cbChatLieu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbChatLieu.FormattingEnabled = true;
-            this.cbChatLieu.Location = new System.Drawing.Point(100, 3);
-            this.cbChatLieu.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
-            this.cbChatLieu.Name = "cbChatLieu";
-            this.cbChatLieu.Size = new System.Drawing.Size(121, 27);
-            this.cbChatLieu.TabIndex = 1;
-            // 
             // flowLayoutPanel24
             // 
             this.flowLayoutPanel24.Controls.Add(this.label26);
@@ -1010,6 +978,39 @@
             this.txtImagePath.Name = "txtImagePath";
             this.txtImagePath.Size = new System.Drawing.Size(288, 82);
             this.txtImagePath.TabIndex = 1;
+            // 
+            // flowLayoutPanel23
+            // 
+            this.flowLayoutPanel23.Controls.Add(this.label23);
+            this.flowLayoutPanel23.Controls.Add(this.cbChatLieu);
+            this.flowLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.flowLayoutPanel23.Location = new System.Drawing.Point(0, 156);
+            this.flowLayoutPanel23.Margin = new System.Windows.Forms.Padding(0);
+            this.flowLayoutPanel23.Name = "flowLayoutPanel23";
+            this.flowLayoutPanel23.Size = new System.Drawing.Size(297, 120);
+            this.flowLayoutPanel23.TabIndex = 9;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(4, 6);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(74, 17);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "Chất Liệu:";
+            // 
+            // cbChatLieu
+            // 
+            this.cbChatLieu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbChatLieu.FormattingEnabled = true;
+            this.cbChatLieu.Location = new System.Drawing.Point(100, 3);
+            this.cbChatLieu.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
+            this.cbChatLieu.Name = "cbChatLieu";
+            this.cbChatLieu.Size = new System.Drawing.Size(121, 27);
+            this.cbChatLieu.TabIndex = 1;
             // 
             // panel1
             // 
@@ -1547,8 +1548,6 @@
             this.flowLayoutPanel17.PerformLayout();
             this.flowLayoutPanel18.ResumeLayout(false);
             this.flowLayoutPanel18.PerformLayout();
-            this.flowLayoutPanel23.ResumeLayout(false);
-            this.flowLayoutPanel23.PerformLayout();
             this.flowLayoutPanel24.ResumeLayout(false);
             this.flowLayoutPanel24.PerformLayout();
             this.flowLayoutPanel25.ResumeLayout(false);
@@ -1557,6 +1556,8 @@
             this.flowLayoutPanel26.PerformLayout();
             this.flowLayoutPanel27.ResumeLayout(false);
             this.flowLayoutPanel27.PerformLayout();
+            this.flowLayoutPanel23.ResumeLayout(false);
+            this.flowLayoutPanel23.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

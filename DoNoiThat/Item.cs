@@ -3,6 +3,7 @@ using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Drawing.Printing;
@@ -92,7 +93,7 @@ namespace DoNoiThat
             cbMauSac.SelectedIndex = -1;
             cbNuocSX.SelectedIndex = -1;
             cbTheLoai.SelectedIndex = -1;
-
+            pictureBox1.Image = null;
         }
         private void setEnable(int state)
         {
@@ -315,29 +316,11 @@ namespace DoNoiThat
                 }
                 if(state == 2)
                 {
-                    string oldPath = txtImagePath.Text;
-                    txtImagePath.Text = oldPath;
-                    string newpath = Application.StartupPath + "\\" + "furniture";
-                    string newFileName = textBoxId.Text;
-                    FileInfo f1 = new FileInfo(oldPath);
-                    if (f1.Exists)
-                    {
-                        if (!Directory.Exists(newpath))
-                        {
-                            Directory.CreateDirectory(newpath);
-                        }
-                        string ext = f1.Extension;
-                        FileStream fs = f1.Create();
-                        anh = "furniture\\" + newFileName + f1.Extension;
-                        txtImagePath.Text = newpath + newFileName + f1.Extension;
-                   
-                        f1.CopyTo(string.Format("{0}{1}{2}", newpath, "tempfile", f1.Extension), true);
-                        f1.Delete();
-                        File.Move()
-                        
 
-                    }
-                    Functions.UpdateDMNoiThat(id, name, type, shape, color, material, country, quantity, importPrice, salePrice, anh, warranty);
+                    anh = ImageProcessing();
+                        
+                 
+                    Functions.UpdateDMNoiThat(id, name, type, shape, color, material, country, quantity, importPrice, salePrice,"furniture"+"\\"+ anh, warranty);
 
                     clearTextBox();
                     loadDataGridView();
@@ -347,6 +330,32 @@ namespace DoNoiThat
             }
 
 
+        }
+        string ImageProcessing()
+        {
+            string inputdb="";
+            string selectedfilepath = txtImagePath.Text;
+            string ext = Path.GetExtension(selectedfilepath);
+            string temp = System.IO.Path.Combine(Application.StartupPath, "furniture", textBoxId.Text+ ext);
+            string oldpath = System.IO.Path.Combine(Application.StartupPath, dataGridViewItemList.CurrentRow.Cells[10].Value.ToString());
+            if (File.Exists(selectedfilepath))
+            { 
+                
+                
+                if (oldpath.CompareTo(selectedfilepath) == 0)
+                { 
+                    File.Delete(temp);
+                    File.Copy(selectedfilepath, temp);
+                    inputdb = Path.GetFileName(temp);
+                }
+                else
+                {
+                    File.Delete(temp);
+                    File.Copy(selectedfilepath, temp);
+                    inputdb = Path.GetFileName(temp);
+                }
+            }
+            return inputdb;
         }
         bool checkValue()
         {
@@ -438,7 +447,10 @@ namespace DoNoiThat
             opendlg.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
             if(opendlg.ShowDialog() == DialogResult.OK)
             {
-                pictureBox1.Image.Dispose();
+                if (pictureBox1.Image != null)
+                {
+                    pictureBox1.Image.Dispose();
+                }
                 pictureBox1.Image = null;
                 string filename = opendlg.FileName;
                 using (FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read))
@@ -453,6 +465,7 @@ namespace DoNoiThat
                         btnAdd.ForeColor = Color.White;
                         fs.Dispose();
                         tempimg.Dispose();
+                        txtImagePath.Text = filename;
                     }
                     catch
                     {
@@ -512,6 +525,37 @@ namespace DoNoiThat
         private void textBoxWarranty_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void iconButtonDelete_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewItemList.CurrentRow == null)
+            {
+                MessageBox.Show("Chọn sản phẩm để xóa");
+            }
+            else
+            {
+                DialogResult dlg = MessageBox.Show("Bạn có muốn xóa sản phẩm này không?","Xác nhận",MessageBoxButtons.YesNo);
+
+                if (dlg == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Functions.RunSQL("DELETE DMNoiThat WHERE " + "MaNoiThat = N'" + textBoxId.Text + "'");
+                        MessageBox.Show("Xóa sản phẩm id = " + textBoxId.Text + " thành công");
+                        clearTextBox();
+                        loadDataGridView();
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Xóa sản phẩm thất bại");
+                    }
+                }
+                else
+                {
+
+                }
+             }   
         }
     }
 }
