@@ -557,5 +557,10 @@ namespace DoNoiThat
                 }
              }   
         }
+
+        private void iconButtonFilter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

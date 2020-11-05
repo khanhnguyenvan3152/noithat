@@ -304,6 +304,7 @@
             this.iconButtonFilter.TabIndex = 3;
             this.iconButtonFilter.Text = "Lọc";
             this.iconButtonFilter.UseVisualStyleBackColor = false;
+            this.iconButtonFilter.Click += new System.EventHandler(this.iconButtonFilter_Click);
             // 
             // label5
             // 
