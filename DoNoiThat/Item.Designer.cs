@@ -37,11 +37,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
-            this.comboBoxImPrice = new System.Windows.Forms.TextBox();
             this.iconButtonFilter = new FontAwesome.Sharp.IconButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBoxCountry = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboBoxMaterial = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
@@ -134,6 +130,8 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControlItem.SuspendLayout();
             this.tabPageItemList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -239,13 +237,11 @@
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.label5);
+            this.panel12.Controls.Add(this.txtMaSP);
             this.panel12.Controls.Add(this.label30);
             this.panel12.Controls.Add(this.comboBoxColor);
-            this.panel12.Controls.Add(this.comboBoxImPrice);
             this.panel12.Controls.Add(this.iconButtonFilter);
-            this.panel12.Controls.Add(this.label5);
-            this.panel12.Controls.Add(this.comboBoxCountry);
-            this.panel12.Controls.Add(this.label4);
             this.panel12.Controls.Add(this.comboBoxMaterial);
             this.panel12.Controls.Add(this.label3);
             this.panel12.Controls.Add(this.comboBoxType);
@@ -260,11 +256,11 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(687, 25);
+            this.label30.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(869, 19);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(39, 16);
+            this.label30.Size = new System.Drawing.Size(42, 18);
             this.label30.TabIndex = 5;
             this.label30.Text = "Màu:";
             // 
@@ -272,19 +268,11 @@
             // 
             this.comboBoxColor.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxColor.FormattingEnabled = true;
-            this.comboBoxColor.Location = new System.Drawing.Point(735, 21);
+            this.comboBoxColor.Location = new System.Drawing.Point(917, 16);
             this.comboBoxColor.Margin = new System.Windows.Forms.Padding(44, 3, 3, 3);
             this.comboBoxColor.Name = "comboBoxColor";
             this.comboBoxColor.Size = new System.Drawing.Size(121, 24);
             this.comboBoxColor.TabIndex = 6;
-            // 
-            // comboBoxImPrice
-            // 
-            this.comboBoxImPrice.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxImPrice.Location = new System.Drawing.Point(945, 21);
-            this.comboBoxImPrice.Name = "comboBoxImPrice";
-            this.comboBoxImPrice.Size = new System.Drawing.Size(104, 25);
-            this.comboBoxImPrice.TabIndex = 4;
             // 
             // iconButtonFilter
             // 
@@ -306,48 +294,11 @@
             this.iconButtonFilter.UseVisualStyleBackColor = false;
             this.iconButtonFilter.Click += new System.EventHandler(this.iconButtonFilter_Click);
             // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(867, 25);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 16);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Giá Nhập:";
-            // 
-            // comboBoxCountry
-            // 
-            this.comboBoxCountry.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCountry.FormattingEnabled = true;
-            this.comboBoxCountry.Location = new System.Drawing.Point(566, 21);
-            this.comboBoxCountry.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxCountry.Name = "comboBoxCountry";
-            this.comboBoxCountry.Size = new System.Drawing.Size(93, 24);
-            this.comboBoxCountry.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(491, 25);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(67, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Nước SX:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // comboBoxMaterial
             // 
             this.comboBoxMaterial.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMaterial.FormattingEnabled = true;
-            this.comboBoxMaterial.Location = new System.Drawing.Point(390, 21);
+            this.comboBoxMaterial.Location = new System.Drawing.Point(731, 16);
             this.comboBoxMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxMaterial.Name = "comboBoxMaterial";
             this.comboBoxMaterial.Size = new System.Drawing.Size(93, 24);
@@ -357,12 +308,12 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(309, 25);
+            this.label3.Location = new System.Drawing.Point(650, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 16);
+            this.label3.Size = new System.Drawing.Size(80, 18);
             this.label3.TabIndex = 0;
             this.label3.Text = "Chất Liệu:";
             // 
@@ -370,7 +321,7 @@
             // 
             this.comboBoxType.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(181, 22);
+            this.comboBoxType.Location = new System.Drawing.Point(522, 16);
             this.comboBoxType.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(93, 24);
@@ -380,12 +331,12 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(134, 26);
+            this.label2.Location = new System.Drawing.Point(475, 19);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 16);
+            this.label2.Size = new System.Drawing.Size(42, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Loại:";
             // 
@@ -1505,6 +1456,24 @@
             this.label17.TabIndex = 0;
             this.label17.Text = "Giá Nhập:";
             // 
+            // txtMaSP
+            // 
+            this.txtMaSP.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSP.Location = new System.Drawing.Point(342, 16);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(100, 25);
+            this.txtMaSP.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(266, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Mã SP";
+            // 
             // Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1602,9 +1571,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Panel panel12;
         private FontAwesome.Sharp.IconButton iconButtonFilter;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBoxCountry;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxMaterial;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxType;
@@ -1696,11 +1662,12 @@
         private System.Windows.Forms.Button btnChooseImage;
         private System.Windows.Forms.TextBox txtImagePath;
         private System.Windows.Forms.TextBox textBoxQuantity;
-        private System.Windows.Forms.TextBox comboBoxImPrice;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.ComboBox comboBoxColor;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel16;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtMaSP;
     }
 }

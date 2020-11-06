@@ -41,8 +41,8 @@ namespace DoNoiThat
             Functions.setDataSource(comboBoxMaterial, "Select MaChatLieu,TenChatLieu FROM ChatLieu");
             Functions.setDataSource(comboBoxType, "Select *FROM TheLoai");
             Functions.setDataSource(comboBoxColor, "Select * FROM MauSac");
-            Functions.setDataSource(comboBoxCountry, "SELECT MaNSX,TenNSX FROM NuocSX");
-            comboBoxColor.SelectedIndex=comboBoxMaterial.SelectedIndex = comboBoxType.SelectedIndex = comboBoxColor.SelectedIndex = comboBoxCountry.SelectedIndex = -1;
+           
+            comboBoxColor.SelectedIndex=comboBoxMaterial.SelectedIndex = comboBoxType.SelectedIndex = comboBoxColor.SelectedIndex = -1;
         }
         private void loadDataGridView()
         {
@@ -339,13 +339,9 @@ namespace DoNoiThat
             string temp = System.IO.Path.Combine(Application.StartupPath, "furniture", textBoxId.Text+ ext);
             string oldpath = System.IO.Path.Combine(Application.StartupPath, dataGridViewItemList.CurrentRow.Cells[10].Value.ToString());
             if (File.Exists(selectedfilepath))
-            { 
-                
-                
+            {
                 if (oldpath.CompareTo(selectedfilepath) == 0)
-                { 
-                    File.Delete(temp);
-                    File.Copy(selectedfilepath, temp);
+                {
                     inputdb = Path.GetFileName(temp);
                 }
                 else
@@ -557,10 +553,38 @@ namespace DoNoiThat
                 }
              }   
         }
-
+        void resetFilter()
+        {
+            comboBoxMaterial.Text = "";
+            comboBoxColor.Text = "";
+            comboBoxType.Text = "";
+            txtMaSP.Text = "";
+        }
         private void iconButtonFilter_Click(object sender, EventArgs e)
         {
-
+            string sql;
+            if((txtMaSP.Text == "") &&(comboBoxMaterial.Text =="") && (comboBoxType.Text =="") && (comboBoxColor.Text ==""))
+            {
+                sql = "SELECT * FROM DMNoiThat";
+            }
+            sql = "SELECT * FROM DMNoiThat WHERE 1=1";
+            if (txtMaSP.Text != "")
+            {
+                sql += " AND MaNoiThat LIKE N'%" + txtMaSP.Text + "%'";
+            }
+            if(comboBoxMaterial.Text !="")
+            {
+                sql += " AND MaChatLieu LIKE N'%" + comboBoxMaterial.SelectedValue + "%'";
+            }
+            if(comboBoxType.Text !="")
+            {
+                sql += " AND MaLoai LIKE N'%" + comboBoxType.SelectedValue + "%'";
+            }
+            DataTable temptb = Functions.GetDataTable(sql);
+            dataGridViewItemList.DataSource = temptb;
+            tableLayoutPanel9.Width = 0;
+            resetFilter();
+            
         }
     }
 }

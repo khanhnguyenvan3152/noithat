@@ -50,12 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditItem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditItem.Designer.cs">
-      <DependentUpon>EditItem.cs</DependentUpon>
-    </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -117,9 +111,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EditItem.resx">
-      <DependentUpon>EditItem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
