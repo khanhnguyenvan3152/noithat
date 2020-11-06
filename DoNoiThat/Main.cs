@@ -11,6 +11,8 @@ using System.Windows.Forms;
 
 namespace DoNoiThat
 {
+    public delegate void SendNotification(int value);
+
     public partial class Main : Form
     {
         static private Form currentForm;
@@ -21,17 +23,28 @@ namespace DoNoiThat
         }
 
 
-
         private void Main_Load(object sender, EventArgs e)
         {
-            Functions.Connect();
             ECAvatar(pictureBoxAvatar, 36);
             ECAvatar(panelAvatar, 40);
 
             labelDate.Text = DateTime.Now.DayOfWeek.ToString() + ", " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
-
-            OpenChildForm(new Home());
+            Functions.Connect();
+            OpenChildForm(new Home(GetValue));
         }
+
+        private void GetValue(int value)
+        {
+            if (value == 2) iconButtonIItem.PerformClick();
+            if (value == 3) iconButtonOrder.PerformClick();
+            if (value == 4) iconButtonImportBill.PerformClick();
+            if (value == 5) iconButtonCustomer.PerformClick();
+            if (value == 6) iconButtonSupplier.PerformClick();
+            if (value == 7) iconButtonStaff.PerformClick();
+            if (value == 8) iconButtonStElse.PerformClick();
+            if (value == 9) iconButtonReport.PerformClick();
+        }
+
 
         //tạo avatar tròn
         private void ECAvatar(Control ob, int cornerRadius)
@@ -64,7 +77,7 @@ namespace DoNoiThat
         {
             Disenable();
             EnableButton(button1, iconButtonHome);
-            OpenChildForm(new Home());
+            OpenChildForm(new Home(GetValue));
         }
 
         public void iconButtonIItem_Click(object sender, EventArgs e)
@@ -111,10 +124,18 @@ namespace DoNoiThat
             OpenChildForm(new Staff());
         }
 
+        private void iconButtonStElse_Click(object sender, EventArgs e)
+        {
+            Disenable();
+            EnableButton(button8, iconButtonStElse);
+            OpenChildForm(new Else());
+        }
+
+
         public void iconButtonReport_Click(object sender, EventArgs e)
         {
             Disenable();
-            EnableButton(button8, iconButtonReport);
+            EnableButton(button9, iconButtonReport);
         }
 
 
@@ -140,7 +161,8 @@ namespace DoNoiThat
             DisenableButton(button5, iconButtonCustomer);
             DisenableButton(button6, iconButtonSupplier);
             DisenableButton(button7, iconButtonStaff);
-            DisenableButton(button8, iconButtonReport);
+            DisenableButton(button8, iconButtonStElse);
+            DisenableButton(button9, iconButtonReport);
         }
 
         private void DisenableButton(Button btn1, Button btn2)
@@ -178,11 +200,6 @@ namespace DoNoiThat
             panel.Margin = new Padding(5);
             panel.Size = new Size(185, 79);
             panel.BackColor = color;
-        }
-
-        private void Main_Closed(object sender, FormClosedEventArgs e)
-        {
-            Functions.Disconnect();
         }
     }
 }

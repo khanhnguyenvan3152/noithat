@@ -123,7 +123,6 @@ C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\bin\Debug\DoNoiThat.ex
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\bin\Debug\DoNoiThat.pdb
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
-C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.EditItem.resources
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
@@ -139,3 +138,4 @@ C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.cs
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.exe
 C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Else.resources

@@ -28,32 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1",
-            "1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Supplier));
             this.tabControlSupplier = new System.Windows.Forms.TabControl();
             this.tabPageISupplierList = new System.Windows.Forms.TabPage();
@@ -65,7 +40,6 @@
             this.iconButtonDelete = new FontAwesome.Sharp.IconButton();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.buttonOk = new System.Windows.Forms.Button();
             this.dataGridViewItem = new System.Windows.Forms.DataGridView();
             this.comboBoxMonth = new System.Windows.Forms.ComboBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
@@ -79,12 +53,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.listViewSupplier = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.dataGridViewSupplier = new System.Windows.Forms.DataGridView();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.buttonOk = new System.Windows.Forms.Button();
             this.tabControlSupplier.SuspendLayout();
             this.tabPageISupplierList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -93,6 +64,7 @@
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).BeginInit();
             this.tableLayoutPanel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSupplier)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlSupplier
@@ -184,6 +156,7 @@
             this.iconButtonAdd.Text = "Thêm";
             this.iconButtonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonAdd.UseVisualStyleBackColor = false;
+            this.iconButtonAdd.Click += new System.EventHandler(this.iconButtonAdd_Click);
             // 
             // iconButtonRepair
             // 
@@ -206,6 +179,7 @@
             this.iconButtonRepair.Text = "Sửa";
             this.iconButtonRepair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonRepair.UseVisualStyleBackColor = false;
+            this.iconButtonRepair.Click += new System.EventHandler(this.iconButtonRepair_Click);
             // 
             // iconButtonDelete
             // 
@@ -228,13 +202,15 @@
             this.iconButtonDelete.Text = "Xóa";
             this.iconButtonDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.iconButtonDelete.UseVisualStyleBackColor = false;
+            this.iconButtonDelete.Click += new System.EventHandler(this.iconButtonDelete_Click);
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.SlateGray;
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.label9);
+            this.panel13.Controls.Add(this.buttonCancel);
             this.panel13.Controls.Add(this.buttonOk);
+            this.panel13.Controls.Add(this.label9);
             this.panel13.Controls.Add(this.dataGridViewItem);
             this.panel13.Controls.Add(this.comboBoxMonth);
             this.panel13.Controls.Add(this.textBoxAddress);
@@ -265,19 +241,6 @@
             this.label9.TabIndex = 5;
             this.label9.Text = "BÁO CÁO";
             // 
-            // buttonOk
-            // 
-            this.buttonOk.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonOk.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonOk.ForeColor = System.Drawing.Color.Black;
-            this.buttonOk.Location = new System.Drawing.Point(279, 378);
-            this.buttonOk.Name = "buttonOk";
-            this.buttonOk.Size = new System.Drawing.Size(75, 26);
-            this.buttonOk.TabIndex = 4;
-            this.buttonOk.Text = "OK";
-            this.buttonOk.UseVisualStyleBackColor = false;
-            // 
             // dataGridViewItem
             // 
             this.dataGridViewItem.BackgroundColor = System.Drawing.Color.White;
@@ -298,6 +261,7 @@
             // 
             // textBoxAddress
             // 
+            this.textBoxAddress.Enabled = false;
             this.textBoxAddress.Location = new System.Drawing.Point(251, 69);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(86, 22);
@@ -305,6 +269,7 @@
             // 
             // textBoxPhone
             // 
+            this.textBoxPhone.Enabled = false;
             this.textBoxPhone.Location = new System.Drawing.Point(82, 65);
             this.textBoxPhone.Name = "textBoxPhone";
             this.textBoxPhone.Size = new System.Drawing.Size(86, 22);
@@ -312,6 +277,7 @@
             // 
             // textBoxId
             // 
+            this.textBoxId.Enabled = false;
             this.textBoxId.Location = new System.Drawing.Point(82, 33);
             this.textBoxId.Name = "textBoxId";
             this.textBoxId.Size = new System.Drawing.Size(86, 22);
@@ -319,6 +285,7 @@
             // 
             // textBoxName
             // 
+            this.textBoxName.Enabled = false;
             this.textBoxName.Location = new System.Drawing.Point(251, 33);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(86, 22);
@@ -391,7 +358,7 @@
             this.tableLayoutPanel9.ColumnCount = 1;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel9.Controls.Add(this.listViewSupplier, 0, 0);
+            this.tableLayoutPanel9.Controls.Add(this.dataGridViewSupplier, 0, 0);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(0);
@@ -401,61 +368,54 @@
             this.tableLayoutPanel9.Size = new System.Drawing.Size(397, 421);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
-            // listViewSupplier
+            // dataGridViewSupplier
             // 
-            this.listViewSupplier.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listViewSupplier.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5});
-            this.listViewSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listViewSupplier.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewSupplier.FullRowSelect = true;
-            this.listViewSupplier.GridLines = true;
-            this.listViewSupplier.HideSelection = false;
-            this.listViewSupplier.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
-            this.listViewSupplier.Location = new System.Drawing.Point(0, 0);
-            this.listViewSupplier.Margin = new System.Windows.Forms.Padding(0);
-            this.listViewSupplier.Name = "listViewSupplier";
-            this.listViewSupplier.Size = new System.Drawing.Size(397, 421);
-            this.listViewSupplier.TabIndex = 3;
-            this.listViewSupplier.UseCompatibleStateImageBehavior = false;
-            this.listViewSupplier.View = System.Windows.Forms.View.Details;
+            this.dataGridViewSupplier.AllowUserToAddRows = false;
+            this.dataGridViewSupplier.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewSupplier.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewSupplier.Name = "dataGridViewSupplier";
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(200)))), ((int)(((byte)(200)))));
+            this.dataGridViewSupplier.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridViewSupplier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewSupplier.Size = new System.Drawing.Size(391, 415);
+            this.dataGridViewSupplier.TabIndex = 0;
+            this.dataGridViewSupplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSupplier_CellContentClick);
             // 
-            // columnHeader1
+            // buttonCancel
             // 
-            this.columnHeader1.Text = "STT";
-            this.columnHeader1.Width = 37;
+            this.buttonCancel.BackColor = System.Drawing.Color.LightCoral;
+            this.buttonCancel.Enabled = false;
+            this.buttonCancel.FlatAppearance.BorderSize = 0;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.ForeColor = System.Drawing.Color.Black;
+            this.buttonCancel.Location = new System.Drawing.Point(275, 378);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(75, 26);
+            this.buttonCancel.TabIndex = 6;
+            this.buttonCancel.Text = "Hủy";
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // columnHeader2
+            // buttonOk
             // 
-            this.columnHeader2.Text = "Mã NCC";
-            this.columnHeader2.Width = 59;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tên NCC";
-            this.columnHeader3.Width = 88;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "SĐT";
-            this.columnHeader4.Width = 76;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Địa Chỉ";
-            this.columnHeader5.Width = 134;
+            this.buttonOk.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.buttonOk.Enabled = false;
+            this.buttonOk.FlatAppearance.BorderSize = 0;
+            this.buttonOk.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonOk.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonOk.ForeColor = System.Drawing.Color.Black;
+            this.buttonOk.Location = new System.Drawing.Point(171, 378);
+            this.buttonOk.Name = "buttonOk";
+            this.buttonOk.Size = new System.Drawing.Size(75, 26);
+            this.buttonOk.TabIndex = 7;
+            this.buttonOk.Text = "OK";
+            this.buttonOk.UseVisualStyleBackColor = false;
+            this.buttonOk.Click += new System.EventHandler(this.buttonOk_Click);
             // 
             // Supplier
             // 
@@ -481,6 +441,7 @@
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).EndInit();
             this.tableLayoutPanel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSupplier)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -497,7 +458,6 @@
         private FontAwesome.Sharp.IconButton iconButtonDelete;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button buttonOk;
         private System.Windows.Forms.DataGridView dataGridViewItem;
         private System.Windows.Forms.ComboBox comboBoxMonth;
         private System.Windows.Forms.TextBox textBoxAddress;
@@ -511,11 +471,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
-        private System.Windows.Forms.ListView listViewSupplier;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.DataGridView dataGridViewSupplier;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.Button buttonOk;
     }
 }

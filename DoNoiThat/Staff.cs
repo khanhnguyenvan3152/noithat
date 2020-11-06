@@ -22,22 +22,13 @@ namespace DoNoiThat
 
         private void Staff_Load(object sender, EventArgs e)
         {
-           
+         
+            Show();
         }
 
-        //private void listViewItem_Click(object sender, EventArgs e)
-        //{
-        //    tableLayoutPanelItem.ColumnStyles[1].Width = 522;
-        //}
-
-        private void iconButtonArrowRight_Click(object sender, EventArgs e)
+        private void Show()
         {
-            tableLayoutPanelItem.ColumnStyles[1].Width = 0;
-        }
-
-        private void listViewItem_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            tableLayoutPanelItem.ColumnStyles[1].Width = 522;
+            this.dataGridViewStaff.DataSource = Functions.GetDataTable("SELECT * FROM NhanVien");
         }
     }
 }

@@ -200,15 +200,9 @@ namespace DoNoiThat
             
         }
 
-        private void panel12_Paint(object sender, PaintEventArgs e)
-        {
+    
 
-        }
-
-        private void tableLayoutPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void dataGridViewItemList_CellClick(object sender, DataGridViewCellEventArgs e)
         {

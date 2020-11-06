@@ -178,5 +178,39 @@ namespace DoNoiThat
 
 
         }
+        public static void PerformSql(string sql)
+        {
+            SqlCommand Command;
+            Command = new SqlCommand(sql, Functions.Con);
+            try
+            {
+                Command.ExecuteNonQuery();
+                MessageBox.Show("Thành công!");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Thất bại!");
+            }
+            finally
+            {
+
+            }
+        }
+
+        public static int SubString(DataGridView view)
+        {
+            if (view.RowCount == 0) return 1;
+            string id = view[0, view.RowCount - 1].Value.ToString();
+            return int.Parse(id.Substring(3)) + 1;
+        }
+
+        public static string HandleNumber(DataGridView view, string str)
+        {
+            string id;
+            if (SubString(view) < 10) id = str + "00" + SubString(view);
+            else if (SubString(view) >= 10 && SubString(view) < 100) id = str + "0" + SubString(view);
+            else id = str + SubString(view);
+            return id;
+        }
     }
 }
