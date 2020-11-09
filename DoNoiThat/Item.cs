@@ -26,12 +26,13 @@ namespace DoNoiThat
         public Item()
         {
             InitializeComponent();
+            tableLayoutPanel9.ColumnStyles[1].Width = 0;
+            dataGridViewItemList.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dataGridViewItemList.MultiSelect = false;
         }
-        TaskCompletionSource<int> btnAddTs;
 
         private void Item_Load(object sender, EventArgs e)
         {
-            tableLayoutPanel9.ColumnStyles[1].Width = 0;
             loadDataGridView();
             Functions.setDataSource(cbChatLieu, "Select MaChatLieu,TenChatLieu FROM ChatLieu");
             Functions.setDataSource(cbKieuDang, "Select * FROM KieuDang");
@@ -41,7 +42,6 @@ namespace DoNoiThat
             Functions.setDataSource(comboBoxMaterial, "Select MaChatLieu,TenChatLieu FROM ChatLieu");
             Functions.setDataSource(comboBoxType, "Select *FROM TheLoai");
             Functions.setDataSource(comboBoxColor, "Select * FROM MauSac");
-           
             comboBoxColor.SelectedIndex=comboBoxMaterial.SelectedIndex = comboBoxType.SelectedIndex = comboBoxColor.SelectedIndex = -1;
         }
         private void loadDataGridView()
@@ -50,13 +50,8 @@ namespace DoNoiThat
             DataTable table = Functions.GetDataTable(sql);
             dataGridViewItemList.DataSource = table;
             dataGridViewItemList.ForeColor = Color.Black;
-            /*dataGridViewItemList.Columns[2].Width = 70;
-            dataGridViewItemList.Columns[3].Width = 70;
-            dataGridViewItemList.Columns[4].Width = 70;
-            dataGridViewItemList.Columns[5].Width = 80;
-            dataGridViewItemList.Columns[6].Width = 80;*/
-            dataGridViewItemList.EditMode = DataGridViewEditMode.EditProgrammatically;
-            dataGridViewItemList.MultiSelect = false;
+            
+        
         }
         private void iconButton1_Click(object sender, EventArgs e)
         {
@@ -426,7 +421,7 @@ namespace DoNoiThat
             clearTextBox();
             pictureBox1.Image = null;
             dataGridViewItemList.Rows[dataGridViewItemList.CurrentRow.Index].Selected = false;
-            btnAddTs = new TaskCompletionSource<int>();
+     
             textBoxId.Text = genarateKey();
         }
 
