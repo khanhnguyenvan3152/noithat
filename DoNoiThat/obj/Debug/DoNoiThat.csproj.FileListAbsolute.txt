@@ -1,0 +1,185 @@
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.exe
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.pdb
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.exe
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.pdb
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+D:\Tailieu\LTTQ\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.exe
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.exe
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.pdb
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Admin\source\repos\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.exe
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\bin\Debug\DoNoiThat.pdb
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.exe
+C:\Users\Khanh\Downloads\DoNoiThat\DoNoiThat\obj\Debug\DoNoiThat.pdb
+D:\Tailieu\NoiThat\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+D:\Tailieu\NoiThat\DoNoiThat\bin\Debug\DoNoiThat.exe
+D:\Tailieu\NoiThat\DoNoiThat\bin\Debug\DoNoiThat.pdb
+D:\Tailieu\NoiThat\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.exe
+D:\Tailieu\NoiThat\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\bin\Debug\DoNoiThat.exe
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\bin\Debug\DoNoiThat.pdb
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.exe
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.EditItem.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\bin\Debug\DoNoiThat.exe
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\bin\Debug\DoNoiThat.pdb
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.EditItem.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.exe
+C:\Users\Khanh\Documents\btllttq\noithat-main\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\bin\Debug\DoNoiThat.exe
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\bin\Debug\DoNoiThat.pdb
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.exe
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\Khanh\Documents\btllttq\noithat-master\DoNoiThat\obj\Debug\DoNoiThat.Else.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\bin\Debug\DoNoiThat.exe
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\bin\Debug\DoNoiThat.pdb
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Else.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.exe
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\RdlCompile.cache
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\RdlCompile.compiled
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\bin\Debug\DoNoiThat.exe.config
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\bin\Debug\DoNoiThat.exe
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\bin\Debug\DoNoiThat.pdb
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.csprojAssemblyReference.cache
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Else.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Main.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Staff.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Supplier.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Import.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Customer.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Order.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Item.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Home.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Login.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Properties.Resources.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.csproj.GenerateResource.cache
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.csproj.CoreCompileInputs.cache
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.exe
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.pdb
