@@ -160,3 +160,5 @@ C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoN
 C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.csproj.CopyComplete
 C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.exe
 C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\DoNoiThat.pdb
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\RdlCompile.cache
+C:\Users\khanh\OneDrive\Documents\baitaplon lttq\noithat\DoNoiThat\obj\Debug\RdlCompile.compiled

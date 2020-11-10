@@ -116,6 +116,10 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dataGridViewDetail = new System.Windows.Forms.DataGridView();
+            this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
@@ -140,13 +144,9 @@
             this.label26 = new System.Windows.Forms.Label();
             this.numericUpDownAmount = new System.Windows.Forms.NumericUpDown();
             this.label27 = new System.Windows.Forms.Label();
-            this.dataGridViewItem = new System.Windows.Forms.DataGridView();
-            this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
+            this.dataGridViewItem = new System.Windows.Forms.DataGridView();
             this.tabControlOrder.SuspendLayout();
             this.tabPageOrderList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -181,8 +181,8 @@
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).BeginInit();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControlOrder
@@ -204,7 +204,7 @@
             this.tabPageOrderList.Controls.Add(this.tableLayoutPanel7);
             this.tabPageOrderList.Location = new System.Drawing.Point(4, 25);
             this.tabPageOrderList.Name = "tabPageOrderList";
-            this.tabPageOrderList.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageOrderList.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageOrderList.Size = new System.Drawing.Size(1057, 601);
             this.tabPageOrderList.TabIndex = 0;
             this.tabPageOrderList.Text = "DS Đơn Đặt Hàng";
@@ -808,7 +808,7 @@
             this.tabPageSale.Controls.Add(this.tableLayoutPanel12);
             this.tabPageSale.Location = new System.Drawing.Point(4, 25);
             this.tabPageSale.Name = "tabPageSale";
-            this.tabPageSale.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPageSale.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageSale.Size = new System.Drawing.Size(1057, 601);
             this.tabPageSale.TabIndex = 1;
             this.tabPageSale.Text = "Lập Hóa Đơn";
@@ -833,7 +833,7 @@
             // tableLayoutPanel13
             // 
             this.tableLayoutPanel13.ColumnCount = 1;
-            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 354F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 369F));
             this.tableLayoutPanel13.Controls.Add(this.panel2, 0, 4);
             this.tableLayoutPanel13.Controls.Add(this.panel13, 0, 1);
             this.tableLayoutPanel13.Controls.Add(this.iconButton6, 0, 0);
@@ -867,7 +867,7 @@
             this.panel2.Controls.Add(this.label34);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(2, 268);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(365, 30);
             this.panel2.TabIndex = 18;
@@ -887,7 +887,7 @@
             // 
             this.txtDeposit.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtDeposit.Location = new System.Drawing.Point(68, 6);
-            this.txtDeposit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDeposit.Margin = new System.Windows.Forms.Padding(2);
             this.txtDeposit.Name = "txtDeposit";
             this.txtDeposit.Size = new System.Drawing.Size(97, 20);
             this.txtDeposit.TabIndex = 1;
@@ -1014,7 +1014,7 @@
             this.panel4.Controls.Add(this.groupBox2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(2, 87);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(365, 134);
             this.panel4.TabIndex = 16;
@@ -1054,7 +1054,7 @@
             // 
             this.txtCustomerName.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtCustomerName.Location = new System.Drawing.Point(63, 37);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerName.Name = "txtCustomerName";
             this.txtCustomerName.Size = new System.Drawing.Size(160, 20);
             this.txtCustomerName.TabIndex = 4;
@@ -1063,7 +1063,7 @@
             // 
             this.txtAddress.Font = new System.Drawing.Font("Arial", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(63, 63);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(275, 32);
@@ -1073,7 +1073,7 @@
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtPhoneNumber.Location = new System.Drawing.Point(226, 7);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(112, 20);
             this.txtPhoneNumber.TabIndex = 2;
@@ -1175,7 +1175,7 @@
             this.panel5.Controls.Add(this.groupBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(2, 225);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(365, 39);
             this.panel5.TabIndex = 17;
@@ -1199,7 +1199,7 @@
             // 
             this.txtStaffName.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
             this.txtStaffName.Location = new System.Drawing.Point(231, 15);
-            this.txtStaffName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtStaffName.Margin = new System.Windows.Forms.Padding(2);
             this.txtStaffName.Name = "txtStaffName";
             this.txtStaffName.Size = new System.Drawing.Size(112, 20);
             this.txtStaffName.TabIndex = 3;
@@ -1303,12 +1303,32 @@
             this.ThanhTien});
             this.dataGridViewDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewDetail.Location = new System.Drawing.Point(2, 302);
-            this.dataGridViewDetail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewDetail.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDetail.Name = "dataGridViewDetail";
             this.dataGridViewDetail.RowHeadersWidth = 51;
             this.dataGridViewDetail.RowTemplate.Height = 24;
             this.dataGridViewDetail.Size = new System.Drawing.Size(365, 194);
             this.dataGridViewDetail.TabIndex = 10;
+            // 
+            // MaNT
+            // 
+            this.MaNT.HeaderText = "Mã NT";
+            this.MaNT.Name = "MaNT";
+            // 
+            // SL
+            // 
+            this.SL.HeaderText = "SL";
+            this.SL.Name = "SL";
+            // 
+            // GiamGia
+            // 
+            this.GiamGia.HeaderText = "Giảm giá";
+            this.GiamGia.Name = "GiamGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // panel3
             // 
@@ -1317,7 +1337,7 @@
             this.panel3.Controls.Add(this.iconButton5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(2, 541);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(365, 52);
             this.panel3.TabIndex = 13;
@@ -1433,7 +1453,7 @@
             this.tableLayoutPanel17.Name = "tableLayoutPanel17";
             this.tableLayoutPanel17.RowCount = 1;
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(687, 50);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(672, 50);
             this.tableLayoutPanel17.TabIndex = 7;
             // 
             // panel15
@@ -1449,7 +1469,7 @@
             this.panel15.Controls.Add(this.label21);
             this.panel15.Controls.Add(this.label22);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(259, 0);
+            this.panel15.Location = new System.Drawing.Point(244, 0);
             this.panel15.Margin = new System.Windows.Forms.Padding(0);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(428, 50);
@@ -1563,7 +1583,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(687, 56);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(672, 56);
             this.tableLayoutPanel1.TabIndex = 8;
             // 
             // panel1
@@ -1574,7 +1594,7 @@
             this.panel1.Controls.Add(this.numericUpDownAmount);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(213, 0);
+            this.panel1.Location = new System.Drawing.Point(198, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 15, 0, 0);
@@ -1605,6 +1625,8 @@
             this.textBoxDisccount.Name = "textBoxDisccount";
             this.textBoxDisccount.Size = new System.Drawing.Size(114, 22);
             this.textBoxDisccount.TabIndex = 3;
+            this.textBoxDisccount.Text = "0";
+            this.textBoxDisccount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label26
             // 
@@ -1622,6 +1644,7 @@
             this.numericUpDownAmount.Name = "numericUpDownAmount";
             this.numericUpDownAmount.Size = new System.Drawing.Size(44, 22);
             this.numericUpDownAmount.TabIndex = 1;
+            this.numericUpDownAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label27
             // 
@@ -1633,49 +1656,13 @@
             this.label27.TabIndex = 0;
             this.label27.Text = "Số Lượng:";
             // 
-            // dataGridViewItem
-            // 
-            this.dataGridViewItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewItem.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewItem.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewItem.Location = new System.Drawing.Point(2, 87);
-            this.dataGridViewItem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridViewItem.Name = "dataGridViewItem";
-            this.dataGridViewItem.RowHeadersWidth = 51;
-            this.dataGridViewItem.RowTemplate.Height = 24;
-            this.dataGridViewItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewItem.Size = new System.Drawing.Size(683, 450);
-            this.dataGridViewItem.TabIndex = 9;
-            this.dataGridViewItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
-            // MaNT
-            // 
-            this.MaNT.HeaderText = "Mã NT";
-            this.MaNT.Name = "MaNT";
-            // 
-            // SL
-            // 
-            this.SL.HeaderText = "SL";
-            this.SL.Name = "SL";
-            // 
-            // GiamGia
-            // 
-            this.GiamGia.HeaderText = "Giảm giá";
-            this.GiamGia.Name = "GiamGia";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.Name = "ThanhTien";
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.iconButton8);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(207, 50);
+            this.panel6.Size = new System.Drawing.Size(192, 50);
             this.panel6.TabIndex = 12;
             // 
             // iconButton8
@@ -1694,6 +1681,22 @@
             this.iconButton8.TabIndex = 5;
             this.iconButton8.Text = "Thêm mới";
             this.iconButton8.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewItem
+            // 
+            this.dataGridViewItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewItem.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewItem.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewItem.Location = new System.Drawing.Point(2, 87);
+            this.dataGridViewItem.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewItem.Name = "dataGridViewItem";
+            this.dataGridViewItem.RowHeadersWidth = 51;
+            this.dataGridViewItem.RowTemplate.Height = 24;
+            this.dataGridViewItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewItem.Size = new System.Drawing.Size(668, 450);
+            this.dataGridViewItem.TabIndex = 9;
+            this.dataGridViewItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
             // Order
             // 
@@ -1757,8 +1760,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).EndInit();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).EndInit();
             this.ResumeLayout(false);
 
         }

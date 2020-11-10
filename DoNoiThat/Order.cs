@@ -10,7 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DoNoiThat.Class;
 namespace DoNoiThat
 {
     public partial class Order : Form
@@ -101,7 +101,41 @@ namespace DoNoiThat
 
         private void iconButtonAdd_Click(object sender, EventArgs e)
         {
-
+            if(dataGridViewItem.CurrentRow == null)
+            {
+                MessageBox.Show("Bạn phải chọn một sản phẩm!");
+            }
+            else
+            {
+                DataGridViewRow row = dataGridViewItem.CurrentRow;
+                string mant = row.Cells[0].Value.ToString();
+                string SL = "";
+                string dongia = row.Cells[9].Value.ToString();
+                string giamgia = textBoxDisccount.Text;
+                string thanhtien = "";
+                if(numericUpDownAmount.Value ==0)
+                {
+                    MessageBox.Show("Chọn số lượng!");
+                    numericUpDownAmount.Focus();
+                }
+                else
+                {
+                    int soluong = int.Parse(numericUpDownAmount.Value.ToString());
+                    SL = soluong.ToString();
+                    thanhtien = (soluong * float.Parse(dongia)-float.Parse(giamgia)).ToString();
+                    dataGridViewDetail.Rows.Add(mant, SL, giamgia, thanhtien.ToString());
+                }
+            }
+        }
+        public string genarateKey()
+        {
+            string temp = dataGridViewOrder.Rows[dataGridViewItem.Rows.Count - 1].Cells[0].Value.ToString();
+            string[] arr = temp.Split('T');
+            int chiso = int.Parse(arr[1]);
+            chiso++;
+            string stringchiso = chiso.ToString();
+            string result = "NT" + chiso.ToString("000");
+            return result;
         }
     }
 }

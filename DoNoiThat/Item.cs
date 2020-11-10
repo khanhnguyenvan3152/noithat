@@ -405,13 +405,17 @@ namespace DoNoiThat
         }
         public string genarateKey()
         {
-            string temp = dataGridViewItemList.Rows[dataGridViewItemList.Rows.Count-1].Cells[0].Value.ToString();
-            string[] arr = temp.Split('T');
-            int chiso = int.Parse(arr[1]);
-            chiso++;
-            string stringchiso = chiso.ToString();
-            string result = "NT" + chiso.ToString("000");
-            return result;
+            if (dataGridViewItemList.Rows.Count == 0) return "NT001";
+            else
+            {
+                string temp = dataGridViewItemList.Rows[dataGridViewItemList.Rows.Count - 1].Cells[0].Value.ToString();
+                string[] arr = temp.Split('T');
+                int chiso = int.Parse(arr[1]);
+                chiso++;
+                string stringchiso = chiso.ToString();
+                string result = "NT" + chiso.ToString("000");
+                return result;
+            }
         }
         private void iconEnableAdd_Click(object sender, EventArgs e)
         {
