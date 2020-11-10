@@ -24,6 +24,8 @@ namespace DoNoiThat
         private void Order_Load(object sender, EventArgs e)
         {
             loadDataGridView();
+            this.dateTimePicker1.Value = System.DateTime.Now;
+            this.dateTimePicker1.Value = System.DateTime.Now;
         }
         private void loadDataGridView()
         {
@@ -72,6 +74,34 @@ namespace DoNoiThat
         private void tabControlOrder_SelectedIndexChanged(object sender, EventArgs e)
         {
             loadDataGridView();
+        }
+
+        private void radioButtonNo_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if(radioButtonYes.Checked == true)
+            {
+                
+            }
+        }
+
+        private void radioButtonYes_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+        protected override void OnResizeBegin(EventArgs e)
+        {
+            SuspendLayout();
+            base.OnResizeBegin(e);
+        }
+        protected override void OnResizeEnd(EventArgs e)
+        {
+            ResumeLayout();
+            base.OnResizeEnd(e);
+        }
+
+        private void iconButtonAdd_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
