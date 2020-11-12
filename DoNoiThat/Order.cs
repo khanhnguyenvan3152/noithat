@@ -11,6 +11,8 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoNoiThat.Class;
+using System.Data.SqlClient;
+
 namespace DoNoiThat
 {
     public partial class Order : Form
@@ -26,6 +28,8 @@ namespace DoNoiThat
             loadDataGridView();
             this.dateTimePicker1.Value = System.DateTime.Now;
             this.dateTimePicker1.Value = System.DateTime.Now;
+            dataGridViewDetail.ForeColor = Color.Black;
+            labelIdOrder1.Text = genarateKey(); //Gan id moi cho lap hoa don
         }
         private void loadDataGridView()
         {
@@ -78,15 +82,26 @@ namespace DoNoiThat
 
         private void radioButtonNo_CheckedChanged_1(object sender, EventArgs e)
         {
-            if(radioButtonYes.Checked == true)
+           if(radioButtonNo.Checked == true)
             {
-                
+                comboBoxCustomerId.Enabled = true;
+                txtCustomerName.Enabled = false;
+                txtPhoneNumber.Enabled = false;
+                txtAddress.Enabled = false;
             }
+       
         }
 
         private void radioButtonYes_CheckedChanged_1(object sender, EventArgs e)
         {
-
+            if (radioButtonYes.Checked == true)
+            {
+                comboBoxCustomerId.Enabled = false;
+                txtCustomerName.Enabled = true;
+                txtPhoneNumber.Enabled = true;
+                txtAddress.Enabled = true;
+            }
+           
         }
         protected override void OnResizeBegin(EventArgs e)
         {
@@ -121,21 +136,91 @@ namespace DoNoiThat
                 else
                 {
                     int soluong = int.Parse(numericUpDownAmount.Value.ToString());
+                    bool check = false;
                     SL = soluong.ToString();
                     thanhtien = (soluong * float.Parse(dongia)-float.Parse(giamgia)).ToString();
-                    dataGridViewDetail.Rows.Add(mant, SL, giamgia, thanhtien.ToString());
+                    if (dataGridViewDetail.Rows.Count > 0)
+                    {
+                        foreach (DataGridViewRow tmprow in dataGridViewDetail.Rows)
+                        {
+                            if (tmprow.Cells[0].Value != null)
+                            {
+                                if (tmprow.Cells[0].Value.ToString().Equals(mant))
+                                {
+                                    soluong = soluong + int.Parse(tmprow.Cells[1].Value.ToString());
+                                    double tong = float.Parse(thanhtien) + float.Parse(tmprow.Cells[3].Value.ToString());
+                                    tmprow.Cells[1].Value = soluong.ToString();
+                                    tmprow.Cells[3].Value = tong.ToString();
+                                    tmprow.Cells[2].Value = giamgia.ToString();
+                                    check = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    if (check==false)
+                    {
+                        dataGridViewDetail.Rows.Add(mant, soluong, giamgia, thanhtien);
+                    }
+                    if(dataGridViewDetail.Rows.Count >0)
+                    {
+                        double tong = 0;
+                        foreach(DataGridViewRow r in dataGridViewDetail.Rows)
+                        {
+                            if (r.Cells[3].Value != null)
+                            {
+                                tong = tong + Convert.ToDouble(r.Cells[3].Value);
+                            }
+                        }
+                        double tongtien = tong * Convert.ToDouble(labelTax1.Text.Substring(0,2))/100+tong;
+                        labelTotal1.Text = tongtien.ToString();
+                    }
                 }
             }
         }
         public string genarateKey()
         {
-            string temp = dataGridViewOrder.Rows[dataGridViewItem.Rows.Count - 1].Cells[0].Value.ToString();
-            string[] arr = temp.Split('T');
-            int chiso = int.Parse(arr[1]);
-            chiso++;
-            string stringchiso = chiso.ToString();
-            string result = "NT" + chiso.ToString("000");
-            return result;
+            SqlCommand cmd = new SqlCommand("SELECT dbo.AUTO_IDDDH()", Functions.Con);
+            cmd.CommandType = CommandType.Text;
+
+            //add parameter for return value
+
+
+            string id = (string)cmd.ExecuteScalar();
+            return id;
+        }
+
+        private void iconButtonDeleteDetailRow_Click(object sender, EventArgs e)
+        {
+            if(dataGridViewDetail.Rows.Count == 0)
+            {
+                MessageBox.Show("Đơn hàng chưa có sản phẩm!");
+            }
+            else
+            {
+                dataGridViewDetail.Rows.RemoveAt(dataGridViewDetail.CurrentRow.Index);
+            }
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+           if(radioButtonYes.Checked == true)
+            {
+                string customerid = generateCustomerId();
+
+            }
+        }
+        string generateCustomerId()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT FROM dbo.AUTO_IDKH()", Functions.Con);
+            cmd.CommandType = CommandType.Text;
+            string id = (string)cmd.ExecuteScalar();
+            return id;
         }
     }
 }
