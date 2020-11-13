@@ -17,6 +17,7 @@ namespace DoNoiThat
 {
     public partial class Order : Form
     {
+        
         public Order()
         {
             InitializeComponent();
@@ -30,6 +31,23 @@ namespace DoNoiThat
             this.dateTimePicker1.Value = System.DateTime.Now;
             dataGridViewDetail.ForeColor = Color.Black;
             labelIdOrder1.Text = genarateKey(); //Gan id moi cho lap hoa don
+
+            loadComboKH();
+        }
+        void loadComboKH()
+        {
+            SqlCommand cmd = Functions.Con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM KhachHang";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBoxCustomerId.Items.Add(dr["MaKH"]);
+            }
+
         }
         private void loadDataGridView()
         {
@@ -206,21 +224,104 @@ namespace DoNoiThat
         {
 
         }
-
+        bool checkTextbox()
+        {
+            if(txtCustomerName.Text == "")
+            {
+                MessageBox.Show("Nhap ten khach hang");
+                return false;
+            }
+            if(txtPhoneNumber.Text =="")
+            {
+                MessageBox.Show("Nhap so dien thoai khach hang");
+                return false;
+            }
+            if(txtAddress.Text =="")
+            {
+                MessageBox.Show("Nhap dia chi khach hang");
+                    return false;
+            }
+            if(txtStaffName.Text =="")
+            {
+                MessageBox.Show("Chon nhan vien");
+                return false;
+            }
+            return true;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
            if(radioButtonYes.Checked == true)
             {
                 string customerid = generateCustomerId();
+                if(checkTextbox() == true)
+                {
+                    try
+                    {
+                        SqlCommand cmd = new SqlCommand("INSERT INTO dbo.KhachHang (MaKH,TenKH,DiaChi,DienThoai) VALUES (N'" + customerid + "',N'" + txtCustomerName.Text + "',N'" + txtAddress.Text + "',N'" + txtPhoneNumber.Text + "'", Functions.Con);
+                        cmd.CommandType = CommandType.Text;
+                        cmd.ExecuteNonQuery();
+                        try
+                        {
+                            string sql = "INSERT[dbo].[DonDH]([SoDDH], [MaNV], [MaKH], [NgayDat], [NgayGiao], [DatCoc], [Thue], [TongTien]) VALUES(N'" + labelIdOrder1.Text + "', N'" + comboBoxStaffId.Text + "', N'" + customerid + "', CAST(N'" + dateTimePicker1.Value + "' AS DateTime)+, CAST(N'" + dateTimePicker2.Value + "' AS DateTime)," + txtDeposit.Text + "," + labelTax1.Text + "," + labelTotal1.Text + ")";
+                            cmd.CommandText = sql;
+                            cmd.ExecuteNonQuery();
+                            foreach(DataGridViewRow row in dataGridViewDetail.Rows)
+                            {
+                                try
+                                {
+                                    string iddondathang = labelIdOrder1.Text;
+                                    string mant = row.Cells[0].Value.ToString();
+                                    string soluong = row.Cells[1].Value.ToString();
+                                    string giamgia = row.Cells[2].Value.ToString();
+                                    string thanhtien = row.Cells[3].Value.ToString();
+                                    sql = "INSERT[dbo].[ChiTietDonDH]([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES(N'" + iddondathang + "', N'" + mant + "'," + soluong + ","+giamgia+ "," + thanhtien  + ")";
 
+                                }
+                                catch(SqlException)
+                                {
+                                    MessageBox.Show("Gặp lỗi khi lưu chi tiết đơn đặt hàng!");
+                                }
+                            }
+                            
+                           
+                        }
+                        catch(SqlException)
+                        {
+                            MessageBox.Show("Thêm hóa đơn thất bại!");
+                        }
+                    }
+                    catch(SqlException)
+                    {
+                        MessageBox.Show("Thêm khách hàng thất bại!");
+                    }
+                  
+
+                }
             }
         }
         string generateCustomerId()
         {
-            SqlCommand cmd = new SqlCommand("SELECT FROM dbo.AUTO_IDKH()", Functions.Con);
+            SqlCommand cmd = new SqlCommand("SELECT dbo.AUTO_IDKH()", Functions.Con);
             cmd.CommandType = CommandType.Text;
             string id = (string)cmd.ExecuteScalar();
             return id;
+        }
+
+        private void comboBoxCustomerId_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlCommand cmd = Functions.Con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM KhachHang WHERE MaKH = '" + comboBoxCustomerId.SelectedItem.ToString() + "'";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                txtCustomerName.Text = dr["TenKH"].ToString();
+                txtPhoneNumber.Text = dr["DienThoai"].ToString();
+                txtAddress.Text = dr["DiaChi"].ToString();
+            }
         }
     }
 }

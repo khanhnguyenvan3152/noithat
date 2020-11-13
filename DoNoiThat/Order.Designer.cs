@@ -111,6 +111,7 @@
             this.comboBoxStaffId = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
             this.labelTax1 = new System.Windows.Forms.Label();
             this.labelTotal1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -147,7 +148,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.dataGridViewItem = new System.Windows.Forms.DataGridView();
-            this.label37 = new System.Windows.Forms.Label();
             this.tabControlOrder.SuspendLayout();
             this.tabPageOrderList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -1091,16 +1091,16 @@
             // 
             // txtCustomerName
             // 
-            this.txtCustomerName.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtCustomerName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCustomerName.Location = new System.Drawing.Point(79, 46);
             this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
             this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(199, 23);
+            this.txtCustomerName.Size = new System.Drawing.Size(199, 25);
             this.txtCustomerName.TabIndex = 4;
             // 
             // txtAddress
             // 
-            this.txtAddress.Font = new System.Drawing.Font("Arial", 6.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(79, 79);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Multiline = true;
@@ -1110,22 +1110,23 @@
             // 
             // txtPhoneNumber
             // 
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumber.Location = new System.Drawing.Point(282, 9);
             this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(139, 23);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(139, 25);
             this.txtPhoneNumber.TabIndex = 2;
             // 
             // comboBoxCustomerId
             // 
-            this.comboBoxCustomerId.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCustomerId.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxCustomerId.FormattingEnabled = true;
             this.comboBoxCustomerId.Location = new System.Drawing.Point(79, 9);
             this.comboBoxCustomerId.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxCustomerId.Name = "comboBoxCustomerId";
-            this.comboBoxCustomerId.Size = new System.Drawing.Size(120, 24);
+            this.comboBoxCustomerId.Size = new System.Drawing.Size(120, 25);
             this.comboBoxCustomerId.TabIndex = 1;
+            this.comboBoxCustomerId.SelectedIndexChanged += new System.EventHandler(this.comboBoxCustomerId_SelectedIndexChanged);
             // 
             // label33
             // 
@@ -1299,6 +1300,18 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(454, 44);
             this.panel14.TabIndex = 14;
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Red;
+            this.label37.Location = new System.Drawing.Point(401, 10);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(51, 24);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "VNĐ";
             // 
             // labelTax1
             // 
@@ -1780,18 +1793,6 @@
             this.dataGridViewItem.Size = new System.Drawing.Size(837, 568);
             this.dataGridViewItem.TabIndex = 9;
             this.dataGridViewItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(401, 10);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(51, 24);
-            this.label37.TabIndex = 2;
-            this.label37.Text = "VNĐ";
             // 
             // Order
             // 
