@@ -106,9 +106,9 @@
             this.label29 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtStaffName = new System.Windows.Forms.TextBox();
+            this.txtStaffId = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.comboBoxStaffId = new System.Windows.Forms.ComboBox();
+            this.comboBoxStaffName = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
@@ -1230,9 +1230,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtStaffName);
+            this.groupBox1.Controls.Add(this.txtStaffId);
             this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.comboBoxStaffId);
+            this.groupBox1.Controls.Add(this.comboBoxStaffName);
             this.groupBox1.Controls.Add(this.label28);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -1244,43 +1244,44 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhân Viên";
             // 
-            // txtStaffName
+            // txtStaffId
             // 
-            this.txtStaffName.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtStaffName.Location = new System.Drawing.Point(289, 19);
-            this.txtStaffName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtStaffName.Name = "txtStaffName";
-            this.txtStaffName.Size = new System.Drawing.Size(139, 23);
-            this.txtStaffName.TabIndex = 3;
+            this.txtStaffId.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtStaffId.Location = new System.Drawing.Point(315, 20);
+            this.txtStaffId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStaffId.Name = "txtStaffId";
+            this.txtStaffId.Size = new System.Drawing.Size(111, 23);
+            this.txtStaffId.TabIndex = 3;
             // 
             // label35
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(224, 22);
+            this.label35.Location = new System.Drawing.Point(14, 23);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(59, 16);
             this.label35.TabIndex = 2;
             this.label35.Text = "Tên NV:";
             // 
-            // comboBoxStaffId
+            // comboBoxStaffName
             // 
-            this.comboBoxStaffId.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxStaffId.FormattingEnabled = true;
-            this.comboBoxStaffId.Location = new System.Drawing.Point(85, 18);
-            this.comboBoxStaffId.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxStaffId.Name = "comboBoxStaffId";
-            this.comboBoxStaffId.Size = new System.Drawing.Size(120, 24);
-            this.comboBoxStaffId.TabIndex = 1;
+            this.comboBoxStaffName.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxStaffName.FormattingEnabled = true;
+            this.comboBoxStaffName.Location = new System.Drawing.Point(85, 18);
+            this.comboBoxStaffName.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxStaffName.Name = "comboBoxStaffName";
+            this.comboBoxStaffName.Size = new System.Drawing.Size(161, 24);
+            this.comboBoxStaffName.TabIndex = 1;
+            this.comboBoxStaffName.SelectedIndexChanged += new System.EventHandler(this.comboBoxStaffName_SelectedIndexChanged);
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(18, 22);
+            this.label28.Location = new System.Drawing.Point(254, 23);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(55, 16);
@@ -1362,6 +1363,8 @@
             // 
             // dataGridViewDetail
             // 
+            this.dataGridViewDetail.AllowUserToAddRows = false;
+            this.dataGridViewDetail.AllowUserToDeleteRows = false;
             this.dataGridViewDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDetail.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1973,9 +1976,9 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtStaffName;
+        private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.ComboBox comboBoxStaffId;
+        private System.Windows.Forms.ComboBox comboBoxStaffName;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNT;
         private System.Windows.Forms.DataGridViewTextBoxColumn SL;
