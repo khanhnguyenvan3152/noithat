@@ -299,9 +299,10 @@ namespace DoNoiThat
 
 
                         }
-                        catch (SqlException)
+                        catch (SqlException )
                         {
                             MessageBox.Show("Thêm hóa đơn thất bại!");
+                         
                             cmd.CommandText = "ROLLBACK;";
                             cmd.ExecuteNonQuery();
                         }
