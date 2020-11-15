@@ -61,7 +61,7 @@
             this.iconButtonSave = new FontAwesome.Sharp.IconButton();
             this.iconButtonDelete = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewDetailOrder = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButtonRefresh = new FontAwesome.Sharp.IconButton();
@@ -135,7 +135,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.iconButton9 = new FontAwesome.Sharp.IconButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -158,7 +158,7 @@
             this.groupBoxStaff.SuspendLayout();
             this.groupBoxCustomer.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDetailOrder)).BeginInit();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
             this.panel12.SuspendLayout();
@@ -237,7 +237,7 @@
             this.tableLayoutPanel8.Controls.Add(this.tableLayoutPanel9, 0, 4);
             this.tableLayoutPanel8.Controls.Add(this.flowLayoutPanel1, 0, 5);
             this.tableLayoutPanel8.Controls.Add(this.iconButton1, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.dataGridView1, 0, 2);
+            this.tableLayoutPanel8.Controls.Add(this.dataGridViewDetailOrder, 0, 2);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel8.Margin = new System.Windows.Forms.Padding(0);
@@ -634,17 +634,20 @@
             this.iconButton1.Text = "Chi Tiết Hóa Đơn";
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewDetailOrder
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 110);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(0, 4, 0, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(432, 374);
-            this.dataGridView1.TabIndex = 6;
+            this.dataGridViewDetailOrder.AllowUserToAddRows = false;
+            this.dataGridViewDetailOrder.AllowUserToDeleteRows = false;
+            this.dataGridViewDetailOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewDetailOrder.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridViewDetailOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDetailOrder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewDetailOrder.Location = new System.Drawing.Point(0, 110);
+            this.dataGridViewDetailOrder.Margin = new System.Windows.Forms.Padding(0, 4, 0, 4);
+            this.dataGridViewDetailOrder.Name = "dataGridViewDetailOrder";
+            this.dataGridViewDetailOrder.RowHeadersWidth = 51;
+            this.dataGridViewDetailOrder.Size = new System.Drawing.Size(432, 374);
+            this.dataGridViewDetailOrder.TabIndex = 6;
             // 
             // tableLayoutPanel10
             // 
@@ -822,6 +825,9 @@
             // 
             // dataGridViewOrder
             // 
+            this.dataGridViewOrder.AllowUserToAddRows = false;
+            this.dataGridViewOrder.AllowUserToDeleteRows = false;
+            this.dataGridViewOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewOrder.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewOrder.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -832,6 +838,7 @@
             this.dataGridViewOrder.RowHeadersWidth = 51;
             this.dataGridViewOrder.Size = new System.Drawing.Size(871, 584);
             this.dataGridViewOrder.TabIndex = 8;
+            this.dataGridViewOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewOrder_CellClick);
             // 
             // tabPageSale
             // 
@@ -961,7 +968,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(120, 27);
             this.dateTimePicker2.TabIndex = 3;
-            this.dateTimePicker2.Value = new System.DateTime(2020, 10, 28, 0, 0, 0, 0);
+            this.dateTimePicker2.Value = new System.DateTime(2020, 11, 16, 0, 0, 0, 0);
             // 
             // dateTimePicker1
             // 
@@ -973,7 +980,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(120, 27);
             this.dateTimePicker1.TabIndex = 3;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 10, 28, 0, 0, 0, 0);
+            this.dateTimePicker1.Value = new System.DateTime(2020, 11, 16, 0, 0, 0, 0);
             // 
             // label11
             // 
@@ -1545,7 +1552,7 @@
             this.panel15.Controls.Add(this.comboBox1);
             this.panel15.Controls.Add(this.label10);
             this.panel15.Controls.Add(this.label20);
-            this.panel15.Controls.Add(this.iconButton9);
+            this.panel15.Controls.Add(this.btnSearch);
             this.panel15.Controls.Add(this.label21);
             this.panel15.Controls.Add(this.label22);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -1617,24 +1624,24 @@
             this.label20.TabIndex = 1;
             this.label20.Text = "Nước SX:";
             // 
-            // iconButton9
+            // btnSearch
             // 
-            this.iconButton9.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.iconButton9.FlatAppearance.BorderSize = 0;
-            this.iconButton9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton9.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton9.IconChar = FontAwesome.Sharp.IconChar.Filter;
-            this.iconButton9.IconColor = System.Drawing.Color.White;
-            this.iconButton9.IconSize = 20;
-            this.iconButton9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton9.Location = new System.Drawing.Point(396, 10);
-            this.iconButton9.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
-            this.iconButton9.Name = "iconButton9";
-            this.iconButton9.Rotation = 0D;
-            this.iconButton9.Size = new System.Drawing.Size(114, 46);
-            this.iconButton9.TabIndex = 2;
-            this.iconButton9.Text = "Lọc";
-            this.iconButton9.UseVisualStyleBackColor = false;
+            this.btnSearch.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Filter;
+            this.btnSearch.IconColor = System.Drawing.Color.White;
+            this.btnSearch.IconSize = 20;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSearch.Location = new System.Drawing.Point(396, 10);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Rotation = 0D;
+            this.btnSearch.Size = new System.Drawing.Size(114, 46);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "Lọc";
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
             // label21
             // 
@@ -1827,7 +1834,7 @@
             this.groupBoxCustomer.ResumeLayout(false);
             this.groupBoxCustomer.PerformLayout();
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDetailOrder)).EndInit();
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
@@ -1918,7 +1925,7 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label20;
-        private FontAwesome.Sharp.IconButton iconButton9;
+        private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label16;
@@ -1929,7 +1936,7 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewDetailOrder;
         private System.Windows.Forms.DataGridView dataGridViewOrder;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;

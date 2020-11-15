@@ -35,6 +35,7 @@ namespace DoNoiThat
             loadComboKH();
             Functions.setDataSource(comboBoxStaffName, "SELECT MaNV,TenNV FROM NhanVien");
             comboBoxStaffName.SelectedIndex = -1;
+      
         }
         void loadComboKH()
         {
@@ -262,21 +263,22 @@ namespace DoNoiThat
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            string ngaydat = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            string ngaygiao = dateTimePicker2.Value.ToString("yyyy-MM-dd");
             if (radioButtonYes.Checked == true)
             {
-                string customerid = generateCustomerId();
+                string customerid = generateCustomerId();      
                 if (checkTextbox() == true)
                 {
                     try
                     {
-                        SqlCommand cmd = new SqlCommand("INSERT dbo.[KhachHang] ([MaKH],[TenKH],[DiaChi],[DienThoai]) VALUES (N'" + customerid + "',N'" + txtCustomerName.Text + "',N'" + txtAddress.Text + "',N'" + txtPhoneNumber.Text + "')", Functions.Con);
-                        cmd.CommandType = CommandType.Text;
-                        cmd.ExecuteScalar();
+                        string sql="INSERT dbo.[KhachHang] ([MaKH],[TenKH],[DiaChi],[DienThoai]) VALUES (N'" + customerid + "',N'" + txtCustomerName.Text + "',N'" + txtAddress.Text + "',N'" + txtPhoneNumber.Text + "')";
+                        Functions.RunSQL(sql);
                         try
                         {
-                            string sql = "INSERT[dbo].[DonDH]([SoDDH], [MaNV], [MaKH], [NgayDat], [NgayGiao], [DatCoc], [Thue], [TongTien]) VALUES(N'" + labelIdOrder1.Text + "', N'" + txtStaffId.Text + "', N'" + customerid + "', CAST(N'" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' AS Date)+, CAST(N'" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "' AS Date)," + txtDeposit.Text + "," + labelTax1.Text.Substring(0,2) + "," + labelTotal1.Text + ")";
-                            cmd.CommandText = sql;
-                            cmd.ExecuteNonQuery();
+                            sql = "INSERT [dbo].[DonDH] ([SoDDH], [MaNV], [MaKH], [NgayDat], [NgayGiao], [DatCoc], [Thue], [TongTien]) VALUES(N'" + labelIdOrder1.Text + "', N'" + txtStaffId.Text + "', N'" + customerid + "', CAST(N'" + ngaydat + "' AS Date), CAST(N'" + ngaygiao + "' AS Date)," + txtDeposit.Text + "," + labelTax1.Text.Substring(0,2) + "," + labelTotal1.Text + ")";
+                            MessageBox.Show(sql);
+                            Functions.RunSQL(sql);
                             foreach (DataGridViewRow row in dataGridViewDetail.Rows)
                             {
                                 try
@@ -286,9 +288,9 @@ namespace DoNoiThat
                                     string soluong = row.Cells[1].Value.ToString();
                                     string giamgia = row.Cells[2].Value.ToString();
                                     string thanhtien = row.Cells[3].Value.ToString();
-                                    sql = "INSERT[dbo].[ChiTietDonDH]([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES(N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";
-                                    cmd.CommandText = sql;
-                                    cmd.ExecuteNonQuery();
+                                    sql = "INSERT [dbo].[ChiTietDonDH] ([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES(N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";
+                                    Functions.RunSQL(sql);
+                                    MessageBox.Show("Thêm hóa đơn thành công!");
                                 }
                                 catch (SqlException)
                                 {
@@ -302,9 +304,8 @@ namespace DoNoiThat
                         catch (SqlException )
                         {
                             MessageBox.Show("Thêm hóa đơn thất bại!");
-                         
-                            cmd.CommandText = "ROLLBACK;";
-                            cmd.ExecuteNonQuery();
+
+                            Functions.RunSQL("ROLLBACK;");
                         }
                     }
                     catch (SqlException)
@@ -321,13 +322,10 @@ namespace DoNoiThat
                 {
                     string customerid = comboBoxCustomerId.SelectedItem.ToString();
 
-                    SqlCommand cmd = Functions.Con.CreateCommand();
-
                     try
                     {
-                        string sql = "INSERT[dbo].[DonDH]([SoDDH], [MaNV], [MaKH], [NgayDat], [NgayGiao], [DatCoc], [Thue], [TongTien]) VALUES(N'" + labelIdOrder1.Text + "', N'" + txtStaffId.Text + "', N'" + customerid + "', CAST(N'" + dateTimePicker1.Value.ToString("yyyy-MM-dd") + "' AS Date)+, CAST(N'" + dateTimePicker2.Value.ToString("yyyy-MM-dd") + "' AS Date)," + txtDeposit.Text + "," + labelTax1.Text.Substring(0,2) + "," + labelTotal1.Text + ")";
-                        cmd.CommandText = sql;
-                        cmd.ExecuteNonQuery();
+                        string sql = "INSERT [dbo].[DonDH] ([SoDDH], [MaNV], [MaKH], [NgayDat], [NgayGiao], [DatCoc], [Thue], [TongTien]) VALUES (N'" + labelIdOrder1.Text + "', N'" + txtStaffId.Text + "', N'" + customerid + "', CAST(N'" + ngaydat + "' AS Date), CAST(N'" + ngaygiao + "' AS Date)," + txtDeposit.Text + "," + labelTax1.Text.Substring(0,2) + "," + labelTotal1.Text + ")";
+                        Functions.RunSQL(sql);
                         foreach (DataGridViewRow row in dataGridViewDetail.Rows)
                         {
                             try
@@ -337,9 +335,9 @@ namespace DoNoiThat
                                 string soluong = row.Cells[1].Value.ToString();
                                 string giamgia = row.Cells[2].Value.ToString();
                                 string thanhtien = row.Cells[3].Value.ToString();
-                                sql = "INSERT[dbo].[ChiTietDonDH]([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES(N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";
-                                cmd.CommandText = sql;
-                                cmd.ExecuteNonQuery();
+                                sql = "INSERT[dbo].[ChiTietDonDH] ([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES (N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";
+                                Functions.RunSQL(sql);
+                                MessageBox.Show("Thêm hóa đơn thành công");
                             }
                             catch (SqlException)
                             {
@@ -396,6 +394,11 @@ namespace DoNoiThat
             {
                 txtStaffId.Text = comboBoxStaffName.SelectedValue.ToString();
             }
+        }
+
+        private void dataGridViewOrder_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
