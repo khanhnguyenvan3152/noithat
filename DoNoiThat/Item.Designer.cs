@@ -192,6 +192,7 @@
             // 
             // tabPageItemList
             // 
+            this.tabPageItemList.BackColor = System.Drawing.Color.White;
             this.tabPageItemList.Controls.Add(this.tableLayoutPanel7);
             this.tabPageItemList.Location = new System.Drawing.Point(4, 31);
             this.tabPageItemList.Margin = new System.Windows.Forms.Padding(4);
@@ -200,7 +201,6 @@
             this.tabPageItemList.Size = new System.Drawing.Size(1382, 887);
             this.tabPageItemList.TabIndex = 1;
             this.tabPageItemList.Text = "Sản Phẩm";
-            this.tabPageItemList.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel7
             // 
@@ -257,7 +257,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(179, 20);
+            this.label5.Location = new System.Drawing.Point(275, 20);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 18);
             this.label5.TabIndex = 8;
@@ -266,9 +266,9 @@
             // txtMaSP
             // 
             this.txtMaSP.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSP.Location = new System.Drawing.Point(238, 15);
+            this.txtMaSP.Location = new System.Drawing.Point(334, 15);
             this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(215, 25);
+            this.txtMaSP.Size = new System.Drawing.Size(115, 25);
             this.txtMaSP.TabIndex = 7;
             // 
             // label30
@@ -319,7 +319,7 @@
             this.comboBoxMaterial.Location = new System.Drawing.Point(731, 16);
             this.comboBoxMaterial.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxMaterial.Name = "comboBoxMaterial";
-            this.comboBoxMaterial.Size = new System.Drawing.Size(93, 24);
+            this.comboBoxMaterial.Size = new System.Drawing.Size(125, 24);
             this.comboBoxMaterial.TabIndex = 1;
             // 
             // label3
@@ -342,7 +342,7 @@
             this.comboBoxType.Location = new System.Drawing.Point(522, 16);
             this.comboBoxType.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(93, 24);
+            this.comboBoxType.Size = new System.Drawing.Size(120, 24);
             this.comboBoxType.TabIndex = 1;
             // 
             // label2
@@ -360,6 +360,7 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.flowLayoutPanel21, 0, 1);
@@ -457,6 +458,7 @@
             // 
             // tableLayoutPanel9
             // 
+            this.tableLayoutPanel9.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel9.ColumnCount = 2;
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 618F));
@@ -1045,6 +1047,7 @@
             // 
             // tableLayoutPanelItem
             // 
+            this.tableLayoutPanelItem.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanelItem.ColumnCount = 2;
             this.tableLayoutPanelItem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanelItem.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 0F));
@@ -1062,6 +1065,7 @@
             // 
             // tableLayoutPanel10
             // 
+            this.tableLayoutPanel10.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));

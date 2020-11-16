@@ -92,18 +92,23 @@
             this.iconButton6 = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.panelCustomer = new System.Windows.Forms.Panel();
-            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.comboBoxCustomerId = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.radioButtonNo = new System.Windows.Forms.RadioButton();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.radioButtonYes = new System.Windows.Forms.RadioButton();
             this.label29 = new System.Windows.Forms.Label();
+            this.radioButtonNo = new System.Windows.Forms.RadioButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtStaffId = new System.Windows.Forms.TextBox();
@@ -117,10 +122,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dataGridViewDetail = new System.Windows.Forms.DataGridView();
-            this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPrintReceipt = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
@@ -129,12 +130,8 @@
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.comboChatLieu = new System.Windows.Forms.ComboBox();
+            this.comboLoai = new System.Windows.Forms.ComboBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -148,6 +145,16 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.dataGridViewItem = new System.Windows.Forms.DataGridView();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboMau = new System.Windows.Forms.ComboBox();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlOrder.SuspendLayout();
             this.tabPageOrderList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -170,7 +177,12 @@
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.panelCustomer.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.panel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -184,6 +196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).BeginInit();
+            this.panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlOrder
@@ -214,6 +227,7 @@
             // 
             // tableLayoutPanel7
             // 
+            this.tableLayoutPanel7.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 438F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -651,6 +665,7 @@
             // 
             // tableLayoutPanel10
             // 
+            this.tableLayoutPanel10.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel10.ColumnCount = 1;
             this.tableLayoutPanel10.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel10.Controls.Add(this.iconButton2, 0, 0);
@@ -842,6 +857,7 @@
             // 
             // tabPageSale
             // 
+            this.tabPageSale.BackColor = System.Drawing.Color.White;
             this.tabPageSale.Controls.Add(this.tableLayoutPanel12);
             this.tabPageSale.Location = new System.Drawing.Point(4, 28);
             this.tabPageSale.Margin = new System.Windows.Forms.Padding(4);
@@ -850,10 +866,10 @@
             this.tabPageSale.Size = new System.Drawing.Size(1323, 756);
             this.tabPageSale.TabIndex = 1;
             this.tabPageSale.Text = "Lập Hóa Đơn";
-            this.tabPageSale.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel12
             // 
+            this.tableLayoutPanel12.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel12.ColumnCount = 2;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 468F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -870,6 +886,7 @@
             // 
             // tableLayoutPanel13
             // 
+            this.tableLayoutPanel13.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel13.ColumnCount = 1;
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 462F));
             this.tableLayoutPanel13.Controls.Add(this.panel2, 0, 4);
@@ -914,7 +931,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.ForeColor = System.Drawing.Color.Red;
-            this.label36.Location = new System.Drawing.Point(222, 9);
+            this.label36.Location = new System.Drawing.Point(253, 12);
             this.label36.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(44, 19);
@@ -927,7 +944,7 @@
             this.txtDeposit.Location = new System.Drawing.Point(85, 8);
             this.txtDeposit.Margin = new System.Windows.Forms.Padding(2);
             this.txtDeposit.Name = "txtDeposit";
-            this.txtDeposit.Size = new System.Drawing.Size(120, 23);
+            this.txtDeposit.Size = new System.Drawing.Size(161, 23);
             this.txtDeposit.TabIndex = 1;
             // 
             // label34
@@ -1032,6 +1049,7 @@
             // 
             // iconButton6
             // 
+            this.iconButton6.BackColor = System.Drawing.Color.White;
             this.iconButton6.Dock = System.Windows.Forms.DockStyle.Top;
             this.iconButton6.FlatAppearance.BorderSize = 0;
             this.iconButton6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -1052,7 +1070,7 @@
             this.iconButton6.Text = "Chi Tiết Hóa Đơn";
             this.iconButton6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton6.UseVisualStyleBackColor = true;
+            this.iconButton6.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -1066,10 +1084,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.panelCustomer);
-            this.groupBox2.Controls.Add(this.radioButtonNo);
-            this.groupBox2.Controls.Add(this.radioButtonYes);
-            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.panel7);
+            this.groupBox2.Controls.Add(this.panel16);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(0);
@@ -1080,130 +1096,162 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Khách Hàng";
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.panelCustomer);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(4, 49);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(450, 117);
+            this.panel7.TabIndex = 4;
+            // 
             // panelCustomer
             // 
-            this.panelCustomer.Controls.Add(this.txtCustomerName);
-            this.panelCustomer.Controls.Add(this.txtAddress);
-            this.panelCustomer.Controls.Add(this.txtPhoneNumber);
-            this.panelCustomer.Controls.Add(this.comboBoxCustomerId);
-            this.panelCustomer.Controls.Add(this.label33);
-            this.panelCustomer.Controls.Add(this.label32);
-            this.panelCustomer.Controls.Add(this.label31);
-            this.panelCustomer.Controls.Add(this.label30);
-            this.panelCustomer.Location = new System.Drawing.Point(4, 41);
+            this.panelCustomer.Controls.Add(this.panel10);
+            this.panelCustomer.Controls.Add(this.panel8);
+            this.panelCustomer.Controls.Add(this.panel17);
+            this.panelCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCustomer.Location = new System.Drawing.Point(0, 0);
             this.panelCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.panelCustomer.Name = "panelCustomer";
-            this.panelCustomer.Size = new System.Drawing.Size(435, 122);
-            this.panelCustomer.TabIndex = 2;
+            this.panelCustomer.Size = new System.Drawing.Size(450, 117);
+            this.panelCustomer.TabIndex = 3;
             // 
-            // txtCustomerName
+            // panel10
             // 
-            this.txtCustomerName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomerName.Location = new System.Drawing.Point(79, 46);
-            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
-            this.txtCustomerName.Name = "txtCustomerName";
-            this.txtCustomerName.Size = new System.Drawing.Size(199, 25);
-            this.txtCustomerName.TabIndex = 4;
+            this.panel10.Controls.Add(this.txtAddress);
+            this.panel10.Controls.Add(this.label33);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(0, 68);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(450, 49);
+            this.panel10.TabIndex = 7;
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(79, 79);
+            this.txtAddress.Location = new System.Drawing.Point(80, 5);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(343, 39);
-            this.txtAddress.TabIndex = 3;
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(282, 9);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(139, 25);
-            this.txtPhoneNumber.TabIndex = 2;
-            // 
-            // comboBoxCustomerId
-            // 
-            this.comboBoxCustomerId.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxCustomerId.FormattingEnabled = true;
-            this.comboBoxCustomerId.Location = new System.Drawing.Point(79, 9);
-            this.comboBoxCustomerId.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBoxCustomerId.Name = "comboBoxCustomerId";
-            this.comboBoxCustomerId.Size = new System.Drawing.Size(120, 25);
-            this.comboBoxCustomerId.TabIndex = 1;
-            this.comboBoxCustomerId.SelectedIndexChanged += new System.EventHandler(this.comboBoxCustomerId_SelectedIndexChanged);
+            this.txtAddress.TabIndex = 5;
             // 
             // label33
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Black;
-            this.label33.Location = new System.Drawing.Point(10, 92);
+            this.label33.Location = new System.Drawing.Point(11, 18);
             this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(63, 18);
-            this.label33.TabIndex = 0;
+            this.label33.TabIndex = 4;
             this.label33.Text = "Địa Chỉ:";
             // 
-            // label32
+            // panel8
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.ForeColor = System.Drawing.Color.Black;
-            this.label32.Location = new System.Drawing.Point(238, 11);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(41, 18);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "SĐT:";
+            this.panel8.Controls.Add(this.txtCustomerName);
+            this.panel8.Controls.Add(this.label31);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 35);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(450, 33);
+            this.panel8.TabIndex = 6;
+            // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(81, 6);
+            this.txtCustomerName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(199, 25);
+            this.txtCustomerName.TabIndex = 6;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.Color.Black;
-            this.label31.Location = new System.Drawing.Point(10, 46);
+            this.label31.Location = new System.Drawing.Point(12, 6);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(66, 18);
-            this.label31.TabIndex = 0;
+            this.label31.TabIndex = 5;
             this.label31.Text = "Tên KH:";
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.txtPhoneNumber);
+            this.panel17.Controls.Add(this.comboBoxCustomerId);
+            this.panel17.Controls.Add(this.label32);
+            this.panel17.Controls.Add(this.label30);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(450, 35);
+            this.panel17.TabIndex = 5;
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(284, 8);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(139, 25);
+            this.txtPhoneNumber.TabIndex = 6;
+            // 
+            // comboBoxCustomerId
+            // 
+            this.comboBoxCustomerId.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCustomerId.FormattingEnabled = true;
+            this.comboBoxCustomerId.Location = new System.Drawing.Point(81, 8);
+            this.comboBoxCustomerId.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxCustomerId.Name = "comboBoxCustomerId";
+            this.comboBoxCustomerId.Size = new System.Drawing.Size(120, 25);
+            this.comboBoxCustomerId.TabIndex = 5;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.ForeColor = System.Drawing.Color.Black;
+            this.label32.Location = new System.Drawing.Point(240, 10);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(41, 18);
+            this.label32.TabIndex = 3;
+            this.label32.Text = "SĐT:";
             // 
             // label30
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(10, 11);
+            this.label30.Location = new System.Drawing.Point(12, 10);
             this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(59, 18);
-            this.label30.TabIndex = 0;
+            this.label30.TabIndex = 4;
             this.label30.Text = "Mã KH:";
             // 
-            // radioButtonNo
+            // panel16
             // 
-            this.radioButtonNo.AutoSize = true;
-            this.radioButtonNo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonNo.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonNo.Location = new System.Drawing.Point(315, 19);
-            this.radioButtonNo.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButtonNo.Name = "radioButtonNo";
-            this.radioButtonNo.Size = new System.Drawing.Size(70, 20);
-            this.radioButtonNo.TabIndex = 1;
-            this.radioButtonNo.TabStop = true;
-            this.radioButtonNo.Text = "Không";
-            this.radioButtonNo.UseVisualStyleBackColor = true;
-            this.radioButtonNo.CheckedChanged += new System.EventHandler(this.radioButtonNo_CheckedChanged_1);
+            this.panel16.Controls.Add(this.radioButtonYes);
+            this.panel16.Controls.Add(this.label29);
+            this.panel16.Controls.Add(this.radioButtonNo);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(4, 23);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(450, 26);
+            this.panel16.TabIndex = 3;
             // 
             // radioButtonYes
             // 
             this.radioButtonYes.AutoSize = true;
             this.radioButtonYes.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonYes.ForeColor = System.Drawing.Color.Black;
-            this.radioButtonYes.Location = new System.Drawing.Point(242, 19);
+            this.radioButtonYes.Location = new System.Drawing.Point(240, 4);
             this.radioButtonYes.Margin = new System.Windows.Forms.Padding(4);
             this.radioButtonYes.Name = "radioButtonYes";
             this.radioButtonYes.Size = new System.Drawing.Size(47, 20);
@@ -1218,12 +1266,27 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(9, 21);
+            this.label29.Location = new System.Drawing.Point(7, 6);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(157, 16);
             this.label29.TabIndex = 0;
             this.label29.Text = "Thêm khách hàng mới?";
+            // 
+            // radioButtonNo
+            // 
+            this.radioButtonNo.AutoSize = true;
+            this.radioButtonNo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonNo.ForeColor = System.Drawing.Color.Black;
+            this.radioButtonNo.Location = new System.Drawing.Point(313, 4);
+            this.radioButtonNo.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButtonNo.Name = "radioButtonNo";
+            this.radioButtonNo.Size = new System.Drawing.Size(70, 20);
+            this.radioButtonNo.TabIndex = 1;
+            this.radioButtonNo.TabStop = true;
+            this.radioButtonNo.Text = "Không";
+            this.radioButtonNo.UseVisualStyleBackColor = true;
+            this.radioButtonNo.CheckedChanged += new System.EventHandler(this.radioButtonNo_CheckedChanged_1);
             // 
             // panel5
             // 
@@ -1374,9 +1437,10 @@
             this.dataGridViewDetail.AllowUserToDeleteRows = false;
             this.dataGridViewDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDetail.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridViewDetail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewDetail.ColumnHeadersHeight = 50;
             this.dataGridViewDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNT,
+            this.DonGia,
             this.SL,
             this.GiamGia,
             this.ThanhTien});
@@ -1389,30 +1453,6 @@
             this.dataGridViewDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDetail.Size = new System.Drawing.Size(458, 246);
             this.dataGridViewDetail.TabIndex = 10;
-            // 
-            // MaNT
-            // 
-            this.MaNT.HeaderText = "Mã NT";
-            this.MaNT.MinimumWidth = 6;
-            this.MaNT.Name = "MaNT";
-            // 
-            // SL
-            // 
-            this.SL.HeaderText = "SL";
-            this.SL.MinimumWidth = 6;
-            this.SL.Name = "SL";
-            // 
-            // GiamGia
-            // 
-            this.GiamGia.HeaderText = "Giảm giá";
-            this.GiamGia.MinimumWidth = 6;
-            this.GiamGia.Name = "GiamGia";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
             // 
             // panel3
             // 
@@ -1436,7 +1476,7 @@
             this.btnPrintReceipt.IconColor = System.Drawing.Color.White;
             this.btnPrintReceipt.IconSize = 20;
             this.btnPrintReceipt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrintReceipt.Location = new System.Drawing.Point(26, 11);
+            this.btnPrintReceipt.Location = new System.Drawing.Point(4, 11);
             this.btnPrintReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
             this.btnPrintReceipt.Name = "btnPrintReceipt";
             this.btnPrintReceipt.Rotation = 0D;
@@ -1444,6 +1484,7 @@
             this.btnPrintReceipt.TabIndex = 3;
             this.btnPrintReceipt.Text = "In";
             this.btnPrintReceipt.UseVisualStyleBackColor = false;
+            this.btnPrintReceipt.Click += new System.EventHandler(this.btnPrintReceipt_Click);
             // 
             // btnSave
             // 
@@ -1475,7 +1516,7 @@
             this.iconButtonDeleteDetailRow.IconColor = System.Drawing.Color.White;
             this.iconButtonDeleteDetailRow.IconSize = 20;
             this.iconButtonDeleteDetailRow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonDeleteDetailRow.Location = new System.Drawing.Point(316, 11);
+            this.iconButtonDeleteDetailRow.Location = new System.Drawing.Point(340, 11);
             this.iconButtonDeleteDetailRow.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
             this.iconButtonDeleteDetailRow.Name = "iconButtonDeleteDetailRow";
             this.iconButtonDeleteDetailRow.Rotation = 0D;
@@ -1487,6 +1528,7 @@
             // 
             // tableLayoutPanel16
             // 
+            this.tableLayoutPanel16.BackColor = System.Drawing.Color.White;
             this.tableLayoutPanel16.ColumnCount = 1;
             this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel16.Controls.Add(this.iconButton7, 0, 0);
@@ -1532,8 +1574,9 @@
             this.tableLayoutPanel17.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tableLayoutPanel17.ColumnCount = 2;
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 535F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 571F));
             this.tableLayoutPanel17.Controls.Add(this.panel15, 1, 0);
+            this.tableLayoutPanel17.Controls.Add(this.panel18, 0, 0);
             this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel17.Location = new System.Drawing.Point(0, 44);
             this.tableLayoutPanel17.Margin = new System.Windows.Forms.Padding(0);
@@ -1546,83 +1589,40 @@
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panel15.Controls.Add(this.comboBox4);
-            this.panel15.Controls.Add(this.comboBox3);
-            this.panel15.Controls.Add(this.comboBox2);
-            this.panel15.Controls.Add(this.comboBox1);
             this.panel15.Controls.Add(this.label10);
-            this.panel15.Controls.Add(this.label20);
+            this.panel15.Controls.Add(this.comboMau);
+            this.panel15.Controls.Add(this.comboChatLieu);
+            this.panel15.Controls.Add(this.comboLoai);
             this.panel15.Controls.Add(this.btnSearch);
             this.panel15.Controls.Add(this.label21);
             this.panel15.Controls.Add(this.label22);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(306, 0);
+            this.panel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel15.Location = new System.Drawing.Point(270, 0);
             this.panel15.Margin = new System.Windows.Forms.Padding(0);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(535, 62);
+            this.panel15.Size = new System.Drawing.Size(571, 62);
             this.panel15.TabIndex = 1;
             // 
-            // comboBox4
+            // comboChatLieu
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(269, 29);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(74, 24);
-            this.comboBox4.TabIndex = 3;
+            this.comboChatLieu.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboChatLieu.FormattingEnabled = true;
+            this.comboChatLieu.Location = new System.Drawing.Point(167, 30);
+            this.comboChatLieu.Margin = new System.Windows.Forms.Padding(4);
+            this.comboChatLieu.Name = "comboChatLieu";
+            this.comboChatLieu.Size = new System.Drawing.Size(122, 24);
+            this.comboChatLieu.TabIndex = 3;
             // 
-            // comboBox3
+            // comboLoai
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(181, 29);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(74, 24);
-            this.comboBox3.TabIndex = 3;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(91, 29);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(74, 24);
-            this.comboBox2.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(4, 29);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(74, 24);
-            this.comboBox1.TabIndex = 3;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(265, 8);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 17);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Đơn Giá Bán:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(178, 8);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(67, 17);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Nước SX:";
+            this.comboLoai.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboLoai.FormattingEnabled = true;
+            this.comboLoai.Location = new System.Drawing.Point(12, 30);
+            this.comboLoai.Margin = new System.Windows.Forms.Padding(4);
+            this.comboLoai.Name = "comboLoai";
+            this.comboLoai.Size = new System.Drawing.Size(124, 24);
+            this.comboLoai.TabIndex = 3;
             // 
             // btnSearch
             // 
@@ -1634,7 +1634,7 @@
             this.btnSearch.IconColor = System.Drawing.Color.White;
             this.btnSearch.IconSize = 20;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(396, 10);
+            this.btnSearch.Location = new System.Drawing.Point(451, 8);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Rotation = 0D;
@@ -1642,26 +1642,27 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Lọc";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label21.Location = new System.Drawing.Point(88, 9);
+            this.label21.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(164, 9);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(72, 17);
+            this.label21.Size = new System.Drawing.Size(78, 16);
             this.label21.TabIndex = 1;
             this.label21.Text = "Chất Liệu:";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(4, 9);
+            this.label22.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(12, 9);
             this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(39, 17);
+            this.label22.Size = new System.Drawing.Size(41, 16);
             this.label22.TabIndex = 1;
             this.label22.Text = "Loại:";
             // 
@@ -1775,7 +1776,7 @@
             this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton8.IconColor = System.Drawing.Color.Black;
             this.iconButton8.IconSize = 16;
-            this.iconButton8.Location = new System.Drawing.Point(16, 8);
+            this.iconButton8.Location = new System.Drawing.Point(51, 7);
             this.iconButton8.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton8.Name = "iconButton8";
             this.iconButton8.Rotation = 0D;
@@ -1803,6 +1804,85 @@
             this.dataGridViewItem.Size = new System.Drawing.Size(837, 568);
             this.dataGridViewItem.TabIndex = 9;
             this.dataGridViewItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(314, 9);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 18);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Màu:";
+            // 
+            // comboMau
+            // 
+            this.comboMau.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.comboMau.FormattingEnabled = true;
+            this.comboMau.Location = new System.Drawing.Point(317, 30);
+            this.comboMau.Margin = new System.Windows.Forms.Padding(44, 3, 3, 3);
+            this.comboMau.Name = "comboMau";
+            this.comboMau.Size = new System.Drawing.Size(121, 24);
+            this.comboMau.TabIndex = 8;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.label20);
+            this.panel18.Controls.Add(this.txtTenSP);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel18.Location = new System.Drawing.Point(3, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(264, 56);
+            this.panel18.TabIndex = 2;
+            // 
+            // txtTenSP
+            // 
+            this.txtTenSP.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTenSP.Location = new System.Drawing.Point(12, 27);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(249, 23);
+            this.txtTenSP.TabIndex = 0;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(9, 6);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(111, 18);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Tên sản phẩm:";
+            // 
+            // MaNT
+            // 
+            this.MaNT.HeaderText = "Mã NT";
+            this.MaNT.MinimumWidth = 6;
+            this.MaNT.Name = "MaNT";
+            // 
+            // DonGia
+            // 
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            // 
+            // SL
+            // 
+            this.SL.HeaderText = "SL";
+            this.SL.MinimumWidth = 6;
+            this.SL.Name = "SL";
+            // 
+            // GiamGia
+            // 
+            this.GiamGia.HeaderText = "Giảm giá";
+            this.GiamGia.MinimumWidth = 6;
+            this.GiamGia.Name = "GiamGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // Order
             // 
@@ -1849,9 +1929,16 @@
             this.panel13.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.panel7.ResumeLayout(false);
             this.panelCustomer.ResumeLayout(false);
-            this.panelCustomer.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -1869,6 +1956,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).EndInit();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1919,12 +2008,8 @@
         private FontAwesome.Sharp.IconButton iconButton7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.ComboBox comboChatLieu;
+        private System.Windows.Forms.ComboBox comboLoai;
         private FontAwesome.Sharp.IconButton btnSearch;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
@@ -1969,30 +2054,41 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Panel panelCustomer;
-        private System.Windows.Forms.TextBox txtCustomerName;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.TextBox txtPhoneNumber;
-        private System.Windows.Forms.ComboBox comboBoxCustomerId;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.RadioButton radioButtonNo;
-        private System.Windows.Forms.RadioButton radioButtonYes;
-        private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtStaffId;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox comboBoxStaffName;
         private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaNT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GiamGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.Panel panel6;
         private FontAwesome.Sharp.IconButton iconButton8;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.RadioButton radioButtonYes;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.RadioButton radioButtonNo;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panelCustomer;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.ComboBox comboBoxCustomerId;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboMau;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox txtTenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaNT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GiamGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }

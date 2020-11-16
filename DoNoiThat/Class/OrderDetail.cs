@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace DoNoiThat.Class
 {
-    class OrderDetail
+    public class OrderDetail
     {
         private string orderid;
         private string productid;
+        private string productname;
         private int quantity;
-        private float discount;
-        private float total;
-
-        public OrderDetail(string orderid, string productid, int quantity, float discount, float total)
+        private double discount;
+        private double total;
+        public OrderDetail(string orderid, string productid, int quantity, double discount, double total)
         {
             Orderid = orderid;
             Productid = productid;
+            Productname = TenSanPham(productid);
             Quantity = quantity;
             Discount = discount;
             Total = total;
@@ -26,7 +27,18 @@ namespace DoNoiThat.Class
         public string Orderid { get => orderid; set => orderid = value; }
         public string Productid { get => productid; set => productid = value; }
         public int Quantity { get => quantity; set => quantity = value; }
-        public float Discount { get => discount; set => discount = value; }
-        public float Total { get => total; set => total = value; }
+        public double Discount { get => discount; set => discount = value; }
+        public double Total { get => total; set => total = value; }
+        public string Productname { get => productname; set => productname = value; }
+
+        public string TenSanPham(string _pid)
+        {
+            string sql = "SELECT TenNoiThat FROM DMNoiThat WHERE MaNoiThat = N'" + _pid + "'";
+            System.Data.DataTable dt = Functions.GetDataTable(sql);
+            string ten = dt.Rows[0].ItemArray[0].ToString();
+            return ten;
+
+        }
     }
+
 }

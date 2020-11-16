@@ -21,15 +21,23 @@ namespace DoNoiThat
         public Order()
         {
             InitializeComponent();
-        }
-
-
-        private void Order_Load(object sender, EventArgs e)
-        {
-            loadDataGridView();
             this.dateTimePicker1.Value = System.DateTime.Now;
             this.dateTimePicker1.Value = System.DateTime.Now;
             dataGridViewDetail.ForeColor = Color.Black;
+            FillComboBox();
+        }
+        private void FillComboBox()
+        {
+            Utils.FillCombo(Utils.ChatLieu, comboChatLieu, "TenChatLieu", "MaChatLieu");
+            Utils.FillCombo(Utils.TheLoai, comboLoai, "TenLoai", "MaLoai");
+            Utils.FillCombo(Utils.MauSac, comboMau, "TenMau", "MaMau");
+        }
+
+        private void Order_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Load");
+            loadDataGridView();
+           
             labelIdOrder1.Text = genarateKey(); //Gan id moi cho lap hoa don
             radioButtonNo.Checked = true;
             loadComboKH();
@@ -54,23 +62,29 @@ namespace DoNoiThat
         }
         private void loadDataGridView()
         {
-            if(tabControlOrder.SelectedIndex ==0)
-            {
-                string sql = "SELECT * FROM DonDH";
-                dataGridViewOrder.ForeColor = Color.Black;
-                dataGridViewDetailOrder.ForeColor = Color.Black;
-                DataTable table = Functions.GetDataTable(sql);
-                dataGridViewOrder.DataSource = table;
-                table.Dispose();
-            }
-            if(tabControlOrder.SelectedIndex ==1)
-            {
-                string sql = "SELECT * FROM DMNoiThat";
-                dataGridViewItem.ForeColor = Color.Black;
-                DataTable table = Functions.GetDataTable(sql);
-                dataGridViewItem.DataSource = table;
-                table.Dispose();
-            }
+            loadDataDanhSachHoaDon();
+            loadDataLapHoaDon();
+
+  
+           
+        }
+        private void loadDataLapHoaDon()
+        {
+            string sql = "SELECT * FROM DMNoiThat";
+            dataGridViewItem.ForeColor = Color.Black;
+            DataTable table = Functions.GetDataTable(sql);
+            dataGridViewItem.DataSource = table;
+            table.Dispose();
+        }
+        private void loadDataDanhSachHoaDon()
+        {
+            string sql = "SELECT * FROM DonDH";
+            dataGridViewOrder.ForeColor = Color.Black;
+            dataGridViewDetailOrder.ForeColor = Color.Black;
+            DataTable table = Functions.GetDataTable(sql);
+            dataGridViewOrder.DataSource = table;
+            table.Dispose();
+
         }
         private void radioButtonYes_CheckedChanged(object sender, EventArgs e)
         {
@@ -412,6 +426,57 @@ namespace DoNoiThat
                 dataGridViewDetailOrder.DataSource = dt;
                 dt.Dispose();
             }
+        }
+
+        private void btnPrintReceipt_Click(object sender, EventArgs e)
+        {
+            OrderObject dondathang = new OrderObject(labelIdOrder1.Text,comboBoxCustomerId.Text,txtStaffId.Text,dateTimePicker1.Value,dateTimePicker2.Value,Convert.ToDouble(txtDeposit.Text),float.Parse(labelTax1.Text.Substring(0,2)),Convert.ToDouble(labelTotal1.Text));
+            List<OrderDetail> list = new List<OrderDetail>();
+            if(dataGridViewDetail.Rows.Count >0)
+            {
+                foreach (DataGridViewRow row in dataGridViewDetail.Rows)
+                {
+                    OrderDetail obj = new OrderDetail(labelIdOrder1.Text, row.Cells[0].Value.ToString(),Convert.ToInt32(row.Cells[1].Value),Convert.ToDouble(row.Cells[2].Value),Convert.ToDouble(row.Cells[3].Value));
+                    list.Add(obj);
+                }
+            }
+        }
+
+        void resetFilter()
+        {
+            comboLoai.Text = "";
+            comboChatLieu.Text = "";
+            comboMau.Text = "";
+ 
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if ( (comboChatLieu.Text == "") && (comboLoai.Text == "") && (comboMau.Text == ""))
+            {
+                sql = "SELECT * FROM DMNoiThat";
+            }
+            sql = "SELECT * FROM DMNoiThat WHERE 1=1";
+            if (txtTenSP.Text != "")
+            {
+                sql += " AND MaNoiThat LIKE N'%" + txtTenSP.Text + "%'";
+            }
+            if (comboChatLieu.Text != "")
+            {
+                sql += " AND MaChatLieu LIKE N'%" + comboChatLieu.SelectedValue + "%'";
+            }
+            if (comboLoai.Text != "")
+            {
+                sql += " AND MaLoai LIKE N'%" + comboLoai.SelectedValue + "%'";
+            }
+            if(comboMau.Text !="")
+            {
+                sql += "AND MaMau LIKES N'%" + comboMau.SelectedValue + "%'";
+            }
+            DataTable temptb = Functions.GetDataTable(sql);
+            dataGridViewItem.DataSource = temptb;
+            temptb.Dispose();
+            resetFilter();
         }
     }
 }
