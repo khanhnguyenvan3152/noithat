@@ -35,6 +35,8 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.comboBoxColor = new System.Windows.Forms.ComboBox();
             this.iconButtonFilter = new FontAwesome.Sharp.IconButton();
@@ -130,8 +132,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.txtMaSP = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.tabControlItem.SuspendLayout();
             this.tabPageItemList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -252,6 +252,24 @@
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(1183, 62);
             this.panel12.TabIndex = 0;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(179, 20);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 18);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Mã SP";
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSP.Location = new System.Drawing.Point(238, 15);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(215, 25);
+            this.txtMaSP.TabIndex = 7;
             // 
             // label30
             // 
@@ -1454,24 +1472,6 @@
             this.label17.Size = new System.Drawing.Size(71, 16);
             this.label17.TabIndex = 0;
             this.label17.Text = "Giá Nhập:";
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaSP.Location = new System.Drawing.Point(342, 16);
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(100, 25);
-            this.txtMaSP.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(266, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 18);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Mã SP";
             // 
             // Item
             // 

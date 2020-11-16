@@ -58,6 +58,7 @@ namespace DoNoiThat
             {
                 string sql = "SELECT * FROM DonDH";
                 dataGridViewOrder.ForeColor = Color.Black;
+                dataGridViewDetailOrder.ForeColor = Color.Black;
                 DataTable table = Functions.GetDataTable(sql);
                 dataGridViewOrder.DataSource = table;
                 table.Dispose();
@@ -242,21 +243,25 @@ namespace DoNoiThat
             if(txtCustomerName.Text == "")
             {
                 MessageBox.Show("Nhap ten khach hang");
+                txtCustomerName.Focus();
                 return false;
             }
             if(txtPhoneNumber.Text =="")
             {
                 MessageBox.Show("Nhap so dien thoai khach hang");
+                txtPhoneNumber.Focus();
                 return false;
             }
             if(txtAddress.Text =="")
             {
                 MessageBox.Show("Nhap dia chi khach hang");
+                txtAddress.Focus();
                     return false;
             }
             if(txtStaffId.Text =="")
             {
                 MessageBox.Show("Chon nhan vien");
+                comboBoxStaffName.Focus();
                 return false;
             }
             return true;
@@ -398,7 +403,15 @@ namespace DoNoiThat
 
         private void dataGridViewOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if(dataGridViewOrder.CurrentRow != null && dataGridViewOrder.Rows.Count > 0)
+            {
+                string SoDDH = dataGridViewOrder.CurrentRow.Cells[0].Value.ToString();
+                string sql = "SELECT * FROM ChiTietDonDH WHERE SoDDH = N'" + SoDDH + "'";
+                DataTable dt = new DataTable();
+                dt = Functions.GetDataTable(sql);
+                dataGridViewDetailOrder.DataSource = dt;
+                dt.Dispose();
+            }
         }
     }
 }
