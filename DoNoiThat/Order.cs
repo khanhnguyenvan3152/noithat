@@ -183,11 +183,11 @@ namespace DoNoiThat
                             {
                                 if (tmprow.Cells[0].Value.ToString().Equals(mant))
                                 {
-                                    soluong = soluong + int.Parse(tmprow.Cells[1].Value.ToString());
-                                    double tong = float.Parse(thanhtien) + float.Parse(tmprow.Cells[3].Value.ToString());
-                                    tmprow.Cells[1].Value = soluong.ToString();
-                                    tmprow.Cells[3].Value = tong.ToString();
-                                    tmprow.Cells[2].Value = giamgia.ToString();
+                                    soluong = soluong + int.Parse(tmprow.Cells[2].Value.ToString());
+                                    double tong = float.Parse(thanhtien) + float.Parse(tmprow.Cells[4].Value.ToString());
+                                    tmprow.Cells[2].Value = soluong.ToString();
+                                    tmprow.Cells[4].Value = tong.ToString();
+                                    tmprow.Cells[3].Value = giamgia.ToString();
                                     check = true;
                                     break;
                                 }
@@ -196,16 +196,16 @@ namespace DoNoiThat
                     }
                     if (check==false)
                     {
-                        dataGridViewDetail.Rows.Add(mant, soluong, giamgia, thanhtien);
+                        dataGridViewDetail.Rows.Add(mant,dongia, soluong, giamgia, thanhtien);
                     }
                     if(dataGridViewDetail.Rows.Count >0)
                     {
                         double tong = 0;
                         foreach(DataGridViewRow r in dataGridViewDetail.Rows)
                         {
-                            if (r.Cells[3].Value != null)
+                            if (r.Cells[4].Value != null)
                             {
-                                tong = tong + Convert.ToDouble(r.Cells[3].Value);
+                                tong = tong + Convert.ToDouble(r.Cells[4].Value);
                             }
                         }
                         double tongtien = tong * Convert.ToDouble(labelTax1.Text.Substring(0,2))/100+tong;
@@ -236,7 +236,7 @@ namespace DoNoiThat
             {
                 double tongtien = Convert.ToDouble(labelTotal1.Text);
                
-                double thanhtien = Convert.ToDouble(dataGridViewDetail.CurrentRow.Cells[3].Value);
+                double thanhtien = Convert.ToDouble(dataGridViewDetail.CurrentRow.Cells[4].Value);
                 double tienthue = thanhtien * Convert.ToDouble(labelTax1.Text.Substring(0, 2))/100;
                 tongtien = tongtien - thanhtien-tienthue;
                 labelTotal1.Text = tongtien.ToString();
@@ -307,7 +307,7 @@ namespace DoNoiThat
                                     string soluong = row.Cells[1].Value.ToString();
                                     string giamgia = row.Cells[2].Value.ToString();
                                     string thanhtien = row.Cells[3].Value.ToString();
-                                    sql = "INSERT [dbo].[ChiTietDonDH] ([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES(N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";
+                                    sql = "INSERT [dbo].[ChiTietDonDH] ([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES(N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";                     
                                     Functions.RunSQL(sql);
                                     MessageBox.Show("Thêm hóa đơn thành công!");
                                 }
@@ -421,7 +421,7 @@ namespace DoNoiThat
             {
                 string SoDDH = dataGridViewOrder.CurrentRow.Cells[0].Value.ToString();
                 string sql = "SELECT * FROM ChiTietDonDH WHERE SoDDH = N'" + SoDDH + "'";
-                DataTable dt = new DataTable();
+                DataTable dt;
                 dt = Functions.GetDataTable(sql);
                 dataGridViewDetailOrder.DataSource = dt;
                 dt.Dispose();
@@ -430,13 +430,17 @@ namespace DoNoiThat
 
         private void btnPrintReceipt_Click(object sender, EventArgs e)
         {
-            OrderObject dondathang = new OrderObject(labelIdOrder1.Text,comboBoxCustomerId.Text,txtStaffId.Text,dateTimePicker1.Value,dateTimePicker2.Value,Convert.ToDouble(txtDeposit.Text),float.Parse(labelTax1.Text.Substring(0,2)),Convert.ToDouble(labelTotal1.Text));
+            OrderObject dondathang = new OrderObject(labelIdOrder1.Text,txtCustomerName.Text,txtStaffId.Text,dateTimePicker1.Value,dateTimePicker2.Value,Convert.ToDouble(txtDeposit.Text),float.Parse(labelTax1.Text.Substring(0,2)),Convert.ToDouble(labelTotal1.Text));
             List<OrderDetail> list = new List<OrderDetail>();
             if(dataGridViewDetail.Rows.Count >0)
             {
                 foreach (DataGridViewRow row in dataGridViewDetail.Rows)
                 {
-                    OrderDetail obj = new OrderDetail(labelIdOrder1.Text, row.Cells[0].Value.ToString(),Convert.ToInt32(row.Cells[1].Value),Convert.ToDouble(row.Cells[2].Value),Convert.ToDouble(row.Cells[3].Value));
+                    string sql = "SELECT TenNoiThat FROM DMNoiThat";
+                    SqlCommand cmd = new SqlCommand(sql, Functions.Con);
+                    cmd.CommandType = CommandType.Text;
+                    string productname = (string)cmd.ExecuteScalar();
+                    OrderDetail obj = new OrderDetail(labelIdOrder1.Text, row.Cells[0].Value.ToString(),productname,Convert.ToInt32(row.Cells[1].Value),Convert.ToInt32(row.Cells[2].Value),Convert.ToDouble(row.Cells[3].Value),Convert.ToDouble(row.Cells[4].Value));
                     list.Add(obj);
                 }
             }

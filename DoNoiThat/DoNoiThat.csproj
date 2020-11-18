@@ -106,8 +106,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\OrderObject.cs" />
+    <Compile Include="Class\KhachHang.cs" />
     <Compile Include="Class\OrderDetail.cs" />
+    <Compile Include="Class\OrderObject.cs" />
     <Compile Include="Else.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +129,11 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="NoiThat.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Staff.cs">
       <SubType>Form</SubType>
@@ -230,6 +236,11 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DoNoiThat.Class.OrderDetail.datasource" />
+    <None Include="Properties\DataSources\DoNoiThat.Class.OrderObject.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -265,6 +276,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

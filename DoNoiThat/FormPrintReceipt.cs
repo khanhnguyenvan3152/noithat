@@ -30,6 +30,7 @@ namespace DoNoiThat
                 new Microsoft.Reporting.WinForms.ReportParameter("@SoDDH",_order.Orderid),
                 new Microsoft.Reporting.WinForms.ReportParameter("@")
             };
+
             this.reportViewer1.RefreshReport();
         }
     }

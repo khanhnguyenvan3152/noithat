@@ -245,7 +245,6 @@ C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\bin\Debug\ru\Microsoft.Re
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.exe.config
-C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.Form2.resources
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\RdlCompile.cache
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\RdlCompile.compiled
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.FormPrintReceipt.resources

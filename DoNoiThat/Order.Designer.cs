@@ -122,6 +122,11 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.dataGridViewDetail = new System.Windows.Forms.DataGridView();
+            this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnPrintReceipt = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
@@ -130,11 +135,16 @@
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboMau = new System.Windows.Forms.ComboBox();
             this.comboChatLieu = new System.Windows.Forms.ComboBox();
             this.comboLoai = new System.Windows.Forms.ComboBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconButtonAdd = new FontAwesome.Sharp.IconButton();
@@ -145,16 +155,6 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
             this.dataGridViewItem = new System.Windows.Forms.DataGridView();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboMau = new System.Windows.Forms.ComboBox();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.txtTenSP = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlOrder.SuspendLayout();
             this.tabPageOrderList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -191,12 +191,12 @@
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.panel18.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).BeginInit();
-            this.panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlOrder
@@ -1445,6 +1445,7 @@
             this.GiamGia,
             this.ThanhTien});
             this.dataGridViewDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewDetail.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridViewDetail.Location = new System.Drawing.Point(2, 379);
             this.dataGridViewDetail.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewDetail.Name = "dataGridViewDetail";
@@ -1453,6 +1454,36 @@
             this.dataGridViewDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDetail.Size = new System.Drawing.Size(458, 246);
             this.dataGridViewDetail.TabIndex = 10;
+            // 
+            // MaNT
+            // 
+            this.MaNT.HeaderText = "Mã NT";
+            this.MaNT.MinimumWidth = 6;
+            this.MaNT.Name = "MaNT";
+            // 
+            // DonGia
+            // 
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            // 
+            // SL
+            // 
+            this.SL.HeaderText = "SL";
+            this.SL.MinimumWidth = 6;
+            this.SL.Name = "SL";
+            // 
+            // GiamGia
+            // 
+            this.GiamGia.HeaderText = "Giảm giá";
+            this.GiamGia.MinimumWidth = 6;
+            this.GiamGia.Name = "GiamGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // panel3
             // 
@@ -1604,6 +1635,27 @@
             this.panel15.Size = new System.Drawing.Size(571, 62);
             this.panel15.TabIndex = 1;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(314, 9);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 18);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Màu:";
+            // 
+            // comboMau
+            // 
+            this.comboMau.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.comboMau.FormattingEnabled = true;
+            this.comboMau.Location = new System.Drawing.Point(317, 30);
+            this.comboMau.Margin = new System.Windows.Forms.Padding(44, 3, 3, 3);
+            this.comboMau.Name = "comboMau";
+            this.comboMau.Size = new System.Drawing.Size(121, 24);
+            this.comboMau.TabIndex = 8;
+            // 
             // comboChatLieu
             // 
             this.comboChatLieu.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1665,6 +1717,34 @@
             this.label22.Size = new System.Drawing.Size(41, 16);
             this.label22.TabIndex = 1;
             this.label22.Text = "Loại:";
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.label20);
+            this.panel18.Controls.Add(this.txtTenSP);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel18.Location = new System.Drawing.Point(3, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(264, 56);
+            this.panel18.TabIndex = 2;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(9, 6);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(111, 18);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Tên sản phẩm:";
+            // 
+            // txtTenSP
+            // 
+            this.txtTenSP.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
+            this.txtTenSP.Location = new System.Drawing.Point(12, 27);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(249, 23);
+            this.txtTenSP.TabIndex = 0;
             // 
             // tableLayoutPanel1
             // 
@@ -1805,85 +1885,6 @@
             this.dataGridViewItem.TabIndex = 9;
             this.dataGridViewItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(314, 9);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 6, 12, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 18);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Màu:";
-            // 
-            // comboMau
-            // 
-            this.comboMau.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.comboMau.FormattingEnabled = true;
-            this.comboMau.Location = new System.Drawing.Point(317, 30);
-            this.comboMau.Margin = new System.Windows.Forms.Padding(44, 3, 3, 3);
-            this.comboMau.Name = "comboMau";
-            this.comboMau.Size = new System.Drawing.Size(121, 24);
-            this.comboMau.TabIndex = 8;
-            // 
-            // panel18
-            // 
-            this.panel18.Controls.Add(this.label20);
-            this.panel18.Controls.Add(this.txtTenSP);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(3, 3);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(264, 56);
-            this.panel18.TabIndex = 2;
-            // 
-            // txtTenSP
-            // 
-            this.txtTenSP.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold);
-            this.txtTenSP.Location = new System.Drawing.Point(12, 27);
-            this.txtTenSP.Name = "txtTenSP";
-            this.txtTenSP.Size = new System.Drawing.Size(249, 23);
-            this.txtTenSP.TabIndex = 0;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(9, 6);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(111, 18);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Tên sản phẩm:";
-            // 
-            // MaNT
-            // 
-            this.MaNT.HeaderText = "Mã NT";
-            this.MaNT.MinimumWidth = 6;
-            this.MaNT.Name = "MaNT";
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.MinimumWidth = 6;
-            this.DonGia.Name = "DonGia";
-            // 
-            // SL
-            // 
-            this.SL.HeaderText = "SL";
-            this.SL.MinimumWidth = 6;
-            this.SL.Name = "SL";
-            // 
-            // GiamGia
-            // 
-            this.GiamGia.HeaderText = "Giảm giá";
-            this.GiamGia.MinimumWidth = 6;
-            this.GiamGia.Name = "GiamGia";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -1950,14 +1951,14 @@
             this.tableLayoutPanel17.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewItem)).EndInit();
-            this.panel18.ResumeLayout(false);
-            this.panel18.PerformLayout();
             this.ResumeLayout(false);
 
         }
