@@ -200,7 +200,6 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report\Report1.rdlc" />
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,6 +263,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="furniture\" />
+    <Folder Include="Report\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

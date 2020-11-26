@@ -33,9 +33,9 @@ namespace DoNoiThat
             Utils.FillCombo(Utils.MauSac, comboMau, "TenMau", "MaMau");
         }
 
+
         private void Order_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Load");
             loadDataGridView();
            
             labelIdOrder1.Text = genarateKey(); //Gan id moi cho lap hoa don
@@ -278,6 +278,11 @@ namespace DoNoiThat
                 comboBoxStaffName.Focus();
                 return false;
             }
+            if(dataGridViewDetail.Rows.Count==0)
+            {
+                MessageBox.Show("Đơn hàng chưa có mặt hàng");
+                return false;
+            }
             return true;
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -425,9 +430,41 @@ namespace DoNoiThat
                 dt = Functions.GetDataTable(sql);
                 dataGridViewDetailOrder.DataSource = dt;
                 dt.Dispose();
+                string makh = dataGridViewOrder.CurrentRow.Cells[2].Value.ToString();
+                string manv = dataGridViewOrder.CurrentRow.Cells[1].Value.ToString();
+                DataTable kh;
+                sql = "SELECT * FROM KhachHang WHERE MaKH = N'" + makh + "'";
+                
+                kh = Functions.GetDataTable(sql);
+                labelIdOrder.Text = dataGridViewOrder.CurrentRow.Cells[0].Value.ToString();
+                labelOrderDate.Text =  DateTime.TryParse(dataGridViewOrder.CurrentRow.Cells[3].Value.ToString("DD-MM-YYYY");
+                labelShipDate.Text = dataGridViewOrder.CurrentRow.Cells[4].Value.ToString();
+                labelTax.Text = dataGridViewOrder.CurrentRow.Cells[6].Value.ToString()+ "%";
+                labelTotal.Text = dataGridViewOrder.CurrentRow.Cells[7].Value.ToString();
+                if (kh.Rows.Count >0)
+                {
+                    lblMaKH.Text = kh.Rows[0].ItemArray[0].ToString();
+                    lblTenKH.Text = kh.Rows[0].ItemArray[1].ToString();
+                    lblSDTKH.Text = kh.Rows[0].ItemArray[3].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng!");
+                }
+                sql = "SELECT * FROM NhanVien WHERE MaNV = N'" + manv + "'";
+                DataTable nv;
+                nv = Functions.GetDataTable(sql);
+                if(nv.Rows.Count>0)
+                {
+                    lblMaNV.Text = nv.Rows[0].ItemArray[0].ToString();
+                    lblTenNV.Text = nv.Rows[0].ItemArray[1].ToString();
+                }
             }
         }
+        string convertDate()
+        {
 
+        }
         private void btnPrintReceipt_Click(object sender, EventArgs e)
         {
             OrderObject dondathang = new OrderObject(labelIdOrder1.Text,txtCustomerName.Text,txtStaffId.Text,dateTimePicker1.Value,dateTimePicker2.Value,Convert.ToDouble(txtDeposit.Text),float.Parse(labelTax1.Text.Substring(0,2)),Convert.ToDouble(labelTotal1.Text));
@@ -456,7 +493,7 @@ namespace DoNoiThat
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string sql;
-            if ( (comboChatLieu.Text == "") && (comboLoai.Text == "") && (comboMau.Text == ""))
+            if ((comboChatLieu.Text == "") && (comboLoai.Text == "") && (comboMau.Text == "") && (txtTenSP.Text == "")) 
             {
                 sql = "SELECT * FROM DMNoiThat";
             }
@@ -481,6 +518,16 @@ namespace DoNoiThat
             dataGridViewItem.DataSource = temptb;
             temptb.Dispose();
             resetFilter();
+        }
+
+        private void iconButtonRefresh_Click(object sender, EventArgs e)
+        {
+            loadDataDanhSachHoaDon();
+        }
+
+        private void dataGridViewOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

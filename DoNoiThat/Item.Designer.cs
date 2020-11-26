@@ -321,6 +321,7 @@
             this.comboBoxMaterial.Name = "comboBoxMaterial";
             this.comboBoxMaterial.Size = new System.Drawing.Size(125, 24);
             this.comboBoxMaterial.TabIndex = 1;
+            this.comboBoxMaterial.SelectedIndexChanged += new System.EventHandler(this.comboBoxMaterial_SelectedIndexChanged);
             // 
             // label3
             // 

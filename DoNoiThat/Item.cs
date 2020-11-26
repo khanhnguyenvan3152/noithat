@@ -577,5 +577,10 @@ namespace DoNoiThat
             resetFilter();
             
         }
+
+        private void comboBoxMaterial_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
