@@ -15,7 +15,7 @@ namespace DoNoiThat
         public static void Connect()
         {
             Con = new SqlConnection(); //Khoi tao doi tuong
-            Con.ConnectionString = "Data Source=LAPTOP-OHE6O6DD;Initial Catalog=QuanLyCuaHang;Integrated Security=True";
+            Con.ConnectionString = "Data Source=LAPTOP-OHE6O6DD;Initial Catalog=QuanLyCuaHangNoiThat;Integrated Security=True";
             Con.Open();
             if (Con.State == ConnectionState.Open)
             {

@@ -14,6 +14,18 @@ namespace DoNoiThat
         public static DataTable KieuDang = Functions.GetDataTable("SELECT MaKieu,TenKieu FROM KieuDang");
         public static DataTable ChatLieu = Functions.GetDataTable("SELECT MaChatLieu,TenChatLieu From ChatLieu");
         public static DataTable MauSac = Functions.GetDataTable("SELECT MaMau,TenMau FROM MauSac");
+        
+        public bool ValidateTextBoxContainWord(TextBox textbox,string message)
+        {
+            double check;
+            if (Double.TryParse(textbox.Text, out check) == false)
+            {
+                MessageBox.Show(message);
+                return false;
+            }
+            else return true;
+        }
+
         public static void FillCombo(DataTable dt,ComboBox cb,string display,string value)
         {
             cb.DataSource = dt;

@@ -27,7 +27,7 @@ namespace DoNoiThat
         {
             ECAvatar(pictureBoxAvatar, 36);
             ECAvatar(panelAvatar, 40);
-
+            this.WindowState = FormWindowState.Maximized;
             labelDate.Text = DateTime.Now.DayOfWeek.ToString() + ", " + DateTime.Now.Day + "/" + DateTime.Now.Month + "/" + DateTime.Now.Year;
             Functions.Connect();
             OpenChildForm(new Home(GetValue));

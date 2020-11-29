@@ -12,19 +12,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DoNoiThat.Class;
 using System.Data.SqlClient;
+using Microsoft.Reporting.WinForms;
 
 namespace DoNoiThat
 {
     public partial class Order : Form
     {
-        
+
         public Order()
         {
             InitializeComponent();
+            dateTimePicker1.Format = DateTimePickerFormat.Custom;
+            dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            dateTimePicker2.Format = DateTimePickerFormat.Custom;
+            dateTimePicker2.CustomFormat = "dd-MM-yyyy";
             this.dateTimePicker1.Value = System.DateTime.Now;
             this.dateTimePicker1.Value = System.DateTime.Now;
             dataGridViewDetail.ForeColor = Color.Black;
             FillComboBox();
+            
         }
         private void FillComboBox()
         {
@@ -43,7 +49,9 @@ namespace DoNoiThat
             loadComboKH();
             Functions.setDataSource(comboBoxStaffName, "SELECT MaNV,TenNV FROM NhanVien");
             comboBoxStaffName.SelectedIndex = -1;
-      
+            dateTimePicker1.Value = System.DateTime.Now;
+            dateTimePicker2.Value = System.DateTime.Now;
+            
         }
         void loadComboKH()
         {
@@ -63,9 +71,7 @@ namespace DoNoiThat
         private void loadDataGridView()
         {
             loadDataDanhSachHoaDon();
-            loadDataLapHoaDon();
-
-  
+            loadDataLapHoaDon();  
            
         }
         private void loadDataLapHoaDon()
@@ -74,7 +80,6 @@ namespace DoNoiThat
             dataGridViewItem.ForeColor = Color.Black;
             DataTable table = Functions.GetDataTable(sql);
             dataGridViewItem.DataSource = table;
-            table.Dispose();
         }
         private void loadDataDanhSachHoaDon()
         {
@@ -83,8 +88,6 @@ namespace DoNoiThat
             dataGridViewDetailOrder.ForeColor = Color.Black;
             DataTable table = Functions.GetDataTable(sql);
             dataGridViewOrder.DataSource = table;
-            table.Dispose();
-
         }
         private void radioButtonYes_CheckedChanged(object sender, EventArgs e)
         {
@@ -248,10 +251,7 @@ namespace DoNoiThat
             }
         }
 
-        private void iconButton8_Click(object sender, EventArgs e)
-        {
-
-        }
+   
         bool checkTextbox()
         {
             if(txtCustomerName.Text == "")
@@ -283,6 +283,11 @@ namespace DoNoiThat
                 MessageBox.Show("Đơn hàng chưa có mặt hàng");
                 return false;
             }
+            if(txtDeposit.Text == "")
+            {
+                MessageBox.Show("Nhập số tiền đặt cọc");
+                return false;
+            }
             return true;
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -300,7 +305,7 @@ namespace DoNoiThat
                         Functions.RunSQL(sql);
                         try
                         {
-                            sql = "INSERT [dbo].[DonDH] ([SoDDH], [MaNV], [MaKH], [NgayDat], [NgayGiao], [DatCoc], [Thue], [TongTien]) VALUES(N'" + labelIdOrder1.Text + "', N'" + txtStaffId.Text + "', N'" + customerid + "', CAST(N'" + ngaydat + "' AS Date), CAST(N'" + ngaygiao + "' AS Date)," + txtDeposit.Text + "," + labelTax1.Text.Substring(0,2) + "," + labelTotal1.Text + ")";
+                            sql = "INSERT [dbo].[DonDH] ([SoDDH], [MaNV], [MaKH], [NgayDat], [NgayGiao], [DatCoc], [Thue], [TongTien]) VALUES(N'" + labelIdOrder1.Text + "', N'" + txtStaffId.Text + "', N'" + customerid + "', CAST(N'" + ngaydat + "' AS Date), CAST(N'" + ngaygiao + "' AS Date)," + txtDeposit.Text.Trim() + "," + labelTax1.Text.Trim().Substring(0,2) + "," + labelTotal1.Text.Trim() + ")";
                             MessageBox.Show(sql);
                             Functions.RunSQL(sql);
                             foreach (DataGridViewRow row in dataGridViewDetail.Rows)
@@ -309,12 +314,12 @@ namespace DoNoiThat
                                 {
                                     string iddondathang = labelIdOrder1.Text;
                                     string mant = row.Cells[0].Value.ToString();
-                                    string soluong = row.Cells[1].Value.ToString();
+                                    int soluong = int.Parse(row.Cells[1].Value.ToString());
                                     string giamgia = row.Cells[2].Value.ToString();
                                     string thanhtien = row.Cells[3].Value.ToString();
                                     sql = "INSERT [dbo].[ChiTietDonDH] ([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES(N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";                     
                                     Functions.RunSQL(sql);
-                                    MessageBox.Show("Thêm hóa đơn thành công!");
+                                  
                                 }
                                 catch (SqlException)
                                 {
@@ -331,6 +336,7 @@ namespace DoNoiThat
 
                             Functions.RunSQL("ROLLBACK;");
                         }
+                        MessageBox.Show("Thêm hóa đơn thành công!");
                     }
                     catch (SqlException)
                     {
@@ -356,9 +362,9 @@ namespace DoNoiThat
                             {
                                 string iddondathang = labelIdOrder1.Text;
                                 string mant = row.Cells[0].Value.ToString();
-                                string soluong = row.Cells[1].Value.ToString();
-                                string giamgia = row.Cells[2].Value.ToString();
-                                string thanhtien = row.Cells[3].Value.ToString();
+                                string soluong = row.Cells[2].Value.ToString();
+                                string giamgia = row.Cells[3].Value.ToString();
+                                string thanhtien = row.Cells[4].Value.ToString();
                                 sql = "INSERT[dbo].[ChiTietDonDH] ([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES (N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";
                                 Functions.RunSQL(sql);
                                 MessageBox.Show("Thêm hóa đơn thành công");
@@ -437,8 +443,8 @@ namespace DoNoiThat
                 
                 kh = Functions.GetDataTable(sql);
                 labelIdOrder.Text = dataGridViewOrder.CurrentRow.Cells[0].Value.ToString();
-                labelOrderDate.Text =  DateTime.TryParse(dataGridViewOrder.CurrentRow.Cells[3].Value.ToString("DD-MM-YYYY");
-                labelShipDate.Text = dataGridViewOrder.CurrentRow.Cells[4].Value.ToString();
+                labelOrderDate.Text =DateTime.Parse(dataGridViewOrder.CurrentRow.Cells[3].Value.ToString()).ToString("dd-MM-yyyy");
+                labelShipDate.Text = DateTime.Parse(dataGridViewOrder.CurrentRow.Cells[4].Value.ToString()).ToString("dd-MM-yyyy");
                 labelTax.Text = dataGridViewOrder.CurrentRow.Cells[6].Value.ToString()+ "%";
                 labelTotal.Text = dataGridViewOrder.CurrentRow.Cells[7].Value.ToString();
                 if (kh.Rows.Count >0)
@@ -461,28 +467,21 @@ namespace DoNoiThat
                 }
             }
         }
-        string convertDate()
+        string convertDate(string datetime)
         {
-
+            string[] arr = datetime.Split(' ');
+            return arr[0];
         }
         private void btnPrintReceipt_Click(object sender, EventArgs e)
         {
-            OrderObject dondathang = new OrderObject(labelIdOrder1.Text,txtCustomerName.Text,txtStaffId.Text,dateTimePicker1.Value,dateTimePicker2.Value,Convert.ToDouble(txtDeposit.Text),float.Parse(labelTax1.Text.Substring(0,2)),Convert.ToDouble(labelTotal1.Text));
-            List<OrderDetail> list = new List<OrderDetail>();
-            if(dataGridViewDetail.Rows.Count >0)
-            {
-                foreach (DataGridViewRow row in dataGridViewDetail.Rows)
-                {
-                    string sql = "SELECT TenNoiThat FROM DMNoiThat";
-                    SqlCommand cmd = new SqlCommand(sql, Functions.Con);
-                    cmd.CommandType = CommandType.Text;
-                    string productname = (string)cmd.ExecuteScalar();
-                    OrderDetail obj = new OrderDetail(labelIdOrder1.Text, row.Cells[0].Value.ToString(),productname,Convert.ToInt32(row.Cells[1].Value),Convert.ToInt32(row.Cells[2].Value),Convert.ToDouble(row.Cells[3].Value),Convert.ToDouble(row.Cells[4].Value));
-                    list.Add(obj);
-                }
-            }
+            PrintRC(labelIdOrder.Text);
         }
+        void PrintRC(string id)
+        {
+            PrintReport rcp = new PrintReport(id);
+            rcp.Show();
 
+        }
         void resetFilter()
         {
             comboLoai.Text = "";
@@ -525,9 +524,29 @@ namespace DoNoiThat
             loadDataDanhSachHoaDon();
         }
 
-        private void dataGridViewOrder_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void iconButtonXoaDonDH_Click(object sender, EventArgs e)
         {
+            
+           
+            if((dataGridViewOrder.CurrentRow != null) && (dataGridViewOrder.CurrentRow.Index < dataGridViewOrder.Rows.Count))
+            {
+                DataGridViewRow row = dataGridViewOrder.CurrentRow;
+                string id = row.Cells[0].Value.ToString();
+                DialogResult dlg = MessageBox.Show("Bạn có muốn xóa đơn đặt hàng " +id+" ?","Xóa đơn đặt hàng",MessageBoxButtons.YesNo);
+                string sql = "DELETE FROM DonDH WHERE SoDDH = N'" + id + "'";
+                Functions.RunSQL(sql);
+                loadDataDanhSachHoaDon();
+            }
+        }
 
+        private void txtDeposit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !(Char.IsNumber(e.KeyChar) || e.KeyChar == 8);
+        }
+
+        private void iconButtonPrinter_Click(object sender, EventArgs e)
+        {
+            PrintRC(labelIdOrder.Text);
         }
     }
 }

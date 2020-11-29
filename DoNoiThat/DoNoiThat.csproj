@@ -65,6 +65,9 @@
     <ManifestKeyFile>DoNoiThat_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.0.78\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=5.14.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.5.14.1\lib\net472\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -94,6 +97,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -109,17 +113,19 @@
     <Compile Include="Class\KhachHang.cs" />
     <Compile Include="Class\OrderDetail.cs" />
     <Compile Include="Class\OrderObject.cs" />
+    <Compile Include="Datasets\DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datasets\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Else.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Else.Designer.cs">
       <DependentUpon>Else.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPrintReceipt.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPrintReceipt.Designer.cs">
-      <DependentUpon>FormPrintReceipt.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="Main.cs">
@@ -129,6 +135,12 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="NoiThat.cs" />
+    <Compile Include="PrintReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintReport.Designer.cs">
+      <DependentUpon>PrintReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -194,12 +206,13 @@
     <EmbeddedResource Include="Else.resx">
       <DependentUpon>Else.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPrintReceipt.resx">
-      <DependentUpon>FormPrintReceipt.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintReport.resx">
+      <DependentUpon>PrintReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report1.rdlc" />
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +246,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Datasets\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DoNoiThat.Class.OrderDetail.datasource" />
     <None Include="Properties\DataSources\DoNoiThat.Class.OrderObject.datasource" />
@@ -263,7 +287,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="furniture\" />
-    <Folder Include="Report\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

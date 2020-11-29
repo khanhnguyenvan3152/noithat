@@ -765,9 +765,9 @@
             this.labelPosition.Location = new System.Drawing.Point(4, 27);
             this.labelPosition.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPosition.Name = "labelPosition";
-            this.labelPosition.Size = new System.Drawing.Size(135, 16);
+            this.labelPosition.Size = new System.Drawing.Size(71, 16);
             this.labelPosition.TabIndex = 1;
-            this.labelPosition.Text = "Nhân Viên Nhặt Rác";
+            this.labelPosition.Text = "Nhân viên";
             // 
             // labelHello
             // 
