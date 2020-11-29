@@ -38,18 +38,17 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1030, 1048);
+            this.reportViewer1.Size = new System.Drawing.Size(836, 647);
             this.reportViewer1.TabIndex = 0;
             // 
             // PrintReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1030, 1048);
+            this.ClientSize = new System.Drawing.Size(836, 647);
             this.Controls.Add(this.reportViewer1);
             this.Name = "PrintReport";
             this.Text = "PrintReport";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PrintReport_Load);
             this.ResumeLayout(false);
 

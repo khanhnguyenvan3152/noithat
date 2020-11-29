@@ -43,15 +43,17 @@ namespace DoNoiThat
         private void Order_Load(object sender, EventArgs e)
         {
             loadDataGridView();
-           
             labelIdOrder1.Text = genarateKey(); //Gan id moi cho lap hoa don
             radioButtonNo.Checked = true;
             loadComboKH();
             Functions.setDataSource(comboBoxStaffName, "SELECT MaNV,TenNV FROM NhanVien");
             comboBoxStaffName.SelectedIndex = -1;
+            SetDateForDateTimePicker();
+        }
+        void SetDateForDateTimePicker()
+        {
             dateTimePicker1.Value = System.DateTime.Now;
             dateTimePicker2.Value = System.DateTime.Now;
-            
         }
         void loadComboKH()
         {
@@ -526,8 +528,6 @@ namespace DoNoiThat
 
         private void iconButtonXoaDonDH_Click(object sender, EventArgs e)
         {
-            
-           
             if((dataGridViewOrder.CurrentRow != null) && (dataGridViewOrder.CurrentRow.Index < dataGridViewOrder.Rows.Count))
             {
                 DataGridViewRow row = dataGridViewOrder.CurrentRow;
@@ -547,6 +547,51 @@ namespace DoNoiThat
         private void iconButtonPrinter_Click(object sender, EventArgs e)
         {
             PrintRC(labelIdOrder.Text);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            comboBoxCustomerId.Text = "";
+            txtCustomerName.Text = "";
+            txtAddress.Text = "";
+            txtPhoneNumber.Text = "";
+            txtStaffId.Text = "";
+            numericUpDownAmount.Value = 0;
+            txtDeposit.Text = "0";
+            textBoxDisccount.Text = "0";
+            dataGridViewDetail.Rows.Clear();
+            comboBoxStaffName.Text = "";
+            labelTotal1.Text = "0";
+        }
+
+        private void iconButtonSearch_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if ((txtSearchKhachHang.Text == "") && (txtSearchNhanVien.Text == "") && (txtSearchMa.Text!=""))
+            {
+                sql = "SELECT * FROM DonDH";
+            }
+            sql = "SELECT SoDDH,DonDH.MaNV,DonDH.MaKH,NgayDat,NgayGiao,DatCoc,Thue,TongTien FROM DonDH JOIN KhachHang ON DonDH.MaKH = KhachHang.MaKH JOIN NhanVien ON NhanVien.MaNV = DonDH.MaNV WHERE 1=1";
+            if(txtSearchMa.Text!="")
+            {
+                sql += " AND SoDDH LIKE N'%" + txtSearchMa.Text.Trim() + "%'";
+            }
+            if (txtSearchKhachHang.Text != "")
+            {
+                sql += " AND TenKH LIKE N'%" + txtSearchKhachHang.Text.Trim() + "%'";
+            }
+            if (txtSearchNhanVien.Text != "")
+            {
+                sql += " AND TenNV LIKE N'%" + txtSearchNhanVien.Text.Trim() + "%'";
+            }
+            DataTable temp = Functions.GetDataTable(sql);
+            dataGridViewOrder.DataSource = temp;
+            temp.Dispose();
         }
     }
 }

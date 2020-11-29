@@ -21,7 +21,9 @@ namespace DoNoiThat
             InitializeComponent();
             var setup = reportViewer1.GetPageSettings();
             setup.Margins = new System.Drawing.Printing.Margins(1, 1, 1, 1);
+            
             reportViewer1.SetPageSettings(setup);
+            reportViewer1.SetDisplayMode(Microsoft.Reporting.WinForms.DisplayMode.PrintLayout);
         }
 
         private void PrintReport_Load(object sender, EventArgs e)
