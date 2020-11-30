@@ -110,6 +110,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChooseSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseSupplier.Designer.cs">
+      <DependentUpon>ChooseSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\KhachHang.cs" />
     <Compile Include="Class\OrderDetail.cs" />
     <Compile Include="Class\OrderObject.cs" />
@@ -152,6 +158,12 @@
     </Compile>
     <Compile Include="Staff.Designer.cs">
       <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaDDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaDDH.Designer.cs">
+      <DependentUpon>SuaDDH.cs</DependentUpon>
     </Compile>
     <Compile Include="Supplier.cs">
       <SubType>Form</SubType>
@@ -203,6 +215,9 @@
     <Compile Include="Utils.cs">
       <SubType>Form</SubType>
     </Compile>
+    <EmbeddedResource Include="ChooseSupplier.resx">
+      <DependentUpon>ChooseSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Else.resx">
       <DependentUpon>Else.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +230,9 @@
     <EmbeddedResource Include="Report\Report1.rdlc" />
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaDDH.resx">
+      <DependentUpon>SuaDDH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Supplier.resx">
       <DependentUpon>Supplier.cs</DependentUpon>

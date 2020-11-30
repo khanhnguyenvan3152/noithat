@@ -250,3 +250,5 @@ C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\bin\Debug\Dapper.xml
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\RdlCompile.cache
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\RdlCompile.compiled
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.PrintReport.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.SuaDDH.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.ChooseSupplier.resources

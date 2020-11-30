@@ -14,7 +14,7 @@ namespace DoNoiThat
         public static DataTable KieuDang = Functions.GetDataTable("SELECT MaKieu,TenKieu FROM KieuDang");
         public static DataTable ChatLieu = Functions.GetDataTable("SELECT MaChatLieu,TenChatLieu From ChatLieu");
         public static DataTable MauSac = Functions.GetDataTable("SELECT MaMau,TenMau FROM MauSac");
-        
+        public static DataTable NhanVien = Functions.GetDataTable("SELECT MaNV,TenNV FROM NhanVien");
         public bool ValidateTextBoxContainWord(TextBox textbox,string message)
         {
             double check;

@@ -29,6 +29,8 @@ namespace DoNoiThat
             this.dateTimePicker1.Value = System.DateTime.Now;
             this.dateTimePicker1.Value = System.DateTime.Now;
             dataGridViewDetail.ForeColor = Color.Black;
+            dataGridViewItem.MultiSelect = false;
+            dataGridViewOrder.MultiSelect = false;
             FillComboBox();
             
         }
@@ -316,9 +318,9 @@ namespace DoNoiThat
                                 {
                                     string iddondathang = labelIdOrder1.Text;
                                     string mant = row.Cells[0].Value.ToString();
-                                    int soluong = int.Parse(row.Cells[1].Value.ToString());
-                                    string giamgia = row.Cells[2].Value.ToString();
-                                    string thanhtien = row.Cells[3].Value.ToString();
+                                    int soluong = int.Parse(row.Cells[2].Value.ToString());
+                                    string giamgia = row.Cells[3].Value.ToString();
+                                    string thanhtien = row.Cells[4].Value.ToString();
                                     sql = "INSERT [dbo].[ChiTietDonDH] ([SoDDH], [MaNoiThat], [SoLuong], [GiamGia], [ThanhTien]) VALUES(N'" + iddondathang + "', N'" + mant + "'," + soluong + "," + giamgia + "," + thanhtien + ")";                     
                                     Functions.RunSQL(sql);
                                   
@@ -449,6 +451,7 @@ namespace DoNoiThat
                 labelShipDate.Text = DateTime.Parse(dataGridViewOrder.CurrentRow.Cells[4].Value.ToString()).ToString("dd-MM-yyyy");
                 labelTax.Text = dataGridViewOrder.CurrentRow.Cells[6].Value.ToString()+ "%";
                 labelTotal.Text = dataGridViewOrder.CurrentRow.Cells[7].Value.ToString();
+                lblDatCoc.Text = dataGridViewOrder.CurrentRow.Cells[5].Value.ToString();
                 if (kh.Rows.Count >0)
                 {
                     lblMaKH.Text = kh.Rows[0].ItemArray[0].ToString();
@@ -466,6 +469,7 @@ namespace DoNoiThat
                 {
                     lblMaNV.Text = nv.Rows[0].ItemArray[0].ToString();
                     lblTenNV.Text = nv.Rows[0].ItemArray[1].ToString();
+                    lblSDTNV.Text = nv.Rows[0].ItemArray[4].ToString();
                 }
             }
         }
@@ -524,6 +528,14 @@ namespace DoNoiThat
         private void iconButtonRefresh_Click(object sender, EventArgs e)
         {
             loadDataDanhSachHoaDon();
+            lblMaKH.Text = "";
+            lblMaNV.Text = "";
+            lblTenKH.Text = "";
+            lblSDTKH.Text = "";
+            lblTenNV.Text = "";
+            labelIdOrder.Text = "";
+            labelOrderDate.Text = "";
+            labelShipDate.Text = "";
         }
 
         private void iconButtonXoaDonDH_Click(object sender, EventArgs e)
@@ -535,7 +547,7 @@ namespace DoNoiThat
                 DialogResult dlg = MessageBox.Show("Bạn có muốn xóa đơn đặt hàng " +id+" ?","Xóa đơn đặt hàng",MessageBoxButtons.YesNo);
                 string sql = "DELETE FROM DonDH WHERE SoDDH = N'" + id + "'";
                 Functions.RunSQL(sql);
-                loadDataDanhSachHoaDon();
+                iconButtonRefresh.PerformClick();
             }
         }
 
@@ -556,6 +568,7 @@ namespace DoNoiThat
 
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
+            labelIdOrder1.Text = genarateKey();
             comboBoxCustomerId.Text = "";
             txtCustomerName.Text = "";
             txtAddress.Text = "";
@@ -592,6 +605,37 @@ namespace DoNoiThat
             DataTable temp = Functions.GetDataTable(sql);
             dataGridViewOrder.DataSource = temp;
             temp.Dispose();
+        }
+
+        private void numericUpDownAmount_ValueChanged(object sender, EventArgs e)
+        {
+            if(dataGridViewItem.CurrentRow != null)
+            {
+                if(dataGridViewItem.CurrentRow.Index <= dataGridViewItem.Rows.Count)
+                {
+                    if(numericUpDownAmount.Value > decimal.Parse(dataGridViewItem.CurrentRow.Cells[7].Value.ToString()))
+                    {
+                        MessageBox.Show("Không đủ số lượng trong kho!");
+                        numericUpDownAmount.Focus();
+                    }
+                }
+            }
+        }
+        public void reloadDS()
+        {
+           loadDataDanhSachHoaDon();
+        }
+        private void iconButtonEdit_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewOrder.CurrentRow !=null)
+            {
+                DateTime ngaydat = DateTime.Parse(dataGridViewOrder.CurrentRow.Cells[3].Value.ToString());
+                DateTime ngaygiao = DateTime.Parse(dataGridViewOrder.CurrentRow.Cells[4].Value.ToString());
+                SuaDDH sua = new SuaDDH(labelIdOrder.Text,lblMaKH.Text,lblMaNV.Text,lblDatCoc.Text,ngaydat,ngaygiao);
+                sua.Show();
+              
+                loadDataDanhSachHoaDon();
+            }
         }
     }
 }

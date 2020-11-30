@@ -17,7 +17,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>0.68in</Top>
+        <Top>0.5911in</Top>
         <Left>0.14189in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
@@ -46,7 +46,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox4</rd:DefaultName>
-        <Top>1.04667in</Top>
+        <Top>0.85499in</Top>
         <Left>0.14189in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
@@ -76,7 +76,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox5</rd:DefaultName>
-        <Top>1.43in</Top>
+        <Top>1.10499in</Top>
         <Left>0.14189in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
@@ -106,7 +106,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>0.31333in</Top>
+        <Top>0.31332in</Top>
         <Left>0.14189in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
@@ -136,7 +136,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>SoDDH</rd:DefaultName>
-        <Top>0.31333in</Top>
+        <Top>0.31332in</Top>
         <Left>1.21689in</Left>
         <Height>0.25in</Height>
         <Width>1.13333in</Width>
@@ -166,7 +166,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox8</rd:DefaultName>
-        <Top>0.68in</Top>
+        <Top>0.5911in</Top>
         <Left>3.18911in</Left>
         <Height>0.25in</Height>
         <Width>0.94778in</Width>
@@ -196,7 +196,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TenNV</rd:DefaultName>
-        <Top>0.68in</Top>
+        <Top>0.5911in</Top>
         <Left>4.20633in</Left>
         <Height>0.25in</Height>
         <Width>1.69333in</Width>
@@ -226,7 +226,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TenKH</rd:DefaultName>
-        <Top>0.68in</Top>
+        <Top>0.5911in</Top>
         <Left>1.21689in</Left>
         <Height>0.25in</Height>
         <Width>1.90833in</Width>
@@ -256,7 +256,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>NgayDat</rd:DefaultName>
-        <Top>1.04667in</Top>
+        <Top>0.85499in</Top>
         <Left>1.21689in</Left>
         <Height>0.25in</Height>
         <Width>1.90833in</Width>
@@ -286,7 +286,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>NgayGiao</rd:DefaultName>
-        <Top>1.44667in</Top>
+        <Top>1.12166in</Top>
         <Left>1.21689in</Left>
         <Height>0.25in</Height>
         <Width>1.90833in</Width>
@@ -653,10 +653,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>2.005in</Top>
+        <Top>1.57721in</Top>
         <Left>0.10078in</Left>
         <Height>0.775in</Height>
-        <Width>6.42389in</Width>
+        <Width>6.42388in</Width>
         <ZIndex>10</ZIndex>
         <Style>
           <Border>
@@ -679,8 +679,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>3.84722in</Top>
-        <Left>0.10633in</Left>
+        <Top>3.16388in</Top>
+        <Left>0.09289in</Left>
         <Height>0.25in</Height>
         <Width>0.45833in</Width>
         <ZIndex>11</ZIndex>
@@ -709,8 +709,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>4.23056in</Top>
-        <Left>0.10078in</Left>
+        <Top>3.54722in</Top>
+        <Left>0.08734in</Left>
         <Height>0.25in</Height>
         <Width>0.89167in</Width>
         <ZIndex>12</ZIndex>
@@ -739,8 +739,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Thue</rd:DefaultName>
-        <Top>3.84722in</Top>
-        <Left>0.62022in</Left>
+        <Top>3.16388in</Top>
+        <Left>0.60678in</Left>
         <Height>0.25in</Height>
         <Width>0.48611in</Width>
         <ZIndex>13</ZIndex>
@@ -769,8 +769,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox23</rd:DefaultName>
-        <Top>3.84722in</Top>
-        <Left>1.148in</Left>
+        <Top>3.16388in</Top>
+        <Left>1.13456in</Left>
         <Height>0.25in</Height>
         <Width>0.45833in</Width>
         <ZIndex>14</ZIndex>
@@ -799,8 +799,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>TongTien</rd:DefaultName>
-        <Top>4.23056in</Top>
-        <Left>1.048in</Left>
+        <Top>3.54722in</Top>
+        <Left>1.03456in</Left>
         <Height>0.25in</Height>
         <Width>1.26667in</Width>
         <ZIndex>15</ZIndex>
@@ -829,8 +829,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>DatCoc</rd:DefaultName>
-        <Top>3.84722in</Top>
-        <Left>2.87633in</Left>
+        <Top>3.16388in</Top>
+        <Left>2.66233in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>16</ZIndex>
@@ -859,8 +859,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
-        <Top>3.84722in</Top>
-        <Left>1.80689in</Left>
+        <Top>3.16388in</Top>
+        <Left>1.59289in</Left>
         <Height>0.25in</Height>
         <Width>1in</Width>
         <ZIndex>17</ZIndex>
@@ -889,8 +889,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox30</rd:DefaultName>
-        <Top>4.23056in</Top>
-        <Left>2.34245in</Left>
+        <Top>3.54722in</Top>
+        <Left>2.32901in</Left>
         <Height>0.25in</Height>
         <Width>0.39167in</Width>
         <ZIndex>18</ZIndex>
@@ -905,13 +905,13 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>4.55in</Height>
+    <Height>3.86667in</Height>
     <Style />
   </Body>
   <Width>6.62466in</Width>
   <Page>
     <PageHeader>
-      <Height>0.33333in</Height>
+      <Height>0.33334in</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -977,10 +977,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox3</rd:DefaultName>
-          <Top>0.06944in</Top>
-          <Left>2.26133in</Left>
+          <Top>0.06943in</Top>
+          <Left>1.80689in</Left>
           <Height>0.25in</Height>
-          <Width>1.73489in</Width>
+          <Width>2.56433in</Width>
           <Style>
             <Border>
               <Style>None</Style>
