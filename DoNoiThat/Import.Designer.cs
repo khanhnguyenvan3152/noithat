@@ -31,6 +31,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Import));
             this.tabControlOrder = new System.Windows.Forms.TabControl();
             this.tabPageImportList = new System.Windows.Forms.TabPage();
@@ -54,9 +57,14 @@
             this.label17 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.dataGridViewImportDetail = new System.Windows.Forms.DataGridView();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.iconButtonPrinter = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.iconButtonXoaDonDH = new FontAwesome.Sharp.IconButton();
+            this.iconButtonRefresh = new FontAwesome.Sharp.IconButton();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -74,8 +82,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.btnXoaSP = new FontAwesome.Sharp.IconButton();
             this.dataGridViewDetail = new System.Windows.Forms.DataGridView();
+            this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.panelCustomer = new System.Windows.Forms.Panel();
             this.txtIdNCC = new System.Windows.Forms.TextBox();
@@ -108,31 +121,21 @@
             this.txtSearchName = new System.Windows.Forms.TextBox();
             this.iconTimKiemTen = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.numericUpDownAmount = new System.Windows.Forms.NumericUpDown();
+            this.label27 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtGiamGia = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtGiaNhap = new System.Windows.Forms.TextBox();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnThemMoi = new FontAwesome.Sharp.IconButton();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.iconButton8 = new FontAwesome.Sharp.IconButton();
-            this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiamGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtGiaNhap = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtGiamGia = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.numericUpDownAmount = new System.Windows.Forms.NumericUpDown();
-            this.label27 = new System.Windows.Forms.Label();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.iconButtonPrinter = new FontAwesome.Sharp.IconButton();
-            this.iconButtonXoaDonDH = new FontAwesome.Sharp.IconButton();
-            this.iconButtonRefresh = new FontAwesome.Sharp.IconButton();
+            this.btnThemSP = new FontAwesome.Sharp.IconButton();
             this.tabControlOrder.SuspendLayout();
             this.tabPageImportList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -143,6 +146,7 @@
             this.groupBoxStaff.SuspendLayout();
             this.groupBoxCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewImportDetail)).BeginInit();
+            this.panel14.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -164,14 +168,13 @@
             this.tableLayoutPanel17.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel19.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).BeginInit();
-            this.panel14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlOrder
@@ -474,6 +477,35 @@
             this.dataGridViewImportDetail.Size = new System.Drawing.Size(428, 327);
             this.dataGridViewImportDetail.TabIndex = 6;
             // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.iconButtonPrinter);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(3, 652);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(422, 53);
+            this.panel14.TabIndex = 7;
+            // 
+            // iconButtonPrinter
+            // 
+            this.iconButtonPrinter.BackColor = System.Drawing.Color.ForestGreen;
+            this.iconButtonPrinter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.iconButtonPrinter.FlatAppearance.BorderSize = 0;
+            this.iconButtonPrinter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonPrinter.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonPrinter.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.iconButtonPrinter.IconColor = System.Drawing.Color.White;
+            this.iconButtonPrinter.IconSize = 20;
+            this.iconButtonPrinter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonPrinter.Location = new System.Drawing.Point(0, 0);
+            this.iconButtonPrinter.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
+            this.iconButtonPrinter.Name = "iconButtonPrinter";
+            this.iconButtonPrinter.Rotation = 0D;
+            this.iconButtonPrinter.Size = new System.Drawing.Size(422, 53);
+            this.iconButtonPrinter.TabIndex = 3;
+            this.iconButtonPrinter.Text = "In";
+            this.iconButtonPrinter.UseVisualStyleBackColor = false;
+            // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.ColumnCount = 1;
@@ -522,6 +554,52 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(0, 19, 0, 0);
             this.panel1.Size = new System.Drawing.Size(645, 58);
             this.panel1.TabIndex = 11;
+            // 
+            // iconButtonXoaDonDH
+            // 
+            this.iconButtonXoaDonDH.BackColor = System.Drawing.Color.Red;
+            this.iconButtonXoaDonDH.FlatAppearance.BorderSize = 0;
+            this.iconButtonXoaDonDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonXoaDonDH.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonXoaDonDH.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.iconButtonXoaDonDH.IconColor = System.Drawing.Color.White;
+            this.iconButtonXoaDonDH.IconSize = 20;
+            this.iconButtonXoaDonDH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonXoaDonDH.Location = new System.Drawing.Point(261, -1);
+            this.iconButtonXoaDonDH.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
+            this.iconButtonXoaDonDH.Name = "iconButtonXoaDonDH";
+            this.iconButtonXoaDonDH.Rotation = 0D;
+            this.iconButtonXoaDonDH.Size = new System.Drawing.Size(185, 54);
+            this.iconButtonXoaDonDH.TabIndex = 9;
+            this.iconButtonXoaDonDH.Text = "Xóa hóa đơn";
+            this.iconButtonXoaDonDH.UseVisualStyleBackColor = false;
+            // 
+            // iconButtonRefresh
+            // 
+            this.iconButtonRefresh.BackColor = System.Drawing.Color.RoyalBlue;
+            this.iconButtonRefresh.FlatAppearance.BorderSize = 0;
+            this.iconButtonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButtonRefresh.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButtonRefresh.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
+            this.iconButtonRefresh.IconColor = System.Drawing.Color.White;
+            this.iconButtonRefresh.IconSize = 20;
+            this.iconButtonRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButtonRefresh.Location = new System.Drawing.Point(460, -1);
+            this.iconButtonRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
+            this.iconButtonRefresh.Name = "iconButtonRefresh";
+            this.iconButtonRefresh.Rotation = 0D;
+            this.iconButtonRefresh.Size = new System.Drawing.Size(185, 54);
+            this.iconButtonRefresh.TabIndex = 8;
+            this.iconButtonRefresh.Text = "Làm Mới";
+            this.iconButtonRefresh.UseVisualStyleBackColor = false;
+            // 
+            // panel16
+            // 
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(3, 3);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(201, 52);
+            this.panel16.TabIndex = 12;
             // 
             // iconButton2
             // 
@@ -660,7 +738,17 @@
             // 
             this.dataGridViewImport.AllowUserToAddRows = false;
             this.dataGridViewImport.AllowUserToDeleteRows = false;
+            this.dataGridViewImport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewImport.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewImport.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewImport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewImport.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -668,8 +756,20 @@
             this.dataGridViewImport.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewImport.MultiSelect = false;
             this.dataGridViewImport.Name = "dataGridViewImport";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewImport.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewImport.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewImport.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewImport.RowTemplate.Height = 24;
+            this.dataGridViewImport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewImport.Size = new System.Drawing.Size(848, 540);
             this.dataGridViewImport.TabIndex = 8;
             // 
@@ -732,7 +832,7 @@
             // 
             this.panel4.Controls.Add(this.iconButton3);
             this.panel4.Controls.Add(this.iconButton4);
-            this.panel4.Controls.Add(this.iconButton5);
+            this.panel4.Controls.Add(this.btnXoaSP);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(3, 648);
             this.panel4.Name = "panel4";
@@ -777,24 +877,24 @@
             this.iconButton4.Text = "Lưu";
             this.iconButton4.UseVisualStyleBackColor = false;
             // 
-            // iconButton5
+            // btnXoaSP
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.OrangeRed;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconSize = 20;
-            this.iconButton5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton5.Location = new System.Drawing.Point(395, 1);
-            this.iconButton5.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Rotation = 0D;
-            this.iconButton5.Size = new System.Drawing.Size(129, 54);
-            this.iconButton5.TabIndex = 5;
-            this.iconButton5.Text = "Xóa";
-            this.iconButton5.UseVisualStyleBackColor = false;
+            this.btnXoaSP.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnXoaSP.FlatAppearance.BorderSize = 0;
+            this.btnXoaSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoaSP.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnXoaSP.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
+            this.btnXoaSP.IconColor = System.Drawing.Color.White;
+            this.btnXoaSP.IconSize = 20;
+            this.btnXoaSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXoaSP.Location = new System.Drawing.Point(395, 1);
+            this.btnXoaSP.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
+            this.btnXoaSP.Name = "btnXoaSP";
+            this.btnXoaSP.Rotation = 0D;
+            this.btnXoaSP.Size = new System.Drawing.Size(129, 54);
+            this.btnXoaSP.TabIndex = 5;
+            this.btnXoaSP.Text = "Xóa";
+            this.btnXoaSP.UseVisualStyleBackColor = false;
             // 
             // dataGridViewDetail
             // 
@@ -802,14 +902,14 @@
             this.dataGridViewDetail.AllowUserToDeleteRows = false;
             this.dataGridViewDetail.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewDetail.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewDetail.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewDetail.ColumnHeadersHeight = 50;
             this.dataGridViewDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNT,
@@ -827,6 +927,38 @@
             this.dataGridViewDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewDetail.Size = new System.Drawing.Size(527, 261);
             this.dataGridViewDetail.TabIndex = 11;
+            // 
+            // MaNT
+            // 
+            this.MaNT.FillWeight = 80F;
+            this.MaNT.HeaderText = "Mã NT";
+            this.MaNT.MinimumWidth = 6;
+            this.MaNT.Name = "MaNT";
+            // 
+            // DonGia
+            // 
+            this.DonGia.HeaderText = "Đơn giá nhập";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            // 
+            // SL
+            // 
+            this.SL.FillWeight = 50F;
+            this.SL.HeaderText = "SL";
+            this.SL.MinimumWidth = 6;
+            this.SL.Name = "SL";
+            // 
+            // GiamGia
+            // 
+            this.GiamGia.HeaderText = "Giảm giá";
+            this.GiamGia.MinimumWidth = 6;
+            this.GiamGia.Name = "GiamGia";
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
             // 
             // groupBox2
             // 
@@ -1040,7 +1172,7 @@
             // 
             this.txtStaffId.Enabled = false;
             this.txtStaffId.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStaffId.Location = new System.Drawing.Point(383, 22);
+            this.txtStaffId.Location = new System.Drawing.Point(383, 20);
             this.txtStaffId.Margin = new System.Windows.Forms.Padding(2);
             this.txtStaffId.Name = "txtStaffId";
             this.txtStaffId.Size = new System.Drawing.Size(129, 27);
@@ -1051,7 +1183,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.Black;
-            this.label28.Location = new System.Drawing.Point(324, 27);
+            this.label28.Location = new System.Drawing.Point(324, 25);
             this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(55, 16);
@@ -1063,7 +1195,7 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(10, 27);
+            this.label35.Location = new System.Drawing.Point(14, 25);
             this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(59, 16);
@@ -1074,11 +1206,12 @@
             // 
             this.comboBoxStaffName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxStaffName.FormattingEnabled = true;
-            this.comboBoxStaffName.Location = new System.Drawing.Point(90, 22);
+            this.comboBoxStaffName.Location = new System.Drawing.Point(90, 20);
             this.comboBoxStaffName.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxStaffName.Name = "comboBoxStaffName";
             this.comboBoxStaffName.Size = new System.Drawing.Size(208, 27);
             this.comboBoxStaffName.TabIndex = 3;
+            this.comboBoxStaffName.SelectedIndexChanged += new System.EventHandler(this.comboBoxStaffName_SelectedIndexChanged);
             // 
             // panel2
             // 
@@ -1158,14 +1291,14 @@
             this.dataGridItem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridItem.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridItem.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridItem.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridItem.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
@@ -1173,10 +1306,10 @@
             this.dataGridItem.MultiSelect = false;
             this.dataGridItem.Name = "dataGridItem";
             this.dataGridItem.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            this.dataGridItem.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            this.dataGridItem.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridItem.RowTemplate.Height = 24;
             this.dataGridItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridItem.Size = new System.Drawing.Size(743, 481);
@@ -1260,6 +1393,97 @@
             this.panel3.Size = new System.Drawing.Size(743, 49);
             this.panel3.TabIndex = 8;
             // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.numericUpDownAmount);
+            this.panel10.Controls.Add(this.label27);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(285, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(211, 49);
+            this.panel10.TabIndex = 9;
+            // 
+            // numericUpDownAmount
+            // 
+            this.numericUpDownAmount.Location = new System.Drawing.Point(123, 9);
+            this.numericUpDownAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.numericUpDownAmount.Name = "numericUpDownAmount";
+            this.numericUpDownAmount.Size = new System.Drawing.Size(55, 26);
+            this.numericUpDownAmount.TabIndex = 3;
+            this.numericUpDownAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.ForeColor = System.Drawing.Color.Black;
+            this.label27.Location = new System.Drawing.Point(20, 14);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(95, 19);
+            this.label27.TabIndex = 2;
+            this.label27.Text = "Số Lượng:";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txtGiamGia);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(496, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(247, 49);
+            this.panel5.TabIndex = 8;
+            // 
+            // txtGiamGia
+            // 
+            this.txtGiamGia.Location = new System.Drawing.Point(88, 9);
+            this.txtGiamGia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGiamGia.Name = "txtGiamGia";
+            this.txtGiamGia.Size = new System.Drawing.Size(142, 26);
+            this.txtGiamGia.TabIndex = 5;
+            this.txtGiamGia.Text = "0";
+            this.txtGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(5, 12);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(86, 19);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Giảm Giá:";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Controls.Add(this.txtGiaNhap);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 0);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(285, 49);
+            this.panel8.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(3, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 19);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Giá nhập";
+            // 
+            // txtGiaNhap
+            // 
+            this.txtGiaNhap.Location = new System.Drawing.Point(98, 8);
+            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(4);
+            this.txtGiaNhap.Name = "txtGiaNhap";
+            this.txtGiaNhap.Size = new System.Drawing.Size(174, 26);
+            this.txtGiaNhap.TabIndex = 6;
+            this.txtGiaNhap.Text = "0";
+            this.txtGiaNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // iconButton7
             // 
             this.iconButton7.FlatAppearance.BorderSize = 0;
@@ -1322,229 +1546,32 @@
             // 
             // panel19
             // 
-            this.panel19.Controls.Add(this.iconButton8);
+            this.panel19.Controls.Add(this.btnThemSP);
             this.panel19.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel19.Location = new System.Drawing.Point(592, 0);
             this.panel19.Name = "panel19";
             this.panel19.Size = new System.Drawing.Size(151, 54);
             this.panel19.TabIndex = 15;
             // 
-            // iconButton8
+            // btnThemSP
             // 
-            this.iconButton8.BackColor = System.Drawing.Color.MidnightBlue;
-            this.iconButton8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButton8.FlatAppearance.BorderSize = 0;
-            this.iconButton8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton8.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton8.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.iconButton8.IconColor = System.Drawing.Color.Black;
-            this.iconButton8.IconSize = 16;
-            this.iconButton8.Location = new System.Drawing.Point(0, 0);
-            this.iconButton8.Margin = new System.Windows.Forms.Padding(4);
-            this.iconButton8.Name = "iconButton8";
-            this.iconButton8.Rotation = 0D;
-            this.iconButton8.Size = new System.Drawing.Size(151, 54);
-            this.iconButton8.TabIndex = 5;
-            this.iconButton8.Text = "Thêm vào HĐ";
-            this.iconButton8.UseVisualStyleBackColor = false;
-            // 
-            // MaNT
-            // 
-            this.MaNT.FillWeight = 80F;
-            this.MaNT.HeaderText = "Mã NT";
-            this.MaNT.MinimumWidth = 6;
-            this.MaNT.Name = "MaNT";
-            // 
-            // DonGia
-            // 
-            this.DonGia.HeaderText = "Đơn giá nhập";
-            this.DonGia.MinimumWidth = 6;
-            this.DonGia.Name = "DonGia";
-            // 
-            // SL
-            // 
-            this.SL.FillWeight = 50F;
-            this.SL.HeaderText = "SL";
-            this.SL.MinimumWidth = 6;
-            this.SL.Name = "SL";
-            // 
-            // GiamGia
-            // 
-            this.GiamGia.HeaderText = "Giảm giá";
-            this.GiamGia.MinimumWidth = 6;
-            this.GiamGia.Name = "GiamGia";
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Controls.Add(this.txtGiaNhap);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 0);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(285, 49);
-            this.panel8.TabIndex = 6;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(3, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 19);
-            this.label9.TabIndex = 7;
-            this.label9.Text = "Giá nhập";
-            // 
-            // txtGiaNhap
-            // 
-            this.txtGiaNhap.Location = new System.Drawing.Point(98, 8);
-            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGiaNhap.Name = "txtGiaNhap";
-            this.txtGiaNhap.Size = new System.Drawing.Size(174, 26);
-            this.txtGiaNhap.TabIndex = 6;
-            this.txtGiaNhap.Text = "0";
-            this.txtGiaNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.txtGiamGia);
-            this.panel5.Controls.Add(this.label10);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(496, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(247, 49);
-            this.panel5.TabIndex = 8;
-            // 
-            // txtGiamGia
-            // 
-            this.txtGiamGia.Location = new System.Drawing.Point(88, 9);
-            this.txtGiamGia.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGiamGia.Name = "txtGiamGia";
-            this.txtGiamGia.Size = new System.Drawing.Size(142, 26);
-            this.txtGiamGia.TabIndex = 5;
-            this.txtGiamGia.Text = "0";
-            this.txtGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(5, 12);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(86, 19);
-            this.label10.TabIndex = 4;
-            this.label10.Text = "Giảm Giá:";
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.numericUpDownAmount);
-            this.panel10.Controls.Add(this.label27);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(285, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(211, 49);
-            this.panel10.TabIndex = 9;
-            // 
-            // numericUpDownAmount
-            // 
-            this.numericUpDownAmount.Location = new System.Drawing.Point(123, 9);
-            this.numericUpDownAmount.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDownAmount.Name = "numericUpDownAmount";
-            this.numericUpDownAmount.Size = new System.Drawing.Size(55, 26);
-            this.numericUpDownAmount.TabIndex = 3;
-            this.numericUpDownAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.ForeColor = System.Drawing.Color.Black;
-            this.label27.Location = new System.Drawing.Point(20, 14);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(95, 19);
-            this.label27.TabIndex = 2;
-            this.label27.Text = "Số Lượng:";
-            // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.iconButtonPrinter);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel14.Location = new System.Drawing.Point(3, 652);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(422, 53);
-            this.panel14.TabIndex = 7;
-            // 
-            // panel16
-            // 
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(3, 3);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(201, 52);
-            this.panel16.TabIndex = 12;
-            // 
-            // iconButtonPrinter
-            // 
-            this.iconButtonPrinter.BackColor = System.Drawing.Color.ForestGreen;
-            this.iconButtonPrinter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.iconButtonPrinter.FlatAppearance.BorderSize = 0;
-            this.iconButtonPrinter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonPrinter.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButtonPrinter.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.iconButtonPrinter.IconColor = System.Drawing.Color.White;
-            this.iconButtonPrinter.IconSize = 20;
-            this.iconButtonPrinter.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonPrinter.Location = new System.Drawing.Point(0, 0);
-            this.iconButtonPrinter.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
-            this.iconButtonPrinter.Name = "iconButtonPrinter";
-            this.iconButtonPrinter.Rotation = 0D;
-            this.iconButtonPrinter.Size = new System.Drawing.Size(422, 53);
-            this.iconButtonPrinter.TabIndex = 3;
-            this.iconButtonPrinter.Text = "In";
-            this.iconButtonPrinter.UseVisualStyleBackColor = false;
-            // 
-            // iconButtonXoaDonDH
-            // 
-            this.iconButtonXoaDonDH.BackColor = System.Drawing.Color.Red;
-            this.iconButtonXoaDonDH.FlatAppearance.BorderSize = 0;
-            this.iconButtonXoaDonDH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonXoaDonDH.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButtonXoaDonDH.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.iconButtonXoaDonDH.IconColor = System.Drawing.Color.White;
-            this.iconButtonXoaDonDH.IconSize = 20;
-            this.iconButtonXoaDonDH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonXoaDonDH.Location = new System.Drawing.Point(261, -1);
-            this.iconButtonXoaDonDH.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
-            this.iconButtonXoaDonDH.Name = "iconButtonXoaDonDH";
-            this.iconButtonXoaDonDH.Rotation = 0D;
-            this.iconButtonXoaDonDH.Size = new System.Drawing.Size(185, 54);
-            this.iconButtonXoaDonDH.TabIndex = 9;
-            this.iconButtonXoaDonDH.Text = "Xóa hóa đơn";
-            this.iconButtonXoaDonDH.UseVisualStyleBackColor = false;
-            // 
-            // iconButtonRefresh
-            // 
-            this.iconButtonRefresh.BackColor = System.Drawing.Color.RoyalBlue;
-            this.iconButtonRefresh.FlatAppearance.BorderSize = 0;
-            this.iconButtonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButtonRefresh.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButtonRefresh.IconChar = FontAwesome.Sharp.IconChar.SyncAlt;
-            this.iconButtonRefresh.IconColor = System.Drawing.Color.White;
-            this.iconButtonRefresh.IconSize = 20;
-            this.iconButtonRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButtonRefresh.Location = new System.Drawing.Point(460, -1);
-            this.iconButtonRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 25, 4);
-            this.iconButtonRefresh.Name = "iconButtonRefresh";
-            this.iconButtonRefresh.Rotation = 0D;
-            this.iconButtonRefresh.Size = new System.Drawing.Size(185, 54);
-            this.iconButtonRefresh.TabIndex = 8;
-            this.iconButtonRefresh.Text = "Làm Mới";
-            this.iconButtonRefresh.UseVisualStyleBackColor = false;
+            this.btnThemSP.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnThemSP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnThemSP.FlatAppearance.BorderSize = 0;
+            this.btnThemSP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThemSP.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnThemSP.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnThemSP.IconColor = System.Drawing.Color.Black;
+            this.btnThemSP.IconSize = 16;
+            this.btnThemSP.Location = new System.Drawing.Point(0, 0);
+            this.btnThemSP.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemSP.Name = "btnThemSP";
+            this.btnThemSP.Rotation = 0D;
+            this.btnThemSP.Size = new System.Drawing.Size(151, 54);
+            this.btnThemSP.TabIndex = 5;
+            this.btnThemSP.Text = "Thêm vào HĐ";
+            this.btnThemSP.UseVisualStyleBackColor = false;
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
             // Import
             // 
@@ -1576,6 +1603,7 @@
             this.groupBoxCustomer.ResumeLayout(false);
             this.groupBoxCustomer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewImportDetail)).EndInit();
+            this.panel14.ResumeLayout(false);
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -1603,17 +1631,16 @@
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAmount)).EndInit();
-            this.panel14.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1694,13 +1721,13 @@
         private System.Windows.Forms.Panel panel6;
         private FontAwesome.Sharp.IconButton btnThemMoi;
         private System.Windows.Forms.Panel panel19;
-        private FontAwesome.Sharp.IconButton iconButton8;
+        private FontAwesome.Sharp.IconButton btnThemSP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtSearchName;
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton iconButton3;
         private FontAwesome.Sharp.IconButton iconButton4;
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton btnXoaSP;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNT;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;

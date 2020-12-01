@@ -181,7 +181,7 @@ namespace DoNoiThat
                     int soluong = int.Parse(numericUpDownAmount.Value.ToString());
                     bool check = false;
                     SL = soluong.ToString();
-                    thanhtien = (soluong * float.Parse(dongia)-float.Parse(giamgia)).ToString();
+                    thanhtien = (soluong * double.Parse(dongia)-double.Parse(txtDeposit.Text)).ToString();
                     if (dataGridViewDetail.Rows.Count > 0)
                     {
                         foreach (DataGridViewRow tmprow in dataGridViewDetail.Rows)
@@ -191,10 +191,11 @@ namespace DoNoiThat
                                 if (tmprow.Cells[0].Value.ToString().Equals(mant))
                                 {
                                     soluong = soluong + int.Parse(tmprow.Cells[2].Value.ToString());
-                                    double tong = float.Parse(thanhtien) + float.Parse(tmprow.Cells[4].Value.ToString());
+                                    double tong = double.Parse(thanhtien) + double.Parse(tmprow.Cells[4].Value.ToString());
+                                    double tonggiam = double.Parse(giamgia) + double.Parse(tmprow.Cells[3].Value.ToString());
                                     tmprow.Cells[2].Value = soluong.ToString();
                                     tmprow.Cells[4].Value = tong.ToString();
-                                    tmprow.Cells[3].Value = giamgia.ToString();
+                                    tmprow.Cells[3].Value = tonggiam.ToString();
                                     check = true;
                                     break;
                                 }

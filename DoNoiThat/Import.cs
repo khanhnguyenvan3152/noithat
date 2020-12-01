@@ -124,5 +124,73 @@ namespace DoNoiThat
         {
 
         }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            if (dataGridItem.CurrentRow == null)
+            {
+                MessageBox.Show("Bạn phải chọn một sản phẩm");
+                dataGridItem.Focus();
+            }
+            else
+            {
+                if(checkTextBox() == true)
+                {
+                    DataGridViewRow row = dataGridItem.CurrentRow;
+                    string mant = row.Cells[0].Value.ToString();
+                    string dongia = txtGiaNhap.Text;
+                    string giamgia = txtGiamGia.Text;
+                    string thanhtien = "";
+                    string SL = "";
+                    int soluong = int.Parse(numericUpDownAmount.Value.ToString());
+                    bool check = false;
+                    SL = soluong.ToString();
+                    thanhtien = ((double)(soluong * float.Parse(dongia) - double.Parse(giamgia))).ToString();
+                    if (dataGridViewDetail.Rows.Count > 0)
+                    {
+                        foreach (DataGridViewRow tmprow in dataGridViewDetail.Rows)
+                        {
+                            if (tmprow.Cells[0].Value != null)
+                            {
+                                if (tmprow.Cells[0].Value.ToString().Equals(mant))
+                                {
+                                    soluong = soluong + int.Parse(tmprow.Cells[2].Value.ToString());
+                                    double tong = float.Parse(thanhtien) + float.Parse(tmprow.Cells[4].Value.ToString());
+                                    double tonggiam = double.Parse(giamgia) + double.Parse(tmprow.Cells[3].Value.ToString());
+                                    tmprow.Cells[2].Value = soluong.ToString();
+                                    tmprow.Cells[4].Value = tong.ToString();
+                                    tmprow.Cells[3].Value = tonggiam.ToString();
+                                    check = true;
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    if (check == false)
+                    {
+                        dataGridViewDetail.Rows.Add(mant, dongia, soluong, giamgia, thanhtien);
+                    }
+                    if (dataGridViewDetail.Rows.Count > 0)
+                    {
+                        double tong = 0;
+                        foreach (DataGridViewRow r in dataGridViewDetail.Rows)
+                        {
+                            if (r.Cells[4].Value != null)
+                            {
+                                tong = tong + Convert.ToDouble(r.Cells[4].Value);
+                            }
+                        }
+                   
+                        labelTotal1.Text = tong.ToString();
+                    }
+                    
+                }    
+            }    
+        }
+
+        private void comboBoxStaffName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtStaffId.Text = comboBoxStaffName.SelectedValue.ToString();
+        }
     }
 }
