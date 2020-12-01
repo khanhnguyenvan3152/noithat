@@ -252,3 +252,4 @@ C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\RdlCompile.comp
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.PrintReport.resources
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.SuaDDH.resources
 C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.ChooseSupplier.resources
+C:\Users\Khanh\Documents\btllttq\noithat-new\DoNoiThat\obj\Debug\DoNoiThat.PrintHDN.resources

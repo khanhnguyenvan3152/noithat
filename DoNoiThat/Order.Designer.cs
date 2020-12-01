@@ -128,8 +128,11 @@
             this.comboBoxStaffName = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.label37 = new System.Windows.Forms.Label();
             this.labelTax1 = new System.Windows.Forms.Label();
+            this.labelTotal1 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.dataGridViewDetail = new System.Windows.Forms.DataGridView();
             this.MaNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -168,9 +171,6 @@
             this.panel19 = new System.Windows.Forms.Panel();
             this.iconButtonAdd = new FontAwesome.Sharp.IconButton();
             this.dataGridViewItem = new System.Windows.Forms.DataGridView();
-            this.label19 = new System.Windows.Forms.Label();
-            this.labelTotal1 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
             this.tabControlOrder.SuspendLayout();
             this.tabPageOrderList.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
@@ -359,9 +359,9 @@
             this.label5.Location = new System.Drawing.Point(1, 8);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 19);
+            this.label5.Size = new System.Drawing.Size(81, 19);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Mã đơn hàng:";
+            this.label5.Text = "Mã hàng:";
             // 
             // txtSearchKhachHang
             // 
@@ -646,13 +646,14 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(450, 75);
             this.panel11.TabIndex = 2;
+            this.panel11.Paint += new System.Windows.Forms.PaintEventHandler(this.panel11_Paint);
             // 
             // lblDatCoc
             // 
             this.lblDatCoc.AutoSize = true;
             this.lblDatCoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDatCoc.ForeColor = System.Drawing.Color.Black;
-            this.lblDatCoc.Location = new System.Drawing.Point(83, 12);
+            this.lblDatCoc.Location = new System.Drawing.Point(85, 11);
             this.lblDatCoc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatCoc.Name = "lblDatCoc";
             this.lblDatCoc.Size = new System.Drawing.Size(0, 24);
@@ -662,7 +663,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(8, 12);
+            this.label16.Location = new System.Drawing.Point(11, 12);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(75, 19);
@@ -1523,6 +1524,18 @@
             this.panel14.Size = new System.Drawing.Size(454, 44);
             this.panel14.TabIndex = 14;
             // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Red;
+            this.label37.Location = new System.Drawing.Point(401, 10);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(51, 24);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "VNĐ";
+            // 
             // labelTax1
             // 
             this.labelTax1.AutoSize = true;
@@ -1535,6 +1548,18 @@
             this.labelTax1.TabIndex = 1;
             this.labelTax1.Text = "10%";
             // 
+            // labelTotal1
+            // 
+            this.labelTotal1.AutoSize = true;
+            this.labelTotal1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTotal1.ForeColor = System.Drawing.Color.Red;
+            this.labelTotal1.Location = new System.Drawing.Point(269, 10);
+            this.labelTotal1.Margin = new System.Windows.Forms.Padding(4, 10, 4, 0);
+            this.labelTotal1.Name = "labelTotal1";
+            this.labelTotal1.Size = new System.Drawing.Size(21, 24);
+            this.labelTotal1.TabIndex = 1;
+            this.labelTotal1.Text = "0";
+            // 
             // label18
             // 
             this.label18.AutoSize = true;
@@ -1546,6 +1571,17 @@
             this.label18.Size = new System.Drawing.Size(54, 19);
             this.label18.TabIndex = 0;
             this.label18.Text = "Thuế:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(171, 12);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(93, 19);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Tổng Tiền:";
             // 
             // dataGridViewDetail
             // 
@@ -2047,41 +2083,7 @@
             this.dataGridViewItem.Size = new System.Drawing.Size(837, 576);
             this.dataGridViewItem.TabIndex = 9;
             this.dataGridViewItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView4_CellContentClick);
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(171, 12);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(93, 19);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "Tổng Tiền:";
-            // 
-            // labelTotal1
-            // 
-            this.labelTotal1.AutoSize = true;
-            this.labelTotal1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTotal1.ForeColor = System.Drawing.Color.Red;
-            this.labelTotal1.Location = new System.Drawing.Point(269, 10);
-            this.labelTotal1.Margin = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.labelTotal1.Name = "labelTotal1";
-            this.labelTotal1.Size = new System.Drawing.Size(21, 24);
-            this.labelTotal1.TabIndex = 1;
-            this.labelTotal1.Text = "0";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(401, 10);
-            this.label37.Margin = new System.Windows.Forms.Padding(4, 10, 4, 0);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(51, 24);
-            this.label37.TabIndex = 2;
-            this.label37.Text = "VNĐ";
+            this.dataGridViewItem.SelectionChanged += new System.EventHandler(this.dataGridViewItem_SelectionChanged);
             // 
             // Order
             // 

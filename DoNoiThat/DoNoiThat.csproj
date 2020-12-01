@@ -127,6 +127,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Datasets\DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Else.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +146,12 @@
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="NoiThat.cs" />
+    <Compile Include="PrintHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrintHDN.Designer.cs">
+      <DependentUpon>PrintHDN.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrintReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,10 +235,14 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PrintHDN.resx">
+      <DependentUpon>PrintHDN.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrintReport.resx">
       <DependentUpon>PrintReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Report1.rdlc" />
+    <EmbeddedResource Include="Report\rpHoaDonNhap.rdlc" />
     <EmbeddedResource Include="Staff.resx">
       <DependentUpon>Staff.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +289,17 @@
     </None>
     <None Include="Datasets\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Datasets\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Datasets\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\DoNoiThat.Class.OrderDetail.datasource" />

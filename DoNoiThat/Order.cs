@@ -311,7 +311,6 @@ namespace DoNoiThat
                         try
                         {
                             sql = "INSERT [dbo].[DonDH] ([SoDDH], [MaNV], [MaKH], [NgayDat], [NgayGiao], [DatCoc], [Thue], [TongTien]) VALUES(N'" + labelIdOrder1.Text + "', N'" + txtStaffId.Text + "', N'" + customerid + "', CAST(N'" + ngaydat + "' AS Date), CAST(N'" + ngaygiao + "' AS Date)," + txtDeposit.Text.Trim() + "," + labelTax1.Text.Trim().Substring(0,2) + "," + labelTotal1.Text.Trim() + ")";
-                            MessageBox.Show(sql);
                             Functions.RunSQL(sql);
                             foreach (DataGridViewRow row in dataGridViewDetail.Rows)
                             {
@@ -377,7 +376,6 @@ namespace DoNoiThat
                             catch (SqlException)
                             {
                                 MessageBox.Show("Gặp lỗi khi lưu chi tiết đơn đặt hàng!");
-
                             }
                         }
 
@@ -590,10 +588,10 @@ namespace DoNoiThat
             {
                 sql = "SELECT * FROM DonDH";
             }
-            sql = "SELECT SoDDH,DonDH.MaNV,DonDH.MaKH,NgayDat,NgayGiao,DatCoc,Thue,TongTien FROM DonDH JOIN KhachHang ON DonDH.MaKH = KhachHang.MaKH JOIN NhanVien ON NhanVien.MaNV = DonDH.MaNV WHERE 1=1";
+            sql = "SELECT DonDH.SoDDH,DonDH.MaNV,DonDH.MaKH,NgayDat,NgayGiao,DatCoc,Thue,TongTien FROM DonDH JOIN KhachHang ON DonDH.MaKH = KhachHang.MaKH JOIN NhanVien ON NhanVien.MaNV = DonDH.MaNV JOIN ChiTietDonDH ON ChiTietDonDH.SoDDH = DonDH.SoDDH JOIN DMNoiThat ON ChiTietDonDH.MaNoiThat = DMNoiThat.MaNoiThat WHERE 1=1";
             if(txtSearchMa.Text!="")
             {
-                sql += " AND SoDDH LIKE N'%" + txtSearchMa.Text.Trim() + "%'";
+                sql += " AND ChiTietDonDH.MaNoiThat LIKE N'%" + txtSearchMa.Text.Trim() + "%'";
             }
             if (txtSearchKhachHang.Text != "")
             {
@@ -637,6 +635,17 @@ namespace DoNoiThat
               
                 loadDataDanhSachHoaDon();
             }
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewItem_SelectionChanged(object sender, EventArgs e)
+        {
+            txtDeposit.Text = "0";
+            numericUpDownAmount.Value = 0;
         }
     }
 }
